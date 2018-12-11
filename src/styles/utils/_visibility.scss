@@ -1,0 +1,7 @@
+.u-#{$ns}-visuallyhidden {
+  @include visuallyhidden;
+}
+
+.u-#{$ns}-hidden {
+  display: none;
+}

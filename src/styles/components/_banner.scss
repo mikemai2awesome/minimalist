@@ -1,0 +1,21 @@
+/* ------------------------------------ *\
+   Components
+\* ------------------------------------ */
+
+.c-#{$ns}-banner {
+  margin-top: 0;
+  margin-bottom: ($v-spacing*1.15 + rem);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: $font-scale-xxxlarge-min + rem;
+
+    @include respond-to(small) {
+      line-height: 1.125;
+      font-size: $font-scale-xxxlarge-max + rem;
+    }
+  }
+}
