@@ -1,3 +1,7 @@
+/* ------------------------------------ *\
+   Visuallyhidden Tools
+\* ------------------------------------ */
+
 @mixin visuallyhidden($important: null) {
   @if $important == important {
     $important: !important;

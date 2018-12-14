@@ -152,6 +152,9 @@ ol, ul {
  */
 
 blockquote {
+  margin-right: 0;
+  margin-left: 0;
+
   > * {
     margin-bottom: ($v-spacing/4 + rem);
     font-size: $font-scale-large + rem;
@@ -163,8 +166,17 @@ blockquote {
   }
 }
 
-figure,
-blockquote {
+q {
+  &:before {
+    content: '\201C';
+  }
+
+  &:after {
+    content: '\201D';
+  }
+}
+
+figure {
   margin-right: ($gutter/2 + rem);
   margin-left: ($gutter/2 + rem);
 
