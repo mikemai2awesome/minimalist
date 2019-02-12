@@ -1,0 +1,14 @@
+/*------------------------------------*\
+  Z-Index Tools
+\*------------------------------------*/
+
+@function z-index($name) {
+  $z-index: index($z-indexes, $name);
+
+  @if $z-index {
+    @return $z-index;
+  }
+
+  @warn 'There is no "#{$name}" in the z-index scale; choose one of: #{$z-indexes}';
+  @return null;
+}

@@ -1,0 +1,90 @@
+/* ------------------------------------ *\
+   All block elements
+\* ------------------------------------ */
+
+$block-elements-list: 'p',
+  'blockquote',
+  'details',
+  'dd',
+  'dl',
+  'fieldset',
+  'figure',
+  'li',
+  'ol',
+  'pre',
+  'ul';
+
+$unquoted-block-elements-list: ();
+
+@each $block-element-type in $block-elements-list {
+  $unquoted-block-elements-list: append($unquoted-block-elements-list, unquote($block-element-type), comma) !global;
+}
+
+$all-block-elements: $unquoted-block-elements-list;
+
+
+/* ------------------------------------ *\
+   All heading elements
+\* ------------------------------------ */
+
+$heading-elements-list: 'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6';
+
+$unquoted-heading-elements-list: ();
+
+@each $heading-element-type in $heading-elements-list {
+  $unquoted-heading-elements-list: append($unquoted-heading-elements-list, unquote($heading-element-type), comma) !global;
+}
+
+$all-heading-elements: $unquoted-heading-elements-list;
+
+
+/* ------------------------------------ *\
+   All text inputs
+\* ------------------------------------ */
+
+$text-input-elements-list: 'input[type=text]',
+  'input[type=color]',
+  'input[type=date]',
+  'input[type=datetime-local]',
+  'input[type=email]',
+  'input[type=month]',
+  'input[type=number]',
+  'input[type=password]',
+  'input[type=search]',
+  'input[type=tel]',
+  'input[type=time]',
+  'input[type=url]',
+  'input[type=week]',
+  'textarea';
+
+$unquoted-text-input-elements-list: ();
+
+@each $text-input-element-type in $text-input-elements-list {
+  $unquoted-text-input-elements-list: append($unquoted-text-input-elements-list, unquote($text-input-element-type), comma) !global;
+}
+
+$all-text-input-elements: $unquoted-text-input-elements-list;
+
+
+/* ------------------------------------ *\
+   All button elements
+\* ------------------------------------ */
+
+$button-elements-list: 'button',
+  '[type=button]',
+  '[type=reset]',
+  '[type=submit]',
+  '::-webkit-file-upload-button';
+
+$unquoted-button-elements-list: ();
+
+@each $button-element-type in $button-elements-list {
+  $unquoted-button-elements-list: append($unquoted-button-elements-list, unquote($button-element-type), comma) !global;
+}
+
+$all-button-elements: $unquoted-button-elements-list;

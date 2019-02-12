@@ -1,5 +1,5 @@
 /* ------------------------------------ *\
-   Components
+   Banner (header of a page)
 \* ------------------------------------ */
 
 .c-#{$ns}-banner {
@@ -11,11 +11,11 @@
   }
 
   h1 {
-    font-size: $font-scale-xxxlarge-min + rem;
+    font-size: type-scale(xxxlarge-min) + rem;
 
     @include respond-to(small) {
       line-height: 1.125;
-      font-size: $font-scale-xxxlarge-max + rem;
+      font-size: type-scale(xxxlarge-max) + rem;
     }
   }
 }

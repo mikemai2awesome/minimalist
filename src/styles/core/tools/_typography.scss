@@ -1,0 +1,11 @@
+/*------------------------------------*\
+  Typography Tools
+\*------------------------------------*/
+
+@function type-scale($name) {
+  @return map-get($type-scales, $name);
+}
+
+@function typeface($name) {
+  @return map-get($typefaces, $name);
+}

@@ -1,4 +1,148 @@
 /* ------------------------------------ *\
+   Element Groups
+\* ------------------------------------ */
+
+// All block elements
+$normalize-block-elements-list: 'p',
+  'blockquote',
+  'details',
+  'dd',
+  'dl',
+  'fieldset',
+  'figure',
+  'li',
+  'ol',
+  'pre',
+  'ul';
+
+$normalize-unquoted-block-elements-list: ();
+
+@each $element in $normalize-block-elements-list {
+  $normalize-unquoted-block-elements-list: append($normalize-unquoted-block-elements-list, unquote($element), comma) !global;
+}
+
+$normalize-all-block-elements: $normalize-unquoted-block-elements-list;
+
+
+// All heading elements
+$normalize-heading-elements-list: 'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6';
+
+$normalize-unquoted-heading-elements-list: ();
+
+@each $element in $normalize-heading-elements-list {
+  $normalize-unquoted-heading-elements-list: append($normalize-unquoted-heading-elements-list, unquote($element), comma) !global;
+}
+
+$normalize-all-heading-elements: $normalize-unquoted-heading-elements-list;
+
+
+// All text inputs
+$normalize-text-input-elements-list: 'input[type=text]',
+  'input[type=color]',
+  'input[type=date]',
+  'input[type=datetime-local]',
+  'input[type=email]',
+  'input[type=month]',
+  'input[type=number]',
+  'input[type=password]',
+  'input[type=search]',
+  'input[type=tel]',
+  'input[type=time]',
+  'input[type=url]',
+  'input[type=week]',
+  'textarea';
+
+$normalize-unquoted-text-input-elements-list: ();
+
+@each $element in $normalize-text-input-elements-list {
+  $normalize-unquoted-text-input-elements-list: append($normalize-unquoted-text-input-elements-list, unquote($element), comma) !global;
+}
+
+$normalize-all-text-input-elements: $normalize-unquoted-text-input-elements-list;
+
+
+// All button elements
+$normalize-button-elements-list: 'button',
+  '[type=button]',
+  '[type=reset]',
+  '[type=submit]',
+  '::-webkit-file-upload-button';
+
+$normalize-unquoted-button-elements-list: ();
+
+@each $element in $normalize-button-elements-list {
+  $normalize-unquoted-button-elements-list: append($normalize-unquoted-button-elements-list, unquote($element), comma) !global;
+}
+
+$normalize-all-button-elements: $normalize-unquoted-button-elements-list;
+
+
+/* ------------------------------------ *\
+   Help Functions
+\* ------------------------------------ */
+
+$normalize-grays: (
+  medium: dimgray,
+  light:  #DCDCDC,
+  xlight: #F0F0F0
+);
+
+@function normalize-gray($name) {
+  @return map-get($normalize-grays, $name);
+}
+
+$normalize-typefaces: (
+  body:    #{'Georgia', serif},
+  heading: #{-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif},
+  mono:    #{monospace, monospace}
+);
+
+@function normalize-typeface($name) {
+  @return map-get($normalize-typefaces, $name);
+}
+
+$normalize-type-scales: (
+  xxlarge: 2.00,
+  xlarge:  1.50,
+  large:   1.17,
+  medium:  1.00,
+  small:   0.83,
+  xsmall:  0.67
+);
+
+@function normalize-type-scale($name) {
+  @return map-get($normalize-type-scales, $name);
+}
+
+
+/* ------------------------------------ *\
+   Config
+\* ------------------------------------ */
+
+$normalize-font-size:   calc(15px + 0.25vw);
+
+$normalize-line-height: 1.65;
+$normalize-gutter:      2;
+$normalize-v-spacing:   ($normalize-line-height - (($normalize-line-height - 1) / 2));
+
+$normalize-color:             black;
+$normalize-background-color:  white;
+
+$normalize-code-color:            #CC0000;
+$normalize-code-background-color: lighten($normalize-code-color, 59%);
+
+$normalize-border-width: 1px;
+$normalize-border-style: solid;
+$normalize-border-color: normalize-gray(light);
+$normalize-border:       $normalize-border-width $normalize-border-style $normalize-border-color;
+
+
+/* ------------------------------------ *\
    Global resets
 \* ------------------------------------ */
 
@@ -23,13 +167,13 @@
  */
 
 html {
-  color: $color;
-  line-height: $line-height; /* 1 */
+  color: $normalize-color;
+  line-height: $normalize-line-height; /* 1 */
   letter-spacing: 0.01rem;
-  font-family: $font-family-body;
-  font-size: $font-size;
+  font-family: normalize-typeface(body);
+  font-size: $normalize-font-size;
   -webkit-text-size-adjust: 100%; /* 2 */
-  background-color: $background-color;
+  background-color: $normalize-background-color;
 }
 
 // Sections
@@ -46,8 +190,8 @@ body {
  * Block elements spacing reset.
  */
 
-#{$all-block-elements},
-#{$all-heading-elements} {
+#{$normalize-all-block-elements},
+#{$normalize-all-heading-elements} {
   margin-top: 0;
 
   &:last-child {
@@ -55,17 +199,17 @@ body {
   }
 }
 
-#{$all-block-elements} {
-  margin-bottom: $v-spacing + rem;
+#{$normalize-all-block-elements} {
+  margin-bottom: $normalize-v-spacing + rem;
 }
 
-#{$all-heading-elements} {
+#{$normalize-all-heading-elements} {
   letter-spacing: -0.025rem;
-  font-family: $font-family-heading;
+  font-family: normalize-typeface(heading);
 }
 
 h2, h3, h4, h5, h6 {
-  margin-bottom: ($v-spacing/4 + rem);
+  margin-bottom: ($normalize-v-spacing/4 + rem);
   line-height: 1.375;
 }
 
@@ -75,29 +219,29 @@ h2, h3, h4, h5, h6 {
  */
 
 h1 {
-  margin-bottom: ($v-spacing/3 + rem); /* 1 */
+  margin-bottom: ($normalize-v-spacing/3 + rem); /* 1 */
   line-height: 1.25;
-  font-size: $font-scale-xxlarge + rem; /* 1 */
+  font-size: normalize-type-scale(xxlarge) + rem; /* 1 */
 }
 
 h2 {
-  font-size: $font-scale-xlarge + rem;
+  font-size: normalize-type-scale(xlarge) + rem;
 }
 
 h3 {
-  font-size: $font-scale-large + rem;
+  font-size: normalize-type-scale(large) + rem;
 }
 
 h4 {
-  font-size: $font-scale-medium + rem;
+  font-size: normalize-type-scale(medium) + rem;
 }
 
 h5 {
-  font-size: $font-scale-small + rem;
+  font-size: normalize-type-scale(small) + rem;
 }
 
 h6 {
-  font-size: $font-scale-xsmall + rem;
+  font-size: normalize-type-scale(xsmall) + rem;
 }
 
 
@@ -109,12 +253,13 @@ h6 {
  */
 
 hr {
-  margin-top: $v-spacing*2 + rem;
-  margin-bottom: $v-spacing*2 + rem;
+  margin-top: $normalize-v-spacing*2 + rem;
+  margin-bottom: $normalize-v-spacing*2 + rem;
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
-  border: $border;
+  border: none;
+  border-bottom: $normalize-border;
 }
 
 /**
@@ -123,7 +268,7 @@ hr {
  */
 
 pre {
-  font-family: $font-family-mono; /* 1 */
+  font-family: normalize-typeface(mono); /* 1 */
   font-size: 1rem; /* 2 */
 }
 
@@ -143,7 +288,7 @@ ol, ul {
   padding-left: 0;
 
   li {
-    margin-bottom: ($v-spacing/8 + rem);
+    margin-bottom: ($normalize-v-spacing/8 + rem);
   }
 }
 
@@ -156,8 +301,8 @@ blockquote {
   margin-left: 0;
 
   > * {
-    margin-bottom: ($v-spacing/4 + rem);
-    font-size: $font-scale-large + rem;
+    margin-bottom: ($normalize-v-spacing/4 + rem);
+    font-size: normalize-type-scale(large) + rem;
   }
 
   q:before {
@@ -177,18 +322,18 @@ q {
 }
 
 figure {
-  margin-right: ($gutter/2 + rem);
-  margin-left: ($gutter/2 + rem);
+  margin-right: ($normalize-gutter/2 + rem);
+  margin-left: ($normalize-gutter/2 + rem);
 
-  @include respond-to(small) {
-    margin-right: $gutter + rem;
-    margin-left: $gutter + rem;
+  @media only screen and (min-width: 37.499em) {
+    margin-right: $normalize-gutter + rem;
+    margin-left: $normalize-gutter + rem;
   }
 }
 
 figcaption,
 blockquote footer {
-  color: dimgray;
+  color: normalize-gray(medium);
 }
 
 /**
@@ -201,12 +346,12 @@ table {
   margin-left: -8px;
 
   figure &:not(:last-child) {
-    margin-bottom: ($v-spacing/8 + rem);
+    margin-bottom: ($normalize-v-spacing/8 + rem);
   }
 }
 
 tbody tr:hover {
-  background-color: $gray-scale-xlight;
+  background-color: normalize-gray(xlight);
 }
 
 th, td {
@@ -214,8 +359,8 @@ th, td {
   padding-bottom: 3px;
   padding-left: 7px;
   text-align: left;
-  font-size: $font-scale-small + rem;
-  border-bottom: $border;
+  font-size: normalize-type-scale(small) + rem;
+  border-bottom: $normalize-border;
 
   &:not(:first-child) {
     text-align: center;
@@ -225,12 +370,12 @@ th, td {
 th {
   padding-top: 0;
   white-space: nowrap;
-  font-family: $font-family-heading;
-  border-bottom-color: currentColor;
+  font-family: normalize-typeface(heading);
+  border-bottom-color: inherit;
 }
 
 td {
-  font-family: $font-family-mono;
+  font-family: normalize-typeface(mono);
 }
 
 // Text-level semantics
@@ -251,7 +396,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline solid darkgray; /* 2 */
+  text-decoration: underline solid normalize-gray(light); /* 2 */
 }
 
 /**
@@ -271,20 +416,20 @@ strong {
 code,
 kbd,
 samp {
-  font-family: $font-family-mono; /* 1 */
-  font-size: $font-scale-small + em; /* 2 */
+  font-family: normalize-typeface(mono); /* 1 */
+  font-size: normalize-type-scale(small) + em; /* 2 */
 }
 
 code {
   padding: 2px 7px 3px 7px;
-  color: $code-color;
-  border: $border;
+  color: $normalize-code-color;
+  border: $normalize-border;
   border-radius: 3px;
-  background-color: $code-background-color;
+  background-color: $normalize-code-background-color;
 
   pre & {
     display: block;
-    padding: ($v-spacing/2.5 + rem) ($gutter/2 + rem);
+    padding: ($normalize-v-spacing/2.5 + rem) ($normalize-gutter/2 + rem);
     white-space: nowrap;
     overflow: auto;
   }
@@ -296,7 +441,7 @@ code {
 
 small,
 figcaption {
-  font-size: $font-scale-small + em;
+  font-size: normalize-type-scale(small) + em;
 }
 
 /**
@@ -309,7 +454,7 @@ sup {
   position: relative;
   line-height: 0;
   vertical-align: baseline;
-  font-size: $font-scale-xsmall + em;
+  font-size: normalize-type-scale(xsmall) + em;
 }
 
 sub {
@@ -332,7 +477,7 @@ img {
 
   figure &:not(:last-child) {
     display: block;
-    margin-bottom: ($v-spacing/8 + rem);
+    margin-bottom: ($normalize-v-spacing/8 + rem);
   }
 }
 
@@ -351,23 +496,23 @@ select,
 textarea {
   margin: 0; /* 2 */
   line-height: 1.15; /* 1 */
-  font-size: $font-scale-medium + rem; /* 1 */
+  font-size: normalize-type-scale(medium) + rem; /* 1 */
 }
 
 input,
 optgroup,
 select,
 textarea {
-  font-family: $font-family-body; /* 1 */
+  font-family: normalize-typeface(body); /* 1 */
 }
 
-#{$all-text-input-elements},
+#{$normalize-all-text-input-elements},
 optgroup,
 select {
   padding: 1px 7px 2px 7px;
 }
 
-#{$all-text-input-elements} {
+#{$normalize-all-text-input-elements} {
   border-width: 1px;
   border-style: solid;
   border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186); /* 3 */
@@ -398,8 +543,8 @@ select { /* 1 */
  * 2. Change font properties to heading font in Safari.
  */
 
-#{$all-button-elements} {
-  font: $font-family-heading; /* 2 */
+#{$normalize-all-button-elements} {
+  font: normalize-typeface(heading); /* 2 */
   font-weight: 400;
   -webkit-appearance: button; /* 1 */
 }
@@ -432,8 +577,8 @@ button:-moz-focusring,
  */
 
 fieldset {
-  padding: ($v-spacing/2 + rem) ($gutter + rem) ($v-spacing + rem) ($gutter + rem); /* 1 */
-  border: $border;
+  padding: ($normalize-v-spacing/2 + rem) ($normalize-gutter + rem) ($normalize-v-spacing + rem) ($normalize-gutter + rem); /* 1 */
+  border: $normalize-border;
 }
 
 /**
@@ -447,13 +592,13 @@ legend {
   display: table; /* 1 */
   max-width: 100%; /* 1 */
   padding: 0; /* 3 */
-  color: $color; /* 2 */
+  color: $normalize-color; /* 2 */
   white-space: normal; /* 1 */
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  font-family: $font-family-heading;
+  font-family: normalize-typeface(heading);
   font-weight: 700;
-  font-size: $font-scale-xsmall + rem;
+  font-size: normalize-type-scale(xsmall) + rem;
   box-sizing: border-box; /* 1 */
 }
 
@@ -535,7 +680,7 @@ details {
 
 summary {
   display: list-item;
-  margin-bottom: ($v-spacing/4 + rem);
+  margin-bottom: ($normalize-v-spacing/4 + rem);
   cursor: pointer;
 }
 
