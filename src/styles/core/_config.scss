@@ -1,0 +1,27 @@
+/* ------------------------------------ *\
+   Namespace
+\* ------------------------------------ */
+
+$ns: 'mnml';
+
+
+/* ------------------------------------ *\
+   Config
+\* ------------------------------------ */
+
+$base-font-size:        15px;
+$responsive-font-size:  calc(#{$base-font-size} + 0.25vw);
+
+$color:                 palette(black);
+$background-color:      palette(white);
+
+
+/*$gray-scale-light:      #DCDCDC;*/
+/*$code-color:            #CC0000;*/
+/*$code-background-color: lighten($code-color, 59%);*/
+/*$link-color:            mediumblue;*/
+
+/*$border-width:          1px;
+$border-style:          solid;
+$border-color:          $gray-scale-light;
+$border:                $border-width $border-style $border-color;*/

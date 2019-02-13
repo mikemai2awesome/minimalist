@@ -1,0 +1,19 @@
+/* ------------------------------------ *\
+   Color Tools
+\* ------------------------------------ */
+
+// Palette function
+@function palette($color, $tone: 'initial') {
+  @return map-get-deep($_palettes, $color, $tone);
+}
+
+// Text contrast
+@function text-contrast($color) {
+  @if (lightness($color) > 60) {
+    @return palette(black);
+  }
+
+  @else {
+    @return palette(white);
+  }
+}

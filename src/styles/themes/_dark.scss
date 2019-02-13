@@ -1,9 +1,16 @@
 .t-#{$ns}-dark {
-  background-color: $background-color; /* This is the opposite of what you want... */
-  filter: invert(100%); /* ...because this whole container will invert all colors. */
+  // Set the regular light theme colors
+  color: $color;
+  background-color: $background-color;
 
+  // Then invert the colors
+  filter: invert(100%);
+
+  // Preserving raster images and embeds
   img:not([src*='.svg']),
-  video {
-     filter: invert(100%); /* Preserving raster images. */
+  video,
+  embed,
+  iframe {
+     filter: invert(100%);
   }
 }
