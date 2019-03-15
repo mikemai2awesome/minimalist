@@ -8,7 +8,7 @@ $_gutter:      2;
 $_h-spacing: $_gutter;
 $_v-spacing: ($_line-height - (($_line-height - 1) / 2));
 
-$_v-spacing-scales: (
+$_v-spacing-scale-values: (
   xxlarge:      $_v-spacing * 8,
   xlarge:       $_v-spacing * 4,
   large:        $_v-spacing * 2,
@@ -18,7 +18,7 @@ $_v-spacing-scales: (
   xxsmall:      $_v-spacing * .125
 );
 
-$_h-spacing-scales: (
+$_h-spacing-scale-values: (
   xxlarge:      $_h-spacing * 8,
   xlarge:       $_h-spacing * 4,
   large:        $_h-spacing * 2,

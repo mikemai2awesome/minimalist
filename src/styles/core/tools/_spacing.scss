@@ -3,11 +3,11 @@
 \*------------------------------------*/
 
 @function v-spacing-scale($name) {
-  @return map-get($_v-spacing-scales, $name);
+  @return map-get($_v-spacing-scale-values, $name);
 }
 
 @function h-spacing-scale($name) {
-  @return map-get($_h-spacing-scales, $name);
+  @return map-get($_h-spacing-scale-values, $name);
 }
 
 @mixin reset-spacing {

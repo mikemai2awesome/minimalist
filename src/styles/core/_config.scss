@@ -9,11 +9,15 @@ $ns: 'mnml';
    Config
 \* ------------------------------------ */
 
-$base-font-size:        15px;
-$responsive-font-size:  calc(#{$base-font-size} + 0.25vw);
+$font-size:
+  // Only edit the px value.
+  calc(
+    15px
+    + 0.25vw
+  ) !default;
 
-$color:                 palette(black);
-$background-color:      palette(white);
+$color:                 palette(black) !default;
+$background-color:      palette(white) !default;
 
 
 /*$gray-scale-light:      #DCDCDC;*/

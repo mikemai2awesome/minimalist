@@ -1,0 +1,126 @@
+$plane-max-width: 1440px;
+
+@mixin plane-max-width {
+  margin: 0 auto;
+  max-width: $plane-max-width;
+}
+
+@mixin plane-full-width {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+
+.c-#{ns}-plane {
+  position: relative;
+}
+
+@each $value in $_h-spacing-scale-values {
+  $value-name: nth($value, 1);
+
+  .c-#{ns}-plane--h-inset-#{$value-name} {
+    padding-right: (h-spacing-scale(#{$value-name})) + rem;
+    padding-left: (h-spacing-scale(#{$value-name})) + rem;
+  }
+}
+
+@each $value in $_v-spacing-scale-values {
+  $value-name: nth($value, 1);
+
+  .c-#{ns}-plane--v-inset-#{$value-name} {
+    padding-top: (v-spacing-scale(#{$value-name})) + rem;
+    padding-bottom: (v-spacing-scale(#{$value-name})) + rem;
+
+    .c-#{ns}-plane-deck {
+      min-height: (v-spacing-scale(#{$value-name})) + rem;
+    }
+
+    .c-#{ns}-plane-deck--upper {
+      margin-top: (v-spacing-scale(#{$value-name}) * -1) + rem;
+    }
+
+    .c-#{ns}-plane-deck--lower {
+      margin-bottom: (v-spacing-scale(#{$value-name}) * -1) + rem;
+    }
+  }
+}
+
+.c-#{ns}-plane-deck,
+.c-#{ns}-plane-cabin {
+  position: relative;
+}
+
+.c-#{ns}-plane-deck {
+  @include plane-max-width;
+
+  display: flex;
+
+  &--upper {
+    align-items: flex-start;
+  }
+
+  &--lower {
+    align-items: flex-end;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    margin-top: (v-spacing-scale(xsmall)) + rem;
+    margin-right: (h-spacing-scale(xsmall) * -1 / 2) + rem;
+    margin-bottom: (v-spacing-scale(xsmall)) + rem;
+    margin-left: (h-spacing-scale(xsmall) * -1 / 2) + rem;
+
+    &__item {
+      padding-right: (h-spacing-scale(xsmall) / 2) + rem;
+      padding-left: (h-spacing-scale(xsmall) / 2) + rem;
+
+      &--start {
+        margin-right: auto;
+        margin-left: 0;
+      }
+
+      &--end {
+        margin-right: 0;
+        margin-left: auto;
+      }
+
+      &--center {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.c-#{ns}-plane-cabin {
+  @include plane-max-width;
+
+  &--full {
+    @include plane-full-width;
+  }
+
+  &--demo {
+    color: black;
+    background-color: white;
+  }
+}
+
+.c-#{ns}-plane-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
