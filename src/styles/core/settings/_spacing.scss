@@ -3,27 +3,27 @@
 \*------------------------------------*/
 
 $_line-height: 1.65;
-$_gutter:      2;
+$_gutter:      3rem;
 
-$_h-spacing: $_gutter;
-$_v-spacing: ($_line-height - (($_line-height - 1) / 2));
+$_h-spacing:   $_gutter;
+$_v-spacing:   ($_line-height - (($_line-height - 1) / 2)) * 1rem;
 
 $_v-spacing-scale-values: (
-  xxlarge:      $_v-spacing * 8,
-  xlarge:       $_v-spacing * 4,
-  large:        $_v-spacing * 2,
-  medium:       $_v-spacing * 1,
-  small:        $_v-spacing * .5,
-  xsmall:       $_v-spacing * .25,
-  xxsmall:      $_v-spacing * .125
+  xxlarge:     $_v-spacing * 8,
+  xlarge:      $_v-spacing * 4,
+  large:       $_v-spacing * 2,
+  medium:      $_v-spacing * 1,
+  small:       $_v-spacing * .5,
+  xsmall:      $_v-spacing * .25,
+  xxsmall:     $_v-spacing * .125
 );
 
 $_h-spacing-scale-values: (
-  xxlarge:      $_h-spacing * 8,
-  xlarge:       $_h-spacing * 4,
-  large:        $_h-spacing * 2,
-  medium:       $_h-spacing * 1,
-  small:        $_h-spacing * .5,
-  xsmall:       $_h-spacing * .25,
-  xxsmall:      $_h-spacing * .125
+  xxlarge:     $_h-spacing * 8,
+  xlarge:      $_h-spacing * 4,
+  large:       $_h-spacing * 2,
+  medium:      $_h-spacing * 1,
+  small:       $_h-spacing * .5,
+  xsmall:      $_h-spacing * .25,
+  xxsmall:     $_h-spacing * .125
 );

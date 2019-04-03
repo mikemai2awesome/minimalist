@@ -2,11 +2,13 @@
    Namespace
 \* ------------------------------------ */
 
-$ns: 'mnml';
+$ns: 'mnml'; // Namespace for the CSS classes.
 
 
 /* ------------------------------------ *\
-   Config
+   Basic Configurations
+   - For more specific configurations,
+     go to settings.
 \* ------------------------------------ */
 
 $font-size:
@@ -16,16 +18,5 @@ $font-size:
     + 0.25vw
   ) !default;
 
-$color:                 palette(black) !default;
-$background-color:      palette(white) !default;
-
-
-/*$gray-scale-light:      #DCDCDC;*/
-/*$code-color:            #CC0000;*/
-/*$code-background-color: lighten($code-color, 59%);*/
-/*$link-color:            mediumblue;*/
-
-/*$border-width:          1px;
-$border-style:          solid;
-$border-color:          $gray-scale-light;
-$border:                $border-width $border-style $border-color;*/
+$text-color:       palette(black) !default;
+$background-color: palette(white) !default;

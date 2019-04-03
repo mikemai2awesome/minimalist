@@ -2,18 +2,18 @@
    Color Settings
 \* ------------------------------------ */
 
-$_color-white: white;
-$_color-black: darken($_color-white,100%);
-$_color-gray: darken($_color-white,45%);
+$_color-white:     white;
+$_color-black:     darken($_color-white,100%);
+$_color-gray:      darken($_color-white,45%);
 $_color-off-white: darken($_color-white,4%);
 $_color-off-black: darken($_color-white,90%);
-$_color-yellow: yellow;
-$_color-green: #28a228;
-$_color-blue: #3455db;
-$_color-purple: #9b59b6;
-$_color-gold: #b8860b;
-$_color-orange: #ff4500;
-$_color-red: #ff0000;
+$_color-yellow:    yellow;
+$_color-green:     #28a228;
+$_color-blue:      #3455db;
+$_color-purple:    #9b59b6;
+$_color-gold:      #b8860b;
+$_color-orange:    #ff4500;
+$_color-red:       #ff0000;
 
 // Color palettes
 $_palettes: (

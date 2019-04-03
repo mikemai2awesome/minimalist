@@ -1,57 +1,65 @@
 $plane-max-width: 1440px;
 
 @mixin plane-max-width {
-  margin: 0 auto;
   max-width: $plane-max-width;
+  margin: 0 auto;
 }
 
 @mixin plane-full-width {
-  margin: 0;
   width: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 
-.c-#{ns}-plane {
+.c-#{$ns}-plane {
   position: relative;
+
+  &--blue {
+    background-color: rgba(palette(blue), 0.8);
+  }
+
+  &--red {
+    background-color: rgba(palette(red), 0.8);
+  }
 }
 
 @each $value in $_h-spacing-scale-values {
   $value-name: nth($value, 1);
 
-  .c-#{ns}-plane--h-inset-#{$value-name} {
-    padding-right: (h-spacing-scale(#{$value-name})) + rem;
-    padding-left: (h-spacing-scale(#{$value-name})) + rem;
+  .c-#{$ns}-plane--h-inset-#{$value-name} {
+    padding-right: h-spacing-scale(#{$value-name});
+    padding-left: h-spacing-scale(#{$value-name});
   }
 }
 
 @each $value in $_v-spacing-scale-values {
   $value-name: nth($value, 1);
 
-  .c-#{ns}-plane--v-inset-#{$value-name} {
-    padding-top: (v-spacing-scale(#{$value-name})) + rem;
-    padding-bottom: (v-spacing-scale(#{$value-name})) + rem;
+  .c-#{$ns}-plane--v-inset-#{$value-name} {
+    padding-top: v-spacing-scale(#{$value-name});
+    padding-bottom: v-spacing-scale(#{$value-name});
 
-    .c-#{ns}-plane-deck {
-      min-height: (v-spacing-scale(#{$value-name})) + rem;
+    .c-#{$ns}-plane-deck {
+      min-height: v-spacing-scale(#{$value-name});
     }
 
-    .c-#{ns}-plane-deck--upper {
-      margin-top: (v-spacing-scale(#{$value-name}) * -1) + rem;
+    .c-#{$ns}-plane-deck--upper {
+      margin-top: v-spacing-scale(#{$value-name}) * -1;
     }
 
-    .c-#{ns}-plane-deck--lower {
-      margin-bottom: (v-spacing-scale(#{$value-name}) * -1) + rem;
+    .c-#{$ns}-plane-deck--lower {
+      margin-bottom: v-spacing-scale(#{$value-name}) * -1;
     }
   }
 }
 
-.c-#{ns}-plane-deck,
-.c-#{ns}-plane-cabin {
+.c-#{$ns}-plane-deck,
+.c-#{$ns}-plane-cabin {
   position: relative;
 }
 
-.c-#{ns}-plane-deck {
+.c-#{$ns}-plane-deck {
   @include plane-max-width;
 
   display: flex;
@@ -70,14 +78,14 @@ $plane-max-width: 1440px;
     flex-direction: row;
     justify-content: space-between;
     flex: 1;
-    margin-top: (v-spacing-scale(xsmall)) + rem;
-    margin-right: (h-spacing-scale(xsmall) * -1 / 2) + rem;
-    margin-bottom: (v-spacing-scale(xsmall)) + rem;
-    margin-left: (h-spacing-scale(xsmall) * -1 / 2) + rem;
+    margin-top: v-spacing-scale(xsmall);
+    margin-right: h-spacing-scale(xsmall) / 2 * -1;
+    margin-bottom: v-spacing-scale(xsmall);
+    margin-left: h-spacing-scale(xsmall) / 2 * -1;
 
     &__item {
-      padding-right: (h-spacing-scale(xsmall) / 2) + rem;
-      padding-left: (h-spacing-scale(xsmall) / 2) + rem;
+      padding-right: h-spacing-scale(xsmall) / 2;
+      padding-left: h-spacing-scale(xsmall) / 2;
 
       &--start {
         margin-right: auto;
@@ -97,20 +105,15 @@ $plane-max-width: 1440px;
   }
 }
 
-.c-#{ns}-plane-cabin {
+.c-#{$ns}-plane-cabin {
   @include plane-max-width;
 
   &--full {
     @include plane-full-width;
   }
-
-  &--demo {
-    color: black;
-    background-color: white;
-  }
 }
 
-.c-#{ns}-plane-background {
+.c-#{$ns}-plane-background {
   position: absolute;
   top: 0;
   right: 0;
