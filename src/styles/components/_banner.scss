@@ -4,7 +4,7 @@
 
 .c-#{$ns}-banner {
   margin-top: 0;
-  margin-bottom: (v-spacing-scale(medium) * 1.15) + rem;
+  margin-bottom: v-spacing(medium) * 1.15;
 
   &:last-child {
     margin-bottom: 0;

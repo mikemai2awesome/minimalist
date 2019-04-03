@@ -2,12 +2,12 @@
   Spacing Tools
 \*------------------------------------*/
 
-@function v-spacing-scale($name) {
-  @return map-get($_v-spacing-scale-values, $name);
+@function v-spacing($name) {
+  @return map-get($_v-spacing-values, $name);
 }
 
-@function h-spacing-scale($name) {
-  @return map-get($_h-spacing-scale-values, $name);
+@function h-spacing($name) {
+  @return map-get($_h-spacing-values, $name);
 }
 
 @mixin reset-spacing {

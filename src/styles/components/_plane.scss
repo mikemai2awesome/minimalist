@@ -24,32 +24,32 @@ $plane-max-width: 1440px;
   }
 }
 
-@each $value in $_h-spacing-scale-values {
+@each $value in $_h-spacing-values {
   $value-name: nth($value, 1);
 
   .c-#{$ns}-plane--h-inset-#{$value-name} {
-    padding-right: h-spacing-scale(#{$value-name});
-    padding-left: h-spacing-scale(#{$value-name});
+    padding-right: h-spacing(#{$value-name});
+    padding-left: h-spacing(#{$value-name});
   }
 }
 
-@each $value in $_v-spacing-scale-values {
+@each $value in $_v-spacing-values {
   $value-name: nth($value, 1);
 
   .c-#{$ns}-plane--v-inset-#{$value-name} {
-    padding-top: v-spacing-scale(#{$value-name});
-    padding-bottom: v-spacing-scale(#{$value-name});
+    padding-top: v-spacing(#{$value-name});
+    padding-bottom: v-spacing(#{$value-name});
 
     .c-#{$ns}-plane-deck {
-      min-height: v-spacing-scale(#{$value-name});
+      min-height: v-spacing(#{$value-name});
     }
 
     .c-#{$ns}-plane-deck--upper {
-      margin-top: v-spacing-scale(#{$value-name}) * -1;
+      margin-top: v-spacing(#{$value-name}) * -1;
     }
 
     .c-#{$ns}-plane-deck--lower {
-      margin-bottom: v-spacing-scale(#{$value-name}) * -1;
+      margin-bottom: v-spacing(#{$value-name}) * -1;
     }
   }
 }
@@ -78,14 +78,14 @@ $plane-max-width: 1440px;
     flex-direction: row;
     justify-content: space-between;
     flex: 1;
-    margin-top: v-spacing-scale(xsmall);
-    margin-right: h-spacing-scale(xsmall) / 2 * -1;
-    margin-bottom: v-spacing-scale(xsmall);
-    margin-left: h-spacing-scale(xsmall) / 2 * -1;
+    margin-top: v-spacing(xsmall);
+    margin-right: h-spacing(xsmall) / 2 * -1;
+    margin-bottom: v-spacing(xsmall);
+    margin-left: h-spacing(xsmall) / 2 * -1;
 
     &__item {
-      padding-right: h-spacing-scale(xsmall) / 2;
-      padding-left: h-spacing-scale(xsmall) / 2;
+      padding-right: h-spacing(xsmall) / 2;
+      padding-left: h-spacing(xsmall) / 2;
 
       &--start {
         margin-right: auto;
