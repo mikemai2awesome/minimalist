@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Normalize | MNML CSS Framework</title>
+    <link rel="stylesheet" type="text/css" href="src/styles/main.css">
+  </head>
+  <body>
+    <div class="c-mnml-plane c-mnml-plane--article c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xlarge t-mnml-dark">
+      <div class="c-mnml-plane-cabin">
+        <div class="c-mnml-plane-cabin__content">
+          <header role="banner" class="c-mnml-banner">
+            <h1 class="c-mnml-banner__headline">Normalize.css + Better Typography</h1>
+            <p class="c-mnml-banner__lead"><em>Normalize.css</em> itself is opinionated and this modified version is even more opinionated, but in a very good way. This code is based on the <code>v8.0.0</code> of <em>Normalize.css</em>, with additions of basic typographic styles. Its purpose is to serve as the standard reset for starting any minmal design projects, all styles aim to mimic the browser defaults with a touch of polish.</p>
+          </header>
+        </div>
+      </div>
+    </div>
+    <main class="c-mnml-plane c-mnml-plane--article c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-large">
+      <div class="c-mnml-plane-cabin">
+        <article class="c-mnml-plane-cabin__content">
+          <h2>Spacing Rules</h2>
+          <p>Elements are spaced using single-direction margin declarations, in this case, <code>margin-bottom</code>. Base spacing unit is equal to the leading (line-height) minus the space between mean line and the top bearing line: <code>1.65 - (1.65 - 1) / 2</code>. That means block elements are spaced <code>1.325rem</code> in-between vertically.</p>
+          <p>Headings and lists would be exempt from the standard spacing because they should vary to indicate clear information grouping.</p>
+          <hr>
+          <h2>List of Elements</h2>
+          <p>Default styles for some of the generic <code>html</code> elements.</p>
+          <h3>Headings</h3>
+          <figure>
+            <h1>This is h1</h1>
+            <h2>This is h2</h2>
+            <h3>This is h3</h3>
+            <h4>This is h4</h4>
+            <h5>This is h5</h5>
+            <h6>This is h6</h6>
+          </figure>
+          <h3>Horizontal Rule</h3>
+          <figure>
+            <hr>
+          </figure>
+          <h3>Preformatted</h3>
+          <p><mark><em>Note: this style is very opinionated.</em></mark></p>
+          <figure>
+            <pre><code>// This is a block of code.<br>pre { display: block; }</code></pre>
+            <p>This is inline <code>code</code> text.</p>
+          </figure>
+          <h3>Anchor</h3>
+          <figure>
+            <p>This is a <a href="javascript:">link</a>.</p>
+            <p>This is a <a href="">visited link</a>.</p>
+          </figure>
+          <h3>Abbreviation</h3>
+          <figure>
+            <p><abbr title="This is an abbreviation">TIAA</abbr></p>
+          </figure>
+          <h3>Strong</h3>
+          <figure>
+            <p>This is <strong>strong</strong> and this is <b>b</b> (obsolete tag).</p>
+          </figure>
+          <h3>Small</h3>
+          <figure>
+            <p>This is <small>small</small>.</p>
+          </figure>
+          <h3>Scripts</h3>
+          <figure>
+            <p>This is a super<sup>script</sup>. This is a sub<sub>script</sub>.</p>
+          </figure>
+          <h3>Un-ordered List</h3>
+          <ul>
+            <li>This is a list item.</li>
+            <li>This is a list item.</li>
+            <li>This is a list item.</li>
+          </ul>
+          <h3>Ordered List</h3>
+          <ol>
+            <li>This is a list item.</li>
+            <li>This is a list item.</li>
+            <li>This is a list item.</li>
+          </ol>
+          <h3>Figure</h3>
+          <figure>
+            <img src="http://via.placeholder.com/900x600" alt="Bill">
+            <figcaption>
+              Fig 1: This is an image.
+            </figcaption>
+          </figure>
+          <p><mark><em>Note: this style is very opinionated.</em></mark></p>
+          <figure>
+            <table>
+              <thead>
+                <tr>
+                  <th>Heading</th>
+                  <th width="30">Heading</th>
+                  <th width="30">Heading</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>cell</td>
+                  <td>cell</td>
+                  <td>cell</td>
+                </tr>
+                <tr>
+                  <td>cell</td>
+                  <td>cell</td>
+                  <td>cell</td>
+                </tr>
+              </tbody>
+            </table>
+            <figcaption>
+              Fig 2: This is a table.
+            </figcaption>
+          </figure>
+          <h3>Blockquote</h3>
+          <blockquote>
+            <p>
+              <q>Simplicity is the ultimate sophistication.</q>
+            </p>
+            <footer>
+              <small>
+                - <cite>Leonardo da Vinci</cite>
+              </small>
+            </footer>
+          </blockquote>
+          <h3>Button</h3>
+          <figure>
+            <p>This is a <button>button</button>.</p>
+          </figure>
+          <h3>Select</h3>
+          <figure>
+            <p>This is a <select name="select" id="select"><optgroup><option value="Select" disabled selected>Select</option><option value="Option 1">Option 1</option></optgroup></select>.</p>
+          </figure>
+          <h3>Inputs</h3>
+          <figure>
+            <p>This is an <input type="text" placeholder="input">.</p>
+          </figure>
+          <h3>Progress</h3>
+          <figure>
+            <p>
+              <progress value="22" max="100"></progress>
+            </p>
+          </figure>
+          <h3>Upload</h3>
+          <figure>
+            <p>
+              <input name="myFile" type="file">
+            </p>
+          </figure>
+          <h3>Form</h3>
+          <figure>
+            <form action="submit">
+              <fieldset>
+                <legend>This is a fieldset</legend>
+                <ol>
+                  <li>
+                    <label>
+                      <div>Input</div>
+                      <input type="text" placeholder="Text input" value="This is a text input.">
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <div>Textarea</div>
+                      <textarea name="textarea" id="" cols="30" rows="10" placeholder="Textarea">This is a textarea.</textarea>
+                    </label>
+                  </li>
+                </ol>
+              </fieldset>
+              <fieldset>
+                <legend>This is another fieldset</legend>
+                <ol>
+                  <li>
+                    <label>
+                      <input type="radio" name="radio">
+                      This is a radio input.
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="radio">
+                      This is a radio input.
+                    </label>
+                  </li>
+                </ol>
+              </fieldset>
+              <fieldset>
+                <legend>This is yet another fieldset</legend>
+                <ol>
+                  <li>
+                    <label>
+                      <input type="checkbox" name="checkbox">
+                      This is a checkbox input.
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" name="checkbox">
+                      This is a checkbox input.
+                    </label>
+                  </li>
+                </ol>
+              </fieldset>
+            </form>
+          </figure>
+          <h3>Details</h3>
+          <figure>
+            <details>
+              <summary>This is the summary.</summary>
+              <p>This is the details.</p>
+            </details>
+          </figure>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

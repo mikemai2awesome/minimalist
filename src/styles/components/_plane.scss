@@ -1,14 +1,16 @@
-$plane-max-width: 1440px;
+@mixin plane-max-width($width) {
+  @if $width == 'article' {
+    max-width: 66ch;
+  }
+  @else if $width == 'large' {
+    max-width: breakpoint(large);
+  }
+  @else if $width == 'xlarge' {
+    max-width: breakpoint(xlarge);
+  }
 
-@mixin plane-max-width {
-  max-width: $plane-max-width;
-  margin: 0 auto;
-}
-
-@mixin plane-full-width {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 
@@ -60,8 +62,6 @@ $plane-max-width: 1440px;
 }
 
 .c-#{$ns}-plane-deck {
-  @include plane-max-width;
-
   display: flex;
 
   &--upper {
@@ -105,11 +105,24 @@ $plane-max-width: 1440px;
   }
 }
 
-.c-#{$ns}-plane-cabin {
-  @include plane-max-width;
+.c-#{$ns}-plane--article {
+  .c-#{$ns}-plane-deck,
+  .c-#{$ns}-plane-cabin {
+    @include plane-max-width(article);
+  }
+}
 
-  &--full {
-    @include plane-full-width;
+.c-#{$ns}-plane--large {
+  .c-#{$ns}-plane-deck,
+  .c-#{$ns}-plane-cabin {
+    @include plane-max-width(large);
+  }
+}
+
+.c-#{$ns}-plane--xlarge {
+  .c-#{$ns}-plane-deck,
+  .c-#{$ns}-plane-cabin {
+    @include plane-max-width(xlarge);
   }
 }
 

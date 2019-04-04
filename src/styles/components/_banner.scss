@@ -9,13 +9,20 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
 
-  h1 {
-    font-size: type-scale(xxxlarge-min) + rem;
+.c-#{$ns}-banner__headline {
+  margin-bottom: v-spacing(medium) / 2;
+  line-height: 1.25;
+  font-size: type-scale(xxxlarge-min) + rem;
 
-    @include respond-to(small) {
-      line-height: 1.125;
-      font-size: type-scale(xxxlarge-max) + rem;
-    }
+  @include respond-to(small) {
+    margin-bottom: v-spacing(medium);
+    line-height: 1.125;
+    font-size: type-scale(xxxlarge-max) + rem;
   }
+}
+
+.c-#{$ns}-banner__lead {
+  font-size: type-scale(large) + rem;
 }
