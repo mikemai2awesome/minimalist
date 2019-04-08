@@ -3,12 +3,12 @@
 \*------------------------------------*/
 
 @function z-index($name) {
-  $z-index: index($_z-indexes, $name);
+  $z-index: index(map-keys($_z-indexes), $name);
 
   @if $z-index {
     @return $z-index;
   }
 
-  @warn 'There is no "#{$name}" in the z-index scale; choose one of: #{$_z-indexes}';
+  @warn 'There is no z-index named "#{$name}". Please refer to the z-index map.';
   @return null;
 }

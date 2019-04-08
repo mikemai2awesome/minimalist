@@ -3,7 +3,12 @@
 \*------------------------------------*/
 
 $_z-indexes: (
-  absolute,
-  sticky,
-  modal
+  background: (),
+  content: (),
+  popover: (),
+  tooltip: (),
+  nav: (),
+  overlay: (),
+  modal: (),
+  fab: (),
 );
