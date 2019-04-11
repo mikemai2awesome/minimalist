@@ -3,18 +3,19 @@
 \*------------------------------------*/
 
 $typefaces: (
-  body:    #{'Georgia', serif},
-  heading: #{-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif},
-  mono:    #{monospace, monospace}
+  body:     #{'Georgia', serif},
+  heading:  #{-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif},
+  smallcap: (),
+  mono:     #{monospace, monospace}
 ) !default;
 
 $type-size-values: (
-  xxxlarge-max: 3.50rem,
-  xxxlarge-min: 2.25rem,
-  xxlarge:      2.00rem,
-  xlarge:       1.50rem,
-  large:        1.17rem,
+  xxxlarge-max: 4rem,
+  xxxlarge-min: 3rem,
+  xxlarge:      2.25rem,
+  xlarge:       1.75rem,
+  large:        1.25rem,
   medium:       1.00rem,
-  small:        0.83rem,
-  xsmall:       0.67rem
+  small:        0.9rem,
+  xsmall:       0.75rem
 ) !default;

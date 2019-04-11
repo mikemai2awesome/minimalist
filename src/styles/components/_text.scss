@@ -10,6 +10,11 @@
 .c-#{$ns}-text--heading {
   letter-spacing: -0.025rem;
   font-family: typeface(heading);
+
+  &.c-#{$ns}-text--xsmall {
+    letter-spacing: 0.1rem;
+    font-family: typeface(smallcap);
+  }
 }
 
 

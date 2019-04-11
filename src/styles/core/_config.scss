@@ -9,7 +9,7 @@ $ns: 'mnml' !default; // Namespace for the CSS classes.
    Google Fonts
 \* ------------------------------------ */
 
-@import url('https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i|Zilla+Slab:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i|Spectral+SC:700|Spectral:400,400i,700,700i');
 
 
 /* ------------------------------------ *\
@@ -19,9 +19,10 @@ $ns: 'mnml' !default; // Namespace for the CSS classes.
 \* ------------------------------------ */
 
 $typefaces: (
-  body:    #{'Zilla Slab', 'Georgia', serif},
-  heading: #{'Barlow', sans-serif},
-  mono:    #{monospace, monospace}
+  body:     #{'Barlow', sans-serif},
+  heading:  #{'Spectral', 'Georgia', serif},
+  smallcap: #{'Spectral SC', 'Georgia', serif},
+  mono:     #{monospace, monospace}
 ) !global;
 
 $font-size:
