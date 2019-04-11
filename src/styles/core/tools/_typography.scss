@@ -3,9 +3,9 @@
 \*------------------------------------*/
 
 @function typeface($name) {
-  @return map-get($_typefaces, $name);
+  @return map-get($typefaces, $name);
 }
 
-@function type-scale($name) {
-  @return map-get($_type-scale-values, $name);
+@function type-size($name) {
+  @return map-get($type-size-values, $name);
 }

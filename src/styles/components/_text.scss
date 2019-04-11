@@ -1,0 +1,88 @@
+/*------------------------------------*\
+  Text
+\*------------------------------------*/
+
+// Type Options
+.c-#{$ns}-text {
+  font-family: typeface(body);
+}
+
+.c-#{$ns}-text--heading {
+  letter-spacing: -0.025rem;
+  font-family: typeface(heading);
+}
+
+
+// Size Options
+.c-#{$ns}-text--xxlarge {
+  font-size: type-size(xxlarge);
+}
+
+.c-#{$ns}-text--xlarge {
+  font-size: type-size(xlarge);
+}
+
+.c-#{$ns}-text--large,
+.c-#{$ns}-text--lede {
+  font-size: type-size(large);
+}
+
+.c-#{$ns}-text--medium {
+  font-size: type-size(medium);
+}
+
+.c-#{$ns}-text--small {
+  font-size: type-size(small);
+}
+
+.c-#{$ns}-text--xsmall {
+  font-size: type-size(xsmall);
+}
+
+.c-#{$ns}-text--display {
+  font-size: type-size(xxxlarge-min);
+
+  @include respond-to(small) {
+    font-size: type-size(xxxlarge-max);
+  }
+}
+
+
+// Display Options
+.c-#{$ns}-text {
+  display: inline;
+}
+
+.c-#{$ns}-text--block {
+  display: block;
+  margin-top: 0;
+  line-height: $line-height;
+
+  &:not(.c-#{$ns}-text--heading) {
+    margin-bottom: v-spacing(medium);
+  }
+
+  &.c-#{$ns}-text--heading {
+    margin-bottom: v-spacing(xsmall);
+    line-height: 1.375;
+
+    &.c-#{$ns}-text--xxlarge {
+      margin-bottom: v-spacing(small);
+      line-height: 1.25;
+    }
+  }
+
+  .c-#{$ns}-text--display {
+    margin-bottom: v-spacing(medium) / 2;
+    line-height: 1.25;
+
+    @include respond-to(small) {
+      margin-bottom: v-spacing(medium);
+      line-height: 1.125;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

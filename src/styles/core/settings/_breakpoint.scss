@@ -2,7 +2,7 @@
   Breakpoint Settings
 \*------------------------------------*/
 
-$_breakpoints: (
+$breakpoints: (
   xxsmall:  20em,
   xsmall:   25em,
   small:    37.5em,
@@ -11,4 +11,4 @@ $_breakpoints: (
   xlarge:   75em,
   xxlarge:  87.5em,
   xxxlarge: 120em
-);
+) !default;

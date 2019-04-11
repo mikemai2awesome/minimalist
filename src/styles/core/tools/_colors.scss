@@ -4,7 +4,7 @@
 
 // Palette function
 @function palette($color, $tone: 'initial') {
-  @return map-get-deep($_palettes, $color, $tone);
+  @return map-get-deep($palettes, $color, $tone);
 }
 
 // Text contrast

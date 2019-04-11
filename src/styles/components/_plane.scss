@@ -26,7 +26,7 @@
   }
 }
 
-@each $value in $_h-spacing-values {
+@each $value in $h-spacing-values {
   $value-name: nth($value, 1);
 
   .c-#{$ns}-plane--h-inset-#{$value-name} {
@@ -35,7 +35,7 @@
   }
 }
 
-@each $value in $_v-spacing-values {
+@each $value in $v-spacing-values {
   $value-name: nth($value, 1);
 
   .c-#{$ns}-plane--v-inset-#{$value-name} {

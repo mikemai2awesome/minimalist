@@ -2,19 +2,19 @@
   Typography Settings
 \*------------------------------------*/
 
-$_typefaces: (
+$typefaces: (
   body:    #{'Georgia', serif},
   heading: #{-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif},
   mono:    #{monospace, monospace}
-);
+) !default;
 
-$_type-scale-values: (
-  xxxlarge-max: 3.50,
-  xxxlarge-min: 2.25,
-  xxlarge:      2.00,
-  xlarge:       1.50,
-  large:        1.17,
-  medium:       1.00,
-  small:        0.83,
-  xsmall:       0.67
-);
+$type-size-values: (
+  xxxlarge-max: 3.50rem,
+  xxxlarge-min: 2.25rem,
+  xxlarge:      2.00rem,
+  xlarge:       1.50rem,
+  large:        1.17rem,
+  medium:       1.00rem,
+  small:        0.83rem,
+  xsmall:       0.67rem
+) !default;

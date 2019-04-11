@@ -2,7 +2,7 @@
   Z-Index Settings
 \*------------------------------------*/
 
-$_z-indexes: (
+$z-indexes: (
   background: (),
   content: (),
   popover: (),
@@ -11,4 +11,4 @@ $_z-indexes: (
   overlay: (),
   modal: (),
   fab: (),
-);
+) !default;

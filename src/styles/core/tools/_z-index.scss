@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 @function z-index($name) {
-  $z-index: index(map-keys($_z-indexes), $name);
+  $z-index: index(map-keys($z-indexes), $name);
 
   @if $z-index {
     @return $z-index;

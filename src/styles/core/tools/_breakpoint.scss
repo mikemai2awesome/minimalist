@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 @function breakpoint($name) {
-  @return map-get($_breakpoints, $name);
+  @return map-get($breakpoints, $name);
 }
 
 @mixin respond-to($min: 0, $max: 0, $orientation: 0) {

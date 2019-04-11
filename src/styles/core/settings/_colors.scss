@@ -2,67 +2,67 @@
    Color Settings
 \* ------------------------------------ */
 
-$_color-white:     white;
-$_color-black:     darken($_color-white,100%);
-$_color-gray:      darken($_color-white,45%);
-$_color-off-white: darken($_color-white,4%);
-$_color-off-black: darken($_color-white,90%);
-$_color-yellow:    yellow;
-$_color-green:     #28a228;
-$_color-blue:      #3455db;
-$_color-purple:    #9b59b6;
-$_color-gold:      #b8860b;
-$_color-orange:    #ff4500;
-$_color-red:       #ff0000;
+$color-white:     white !default;
+$color-black:     darken($color-white,100%) !default;
+$color-gray:      darken($color-white,45%) !default;
+$color-off-white: darken($color-white,4%) !default;
+$color-off-black: darken($color-white,90%) !default;
+$color-yellow:    yellow !default;
+$color-green:     #28a228 !default;
+$color-blue:      #3455db !default;
+$color-purple:    #9b59b6 !default;
+$color-gold:      #b8860b !default;
+$color-orange:    #ff4500 !default;
+$color-red:       #ff0000 !default;
 
 // Color palettes
-$_palettes: (
+$palettes: (
   blue: (
-    xlight:  mix($_color-white, $_color-blue, 65%),
-    light:   mix($_color-white, $_color-blue, 10%),
-    initial: $_color-blue,
-    dark:    mix($_color-black, $_color-blue, 25%),
-    xdark:   mix($_color-black, $_color-blue, 55%),
+    xlight:  mix($color-white, $color-blue, 65%),
+    light:   mix($color-white, $color-blue, 10%),
+    initial: $color-blue,
+    dark:    mix($color-black, $color-blue, 25%),
+    xdark:   mix($color-black, $color-blue, 55%),
   ),
   purple: (
-    light:   mix($_color-white, $_color-purple, 25%),
-    initial: $_color-purple,
-    dark:    mix($_color-black, $_color-purple, 50%)
+    light:   mix($color-white, $color-purple, 25%),
+    initial: $color-purple,
+    dark:    mix($color-black, $color-purple, 50%)
   ),
   yellow: (
-    light:   mix($_color-white, $_color-yellow, 25%),
-    initial: $_color-yellow,
-    dark:    mix($_color-black, $_color-yellow, 50%)
+    light:   mix($color-white, $color-yellow, 25%),
+    initial: $color-yellow,
+    dark:    mix($color-black, $color-yellow, 50%)
   ),
   green: (
-    light:   mix($_color-white, $_color-green, 25%),
-    initial: $_color-green,
-    dark:    mix($_color-black, $_color-green, 50%)
+    light:   mix($color-white, $color-green, 25%),
+    initial: $color-green,
+    dark:    mix($color-black, $color-green, 50%)
   ),
   red: (
-    light:   mix($_color-white, $_color-red, 25%),
-    initial: $_color-red,
-    dark:    mix($_color-black, $_color-red, 50%)
+    light:   mix($color-white, $color-red, 25%),
+    initial: $color-red,
+    dark:    mix($color-black, $color-red, 50%)
   ),
   orange: (
-    light:   mix($_color-white, $_color-orange, 25%),
-    initial: $_color-orange,
-    dark:    mix($_color-black, $_color-orange, 50%)
+    light:   mix($color-white, $color-orange, 25%),
+    initial: $color-orange,
+    dark:    mix($color-black, $color-orange, 50%)
   ),
   gold: (
-    light:   mix($_color-white, $_color-gold, 25%),
-    initial: $_color-gold,
-    dark:    mix($_color-black, $_color-gold, 50%)
+    light:   mix($color-white, $color-gold, 25%),
+    initial: $color-gold,
+    dark:    mix($color-black, $color-gold, 50%)
   ),
   gray: (
-    light:   $_color-off-white,
-    initial: $_color-gray,
-    dark:    $_color-off-black
+    light:   $color-off-white,
+    initial: $color-gray,
+    dark:    $color-off-black
   ),
   black: (
-    initial: $_color-black
+    initial: $color-black
   ),
   white: (
-    initial: $_color-white
+    initial: $color-white
   ),
-);
+) !default;
