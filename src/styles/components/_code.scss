@@ -2,28 +2,40 @@
    Code
 \* ------------------------------------ */
 
+.c-#{$ns}-code,
+.c-#{$ns}-code-block {
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  word-spacing: normal;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
 .c-#{$ns}-code {
+  @include shadow-border(thick, rgba($code-text-color, 0.1));
+
   display: inline;
-  margin: 0 0.15rem;
-  padding: 2px 7px 3px 7px;
+  margin: 0 border-width(thick);
+  padding: 2px h-spacing(xxsmall) 3px h-spacing(xxsmall);
   color: $code-text-color;
   text-align: left;
   font-family: typeface(mono);
   font-size: type-size(xsmall);
-  border-radius: 0.5em;
+  border-radius: border-radius(large);
   background-color: $code-background-color;
-  box-shadow: 0 0 0 0.15rem rgba($code-text-color, 0.1);
 
   @at-root .c-#{$ns}-code-block & {
     display: block;
-    overflow: auto;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
     margin: 0;
     padding: v-spacing(xsmall) h-spacing(small);
-    white-space: nowrap;
   }
 }
 
 .c-#{$ns}-code-block {
-  display: block;
+  display: flex;
   font-size: type-size(xsmall);
 }

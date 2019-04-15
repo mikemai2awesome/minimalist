@@ -1,0 +1,28 @@
+/*------------------------------------*\
+  Border radius Tools
+\*------------------------------------*/
+
+@function border-radius($radius) {
+  @if map-has-key($border-radius-values, $radius) {
+    @return map-get($border-radius-values, $radius)
+  } @else {
+    @error 'A radius, #{$radius}, was passed into border-radius() function that is not defined in $border-radius-values';
+  }
+}
+
+@function border-width($width) {
+  @if map-has-key($border-width-values, $width) {
+    @return map-get($border-width-values, $width)
+  } @else {
+    @error 'A width, #{$width}, was passed into border-width() function that is not defined in $border-width-values';
+  }
+}
+
+@mixin shadow-border($width, $color) {
+  @if map-has-key($border-width-values, $width) {
+    $border-width: map-get-deep($border-width-values, $width);
+    box-shadow: 0 0 0 $border-width $color;
+  } @else {
+    @error 'A width, #{$width}, was passed into shadow-border() mixin that is not defined in $border-width-values';
+  }
+}

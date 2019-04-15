@@ -1,8 +1,10 @@
 @import 'map-get-deep';
+
+@import 'border';
+@import 'breakpoint';
 @import 'colors';
 @import 'spacing';
 @import 'strip-unit';
 @import 'typography';
-@import 'breakpoint';
-@import 'z-index';
 @import 'visuallyhidden';
+@import 'z-index';
