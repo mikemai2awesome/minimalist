@@ -1,0 +1,29 @@
+/* ------------------------------------ *\
+   Code
+\* ------------------------------------ */
+
+.c-#{$ns}-code {
+  display: inline;
+  margin: 0 0.15rem;
+  padding: 2px 7px 3px 7px;
+  color: $code-text-color;
+  text-align: left;
+  font-family: typeface(mono);
+  font-size: type-size(xsmall);
+  border-radius: 0.5em;
+  background-color: $code-background-color;
+  box-shadow: 0 0 0 0.15rem rgba($code-text-color, 0.1);
+
+  @at-root .c-#{$ns}-code-block & {
+    display: block;
+    overflow: auto;
+    margin: 0;
+    padding: v-spacing(xsmall) h-spacing(small);
+    white-space: nowrap;
+  }
+}
+
+.c-#{$ns}-code-block {
+  display: block;
+  font-size: type-size(xsmall);
+}

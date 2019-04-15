@@ -32,5 +32,8 @@ $font-size:
     + 0.25vw
   ) !global;
 
-$text-color:       palette(black) !global;
-$background-color: palette(white) !global;
+$text-color:       palette(gray, dark) !global;
+$background-color: palette(gray, light) !global;
+
+$code-text-color:       palette(purple) !global;
+$code-background-color: rgba(palette(purple, light), 0.08) !global;

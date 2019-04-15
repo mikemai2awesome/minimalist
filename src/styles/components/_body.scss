@@ -3,7 +3,8 @@
 \* ------------------------------------ */
 
 .c-#{$ns}-body {
-  line-height: $line-height;
-  font-family: typeface(body);
-  font-size: $font-size;
+  margin: 0;
+  color: $text-color;
+  font-size: type-size(medium);
+  background-color: $background-color;
 }

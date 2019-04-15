@@ -1,0 +1,23 @@
+/* ------------------------------------ *\
+   List
+\* ------------------------------------ */
+
+.c-#{$ns}-list {
+  @include reset-spacing;
+
+  margin-bottom: v-spacing(medium);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.c-#{$ns}-list__item {
+  @include reset-spacing;
+
+  margin-bottom: v-spacing(xxsmall);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

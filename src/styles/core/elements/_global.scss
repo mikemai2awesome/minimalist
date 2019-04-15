@@ -1,0 +1,28 @@
+/* ------------------------------------ *\
+   Global elements
+\* ------------------------------------ */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  font-feature-settings: 'kern';
+  font-kerning: normal;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+html {
+  line-height: $line-height;
+  letter-spacing: 0.005rem;
+  font-family: typeface(body);
+  font-size: $font-size;
+  -webkit-text-size-adjust: 100%;
+}
+
+#{$all-block-elements} {
+  margin-top: 0;
+  margin-bottom: v-spacing(medium);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
