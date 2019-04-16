@@ -10,6 +10,7 @@
 .c-#{$ns}-text--heading {
   letter-spacing: -0.025em;
   font-family: typeface(heading);
+  font-weight: 700;
 
   &.c-#{$ns}-text--xsmall {
     letter-spacing: 0.1em;
@@ -61,7 +62,7 @@
 .c-#{$ns}-text--block {
   display: block;
   margin-top: 0;
-  line-height: $line-height;
+  line-height: line-height(regular);
 
   &:not(.c-#{$ns}-text--heading) {
     margin-bottom: v-spacing(medium);
@@ -69,21 +70,21 @@
 
   &.c-#{$ns}-text--heading {
     margin-bottom: v-spacing(xsmall);
-    line-height: 1.375;
+    line-height: line-height(tight);
 
     &.c-#{$ns}-text--xxlarge {
       margin-bottom: v-spacing(small);
-      line-height: 1.25;
+      line-height: line-height(xtight);
     }
-  }
 
-  .c-#{$ns}-text--display {
-    margin-bottom: v-spacing(medium) / 2;
-    line-height: 1.25;
+    &.c-#{$ns}-text--display {
+      margin-bottom: v-spacing(small);
+      line-height: line-height(xtight);
 
-    @include respond-to(small) {
-      margin-bottom: v-spacing(medium);
-      line-height: 1.125;
+      @include respond-to(small) {
+        margin-bottom: v-spacing(medium);
+        line-height: line-height(xxtight);
+      }
     }
   }
 

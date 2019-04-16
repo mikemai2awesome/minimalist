@@ -2,6 +2,10 @@
   Spacing Tools
 \*------------------------------------*/
 
+@function line-height($name) {
+  @return map-get($line-height-values, $name);
+}
+
 @function v-spacing($name) {
   @return map-get($v-spacing-values, $name);
 }
