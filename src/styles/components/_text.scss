@@ -5,6 +5,7 @@
 // Type Options
 .c-#{$ns}-text {
   font-family: typeface(body);
+  font-weight: 400;
 }
 
 .c-#{$ns}-text--heading {
@@ -18,6 +19,10 @@
   }
 }
 
+.c-#{$ns}-text--lede {
+  font-family: typeface(smallcap);
+  font-weight: 400;
+}
 
 // Size Options
 .c-#{$ns}-text--xxlarge {

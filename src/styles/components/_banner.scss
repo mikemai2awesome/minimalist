@@ -4,25 +4,9 @@
 
 .c-#{$ns}-banner {
   margin-top: 0;
-  margin-bottom: v-spacing(medium) * 1.15;
+  margin-bottom: v-spacing(large);
 
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.c-#{$ns}-banner__headline {
-  margin-bottom: v-spacing(medium) / 2;
-  line-height: 1.25;
-  font-size: type-size(xxxlarge-min);
-
-  @include respond-to(small) {
-    margin-bottom: v-spacing(medium);
-    line-height: 1.125;
-    font-size: type-size(xxxlarge-max);
-  }
-}
-
-.c-#{$ns}-banner__lead {
-  font-size: type-size(large);
 }
