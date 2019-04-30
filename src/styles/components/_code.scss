@@ -2,40 +2,61 @@
    Code
 \* ------------------------------------ */
 
-.c-#{$ns}-code,
-.c-#{$ns}-code-block {
+.c-#{$ns}-code-block,
+.c-#{$ns}-code-block .c-#{$ns}-code {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
   white-space: pre-wrap;
   word-spacing: normal;
   word-break: break-word;
   word-wrap: break-word;
+  border-radius: border-radius(large);
 }
 
 .c-#{$ns}-code {
-  @include shadow-border(thick, rgba($code-text-color, 0.1));
+  @include shadow-border(thin, rgba($code-text-color, 0.25));
 
   display: inline;
-  margin: 0 border-width(thick);
-  padding: 2px h-spacing(xxsmall) 3px h-spacing(xxsmall);
+  margin: 0;
+  padding: 1px h-spacing(xxsmall) 2px h-spacing(xxsmall);
   color: $code-text-color;
   text-align: left;
   font-family: typeface(mono);
-  font-size: type-size(xsmall);
-  border-radius: border-radius(large);
+  font-size: strip-unit(type-size(small)) + em;
+  border-radius: border-radius(small);
   background-color: $code-background-color;
 
   @at-root .c-#{$ns}-code-block & {
+    @include shadow-border(thick, $code-text-color);
+
     display: block;
-    width: 100%;
     overflow-y: auto;
     overflow-x: auto;
-    margin: 0;
-    padding: v-spacing(xsmall) h-spacing(small);
+    width: 100%;
+    padding: v-spacing(medium) h-spacing(small);
+    color: $text-color;
+    font-size: 1em;
   }
 }
 
 .c-#{$ns}-code-block {
   display: flex;
+  margin-right: (h-spacing(small) * -1);
+  margin-left: (h-spacing(small) * -1);
   font-size: type-size(xsmall);
+
+  &:before {
+    content: 'code';
+    position: absolute;
+    margin: 0 0 0 -0.5em;
+    padding: 0 0.5em;
+    color: $background-color;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: typeface(body);
+    font-size: type-size(xxsmall);
+    border-radius: border-radius(small);
+    background-color: $code-text-color;
+    transform: translate3d(h-spacing(small), -50%, 0);
+  }
 }
