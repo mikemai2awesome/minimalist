@@ -69,8 +69,27 @@
   margin-top: 0;
   line-height: line-height(regular);
 
+  &:before {
+    position: absolute;
+    font-family: typeface(smallcap);
+    font-weight: 400;
+    opacity: 0.1;
+    transform: translateX(calc(-100% - #{h-spacing(xxsmall)}));
+  }
+
   &:not(.c-#{$ns}-text--heading) {
     margin-bottom: v-spacing(medium);
+
+    &:before {
+      content: '\00B6';
+      font-size: type-size(xsmall);
+    }
+  }
+
+  &.c-#{$ns}-text--lede {
+    &:before {
+      display: none;
+    }
   }
 
   &.c-#{$ns}-text--heading {
@@ -78,8 +97,26 @@
     line-height: line-height(tight);
 
     &.c-#{$ns}-text--xxlarge {
-      margin-bottom: v-spacing(small);
+      margin-bottom: v-spacing(medium);
+      padding-bottom: v-spacing(xsmall);
       line-height: line-height(xtight);
+
+      &:before {
+        content: '\00A7';
+        font-size: type-size(medium);
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: h-spacing(large);
+        height: 2px;
+        color: inherit;
+        background-color: currentColor;
+        opacity: 0.1;
+        transform: translateY(v-spacing(xsmall));
+      }
     }
 
     &.c-#{$ns}-text--display {

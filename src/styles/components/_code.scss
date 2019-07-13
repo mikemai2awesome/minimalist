@@ -27,7 +27,7 @@
   background-color: $code-background-color;
 
   @at-root .c-#{$ns}-code-block & {
-    @include shadow-border(thick, $code-text-color);
+    @include shadow-border(thick, rgba($code-text-color, 0.25));
 
     display: block;
     overflow-y: auto;
