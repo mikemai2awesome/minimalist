@@ -5,7 +5,7 @@
 
 @mixin plane-max-width($width) {
   @if $width == 'article' {
-    max-width: 66ch;
+    max-width: 75ch;
   }
   @else if $width == 'large' {
     max-width: breakpoint(large);

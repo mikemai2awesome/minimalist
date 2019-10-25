@@ -34,7 +34,6 @@
     overflow-x: auto;
     width: 100%;
     padding: v-spacing(medium) h-spacing(small);
-    color: $text-color;
     font-size: 1em;
   }
 }
@@ -49,11 +48,11 @@
     content: 'code';
     position: absolute;
     margin: 0 0 0 -0.5em;
-    padding: 0 0.5em;
+    padding: 1px 0.5em 0 0.5em;
     color: $background-color;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-family: typeface(body);
+    font-family: typeface(heading);
     font-size: type-size(xxsmall);
     border-radius: border-radius(small);
     background-color: $code-text-color;

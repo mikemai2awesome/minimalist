@@ -3,12 +3,11 @@
 \*------------------------------------*/
 
 $z-indexes: (
-  background: (),
+  content-low: (),
   content: (),
-  popover: (),
-  tooltip: (),
-  nav: (),
+  content-high: (),
+  floating-low: (),
+  floating: (),
+  floating-high: (),
   overlay: (),
-  modal: (),
-  fab: (),
 ) !default;

@@ -11,17 +11,20 @@
 .c-#{$ns}-text--heading {
   letter-spacing: -0.025em;
   font-family: typeface(heading);
-  font-weight: 700;
+  font-weight: 400;
 
   &.c-#{$ns}-text--xsmall {
+    text-transform: uppercase;
     letter-spacing: 0.1em;
     font-family: typeface(smallcap);
+    font-weight: 800;
   }
 }
 
 .c-#{$ns}-text--lede {
+  text-transform: capitalize;
   font-family: typeface(smallcap);
-  font-weight: 400;
+  font-weight: 800;
 }
 
 // Size Options
@@ -29,12 +32,12 @@
   font-size: type-size(xxlarge);
 }
 
-.c-#{$ns}-text--xlarge {
+.c-#{$ns}-text--xlarge,
+.c-#{$ns}-text--lede {
   font-size: type-size(xlarge);
 }
 
-.c-#{$ns}-text--large,
-.c-#{$ns}-text--lede {
+.c-#{$ns}-text--large {
   font-size: type-size(large);
 }
 
@@ -71,9 +74,9 @@
 
   &:before {
     position: absolute;
-    font-family: typeface(smallcap);
+    font-family: typeface(body);
     font-weight: 400;
-    opacity: 0.1;
+    opacity: 0.2;
     transform: translateX(calc(-100% - #{h-spacing(xxsmall)}));
   }
 
@@ -87,6 +90,8 @@
   }
 
   &.c-#{$ns}-text--lede {
+    line-height: line-height(tight);
+
     &:before {
       display: none;
     }
@@ -121,6 +126,7 @@
 
     &.c-#{$ns}-text--display {
       margin-bottom: v-spacing(small);
+      margin-left: -0.05em;
       line-height: line-height(xtight);
 
       @include respond-to(small) {

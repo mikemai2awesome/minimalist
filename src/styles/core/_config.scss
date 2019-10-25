@@ -9,8 +9,7 @@ $ns: 'mnml' !default; // Namespace for the CSS classes.
    Google Fonts
 \* ------------------------------------ */
 
-@import url('https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i|Spectral+SC:400,700|Spectral:400,400i,700,700i');
-
+@import url('https://fonts.googleapis.com/css?family=Spectral:400,400i,700,700i|Alegreya+Sans+SC:800|Bungee&display=swap');
 
 /* ------------------------------------ *\
    Basic Configurations
@@ -19,16 +18,16 @@ $ns: 'mnml' !default; // Namespace for the CSS classes.
 \* ------------------------------------ */
 
 $typefaces: (
-  body:     #{'Barlow', sans-serif},
-  heading:  #{'Spectral', 'Georgia', serif},
-  smallcap: #{'Spectral SC', 'Georgia', serif},
+  body:     #{'Spectral', 'Georgia', serif},
+  heading:  #{'Bungee', Impact, sans-serif},
+  smallcap: #{'Alegreya Sans SC', sans-serif},
   mono:     #{monospace, monospace}
 ) !global;
 
 $font-size:
   // Only edit the px value.
   calc(
-    18px
+    16px
     + 0.25vw
   ) !global;
 
