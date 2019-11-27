@@ -2,10 +2,14 @@
    List
 \* ------------------------------------ */
 
+$bullet-color: $link-color !default;
+
 .c-#{$ns}-list {
   @include reset-spacing;
 
+  display: block;
   margin-bottom: v-spacing(medium);
+  list-style: none;
 
   &:last-child {
     margin-bottom: 0;
@@ -14,10 +18,182 @@
 
 .c-#{$ns}-list__item {
   @include reset-spacing;
+}
 
-  margin-bottom: v-spacing(xxsmall);
+.c-#{$ns}-list--unordered {
+  .c-#{$ns}-list__item {
+    position: relative;
+    margin-bottom: v-spacing(xxsmall);
 
-  &:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      position: absolute;
+      left: h-spacing(xsmall) * -1;
+      content: '\2059';
+      color: $bullet-color;
+      transform: translateX(-100%);
+    }
   }
 }
+
+.c-#{$ns}-list--ordered {
+  counter-reset: ordered-list-item;
+
+  .c-#{$ns}-list__item {
+    position: relative;
+    counter-increment: ordered-list-item;
+
+    &:before {
+      position: absolute;
+      left: h-spacing(xsmall) * -1;
+      content: counter(ordered-list-item);
+      color: $bullet-color;
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.c-#{$ns}-list--ordered,
+.c-#{$ns}-list--unordered {
+  .c-#{$ns}-list--ordered,
+  .c-#{$ns}-list--unordered {
+    margin-left: calc(#{h-spacing(small)} + 0.1rem);
+  }
+
+  &.is-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: v-spacing(xxsmall) * -1;
+    margin-left: h-spacing(small) * -2.25;
+
+    .c-#{$ns}-list__item {
+      display: inline-flex;
+      margin-top: v-spacing(xxsmall);
+      margin-bottom: 0;
+      margin-left: h-spacing(small) * 2.25;
+      vertical-align: middle;
+    }
+  }
+}
+
+.c-#{$ns}-list--bare {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .c-#{$ns}-list__item {
+    display: flex;
+    flex-basis: 100%;
+  }
+
+  &.is-horizontal {
+    flex-direction: row;
+    margin-bottom: v-spacing(medium) * -1;
+    margin-left: h-spacing(medium) * -1;
+
+    .c-#{$ns}-list__item {
+      display: inline-flex;
+      flex: 1;
+      flex-basis: 200px;
+      margin-bottom: v-spacing(medium);
+      margin-left: h-spacing(medium);
+    }
+  }
+}
+
+/*
+  &.inline {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -($gutter/8 + rem);
+    margin-bottom: -($line-height/8 + rem);
+
+    > li {
+      display: inline-block;
+      display: inline-flex;
+      margin-right: $gutter/8 + rem;
+      vertical-align: middle;
+    }
+  }
+
+  &.ui {
+    position: relative;
+    background-color: $off-white;
+
+    &:before,
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      background-color: $off-white;
+    }
+
+    &:after {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: $border-width;
+    }
+
+    > li {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+      padding-top: $line-height/2 + rem;
+      padding-right: $gutter/2 + rem;
+      padding-bottom: $line-height/2 + rem;
+      padding-left: $gutter/2 + rem;
+      border-bottom-width: $border-width;
+      border-bottom-style: $border-style;
+      border-bottom-color: $border-color;
+    }
+
+    &.horizontal {
+      display: flex;
+      flex-wrap: wrap;
+
+      &:before {
+        bottom: 0;
+        right: 0;
+        width: $border-width;
+        height: 100%;
+      }
+
+      > li {
+        display: flex;
+        flex: 1;
+        min-width: 150px;
+        border-right-width: $border-width;
+        border-right-style: $border-style;
+        border-right-color: $border-color;
+      }
+    }
+
+    &.comfortable {
+      padding-top: $line-height + rem;
+      padding-right: $gutter + rem;
+      padding-bottom: $line-height + rem;
+      padding-left: $gutter + rem;
+    }
+
+    &.cozy {
+      padding-top: $line-height/2 + rem;
+      padding-right: $gutter/2 + rem;
+      padding-bottom: $line-height/2 + rem;
+      padding-left: $gutter/2 + rem;
+    }
+
+    &.compact {
+      padding-top: $line-height/4 + rem;
+      padding-right: $gutter/2 + rem;
+      padding-bottom: $line-height/4 + rem;
+      padding-left: $gutter/2 + rem;
+    }
+  }
+*/

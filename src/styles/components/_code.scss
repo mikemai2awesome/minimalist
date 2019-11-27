@@ -2,6 +2,9 @@
    Code
 \* ------------------------------------ */
 
+$code-text-color: $link-color !default;
+$code-border-color: rgba($code-text-color, 0.25) !default;
+
 .c-#{$ns}-code-block,
 .c-#{$ns}-code-block .c-#{$ns}-code {
   white-space: -moz-pre-wrap;
@@ -14,7 +17,7 @@
 }
 
 .c-#{$ns}-code {
-  @include shadow-border(thin, rgba($code-text-color, 0.25));
+  @include shadow-border(thin, $code-border-color);
 
   display: inline;
   margin: 0;
@@ -24,10 +27,10 @@
   font-family: typeface(mono);
   font-size: strip-unit(type-size(small)) + em;
   border-radius: border-radius(small);
-  background-color: $code-background-color;
+  background-color: rgba(lighten($code-text-color, 50%), 0.95);
 
   @at-root .c-#{$ns}-code-block & {
-    @include shadow-border(thick, rgba($code-text-color, 0.25));
+    @include shadow-border(thick, $code-border-color);
 
     display: block;
     overflow-y: auto;
