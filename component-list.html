@@ -9,7 +9,7 @@
       <div class="c-mnml-plane-cabin">
         <div class="c-mnml-plane-cabin__content">
           <header role="banner" class="c-mnml-banner">
-            <p class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xsmall">Component</p>
+            <p class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xsmall">Layout component</p>
             <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--display">List</h1>
           </header>
         </div>
@@ -18,8 +18,9 @@
     <main class="c-mnml-plane c-mnml-plane--xlarge c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xlarge">
       <div class="c-mnml-plane-cabin">
         <article class="c-mnml-plane-cabin__content" style="display: flex; flex-direction: row; flex-wrap: wrap;">
-          <div class="t-mnml-dark" style="flex: 1; padding: 1rem 2rem; border: 1px dotted;">
-            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Unordered List</h2>
+          <div class="t-mnml-dark" style="flex: 1; padding: 2rem; border: 1px dashed gray;">
+            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Unordered List</h2>
+            <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Vertical</h3>
             <ul class="c-mnml-list c-mnml-list--unordered">
               <li class="c-mnml-list__item">
                 First level item
@@ -33,7 +34,13 @@
                       <li class="c-mnml-list__item">
                         Third level item
                       </li>
+                      <li class="c-mnml-list__item">
+                        Third level item
+                      </li>
                     </ul>
+                  </li>
+                  <li class="c-mnml-list__item">
+                    Second level item
                   </li>
                 </ul>
               </li>
@@ -41,32 +48,40 @@
                 First level item
               </li>
             </ul>
+            <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Horizontal</h3>
             <ul class="c-mnml-list c-mnml-list--unordered is-horizontal">
               <li class="c-mnml-list__item">
-                Inline item
+                Horizontal item
               </li>
               <li class="c-mnml-list__item">
-                Inline item
+                Horizontal item
               </li>
               <li class="c-mnml-list__item">
-                Inline item
+                Horizontal item
               </li>
             </ul>
-            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Ordered List</h2>
+            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Ordered List</h2>
+            <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Vertical</h3>
             <ol class="c-mnml-list c-mnml-list--ordered">
               <li class="c-mnml-list__item">
                 First level item
               </li>
               <li class="c-mnml-list__item">
-                First level item.
+                First level item
                 <ol class="c-mnml-list c-mnml-list--ordered">
                   <li class="c-mnml-list__item">
-                    Second level item.
+                    Second level item
                     <ol class="c-mnml-list c-mnml-list--ordered">
                       <li class="c-mnml-list__item">
-                        Third level item.
+                        Third level item
+                      </li>
+                      <li class="c-mnml-list__item">
+                        Third level item
                       </li>
                     </ol>
+                  </li>
+                  <li class="c-mnml-list__item">
+                    Second level item
                   </li>
                 </ol>
               </li>
@@ -74,18 +89,20 @@
                 First level item
               </li>
             </ol>
+            <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Horizontal</h3>
             <ol class="c-mnml-list c-mnml-list--ordered is-horizontal">
               <li class="c-mnml-list__item">
-                Inline item
+                Horizontal item
               </li>
               <li class="c-mnml-list__item">
-                Inline item
+                Horizontal item
               </li>
               <li class="c-mnml-list__item">
-                Inline item
+                Horizontal item
               </li>
             </ol>
-            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Bare List</h2>
+            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Bare List</h2>
+            <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Vertical</h3>
             <div class="c-mnml-list c-mnml-list--bare">
               <div class="c-mnml-list__item">
                 Bare item
@@ -97,6 +114,7 @@
                 Bare item
               </div>
             </div>
+            <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Horizontal</h3>
             <div class="c-mnml-list c-mnml-list--bare is-horizontal">
               <div class="c-mnml-list__item">
                 Bare item
@@ -106,11 +124,24 @@
               </div>
               <div class="c-mnml-list__item">
                 Bare item
+              </div>
+            </div>
+            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Inline List</h2>
+            <div class="c-mnml-list c-mnml-list--inline">
+              <div class="c-mnml-list__item">
+                Inline item
+              </div>
+              <div class="c-mnml-list__item">
+                Inline item
+              </div>
+              <div class="c-mnml-list__item">
+                Inline item
               </div>
             </div>
           </div>
-          <div class="t-mnml-light" style="flex: 1; padding: 1rem 2rem; border: 1px dotted;">
-            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Unordered List</h2>
+          <div class="t-mnml-light" style="flex: 1; padding: 2rem; border: 1px dashed gray;">
+            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Unordered List</h2>
+            <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Vertical</h3>
             <ul class="c-mnml-list c-mnml-list--unordered">
               <li class="c-mnml-list__item">
                 First level item
@@ -124,7 +155,13 @@
                       <li class="c-mnml-list__item">
                         Third level item
                       </li>
+                      <li class="c-mnml-list__item">
+                        Third level item
+                      </li>
                     </ul>
+                  </li>
+                  <li class="c-mnml-list__item">
+                    Second level item
                   </li>
                 </ul>
               </li>
@@ -132,32 +169,40 @@
                 First level item
               </li>
             </ul>
+            <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Horizontal</h3>
             <ul class="c-mnml-list c-mnml-list--unordered is-horizontal">
               <li class="c-mnml-list__item">
-                Inline item
+                Horizontal item
               </li>
               <li class="c-mnml-list__item">
-                Inline item
+                Horizontal item
               </li>
               <li class="c-mnml-list__item">
-                Inline item
+                Horizontal item
               </li>
             </ul>
-            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Ordered List</h2>
+            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Ordered List</h2>
+            <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Vertical</h3>
             <ol class="c-mnml-list c-mnml-list--ordered">
               <li class="c-mnml-list__item">
                 First level item
               </li>
               <li class="c-mnml-list__item">
-                First level item.
+                First level item
                 <ol class="c-mnml-list c-mnml-list--ordered">
                   <li class="c-mnml-list__item">
-                    Second level item.
+                    Second level item
                     <ol class="c-mnml-list c-mnml-list--ordered">
                       <li class="c-mnml-list__item">
-                        Third level item.
+                        Third level item
+                      </li>
+                      <li class="c-mnml-list__item">
+                        Third level item
                       </li>
                     </ol>
+                  </li>
+                  <li class="c-mnml-list__item">
+                    Second level item
                   </li>
                 </ol>
               </li>
@@ -165,18 +210,20 @@
                 First level item
               </li>
             </ol>
+            <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Horizontal</h3>
             <ol class="c-mnml-list c-mnml-list--ordered is-horizontal">
               <li class="c-mnml-list__item">
-                Inline item
+                Horizontal item
               </li>
               <li class="c-mnml-list__item">
-                Inline item
+                Horizontal item
               </li>
               <li class="c-mnml-list__item">
-                Inline item
+                Horizontal item
               </li>
             </ol>
-            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Bare List</h2>
+            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Bare List</h2>
+            <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Vertical</h3>
             <div class="c-mnml-list c-mnml-list--bare">
               <div class="c-mnml-list__item">
                 Bare item
@@ -188,6 +235,7 @@
                 Bare item
               </div>
             </div>
+            <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Horizontal</h3>
             <div class="c-mnml-list c-mnml-list--bare is-horizontal">
               <div class="c-mnml-list__item">
                 Bare item
@@ -197,6 +245,18 @@
               </div>
               <div class="c-mnml-list__item">
                 Bare item
+              </div>
+            </div>
+            <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Inline List</h2>
+            <div class="c-mnml-list c-mnml-list--inline">
+              <div class="c-mnml-list__item">
+                Inline item
+              </div>
+              <div class="c-mnml-list__item">
+                Inline item
+              </div>
+              <div class="c-mnml-list__item">
+                Inline item
               </div>
             </div>
           </div>

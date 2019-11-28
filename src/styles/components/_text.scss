@@ -103,8 +103,13 @@
 
     &.c-#{$ns}-text--xxlarge {
       margin-bottom: v-spacing(medium);
+      padding-top: v-spacing(medium);
       padding-bottom: v-spacing(xsmall);
       line-height: line-height(xtight);
+
+      &:first-child {
+        padding-top: 0;
+      }
 
       &:before {
         content: '\00A7';
@@ -116,7 +121,7 @@
         display: block;
         position: absolute;
         width: h-spacing(large);
-        height: 2px;
+        height: 3px;
         color: inherit;
         background-color: currentColor;
         opacity: 0.1;
@@ -125,12 +130,11 @@
     }
 
     &.c-#{$ns}-text--display {
-      margin-bottom: v-spacing(small);
+      margin-bottom: v-spacing(xsmall);
       margin-left: -0.05em;
       line-height: line-height(xtight);
 
       @include respond-to(small) {
-        margin-bottom: v-spacing(medium);
         line-height: line-height(xxtight);
       }
     }
