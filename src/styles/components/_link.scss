@@ -1,0 +1,31 @@
+/* ------------------------------------ *\
+   Link
+\* ------------------------------------ */
+
+.c-#{$ns}-link {
+  text-decoration: none;
+  transition:
+    color 200ms ease-in,
+    box-shadow 200ms ease-in;
+
+  &:link {
+    color: $link-color;
+    box-shadow: 0 -0.25em 0 rgba($link-color, 0.1) inset;
+  }
+
+  &:visited {
+    color: $text-color;
+    box-shadow: 0 -0.25em 0 rgba($text-color, 0.1) inset;
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-color;
+    box-shadow: 0 -0.4em 0 rgba($link-color, 0.2) inset;
+  }
+
+  &:active {
+    color: $text-color;
+    box-shadow: 0 -0.4em 0 $text-color inset;
+  }
+}

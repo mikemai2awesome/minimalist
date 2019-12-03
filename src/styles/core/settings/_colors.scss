@@ -37,12 +37,12 @@ $palettes: (
   green: (
     light:   mix($color-white, $color-green, 25%),
     initial: $color-green,
-    dark:    mix($color-black, $color-green, 50%)
+    dark:    mix($color-black, $color-green, 40%)
   ),
   red: (
     light:   mix($color-white, $color-red, 25%),
     initial: $color-red,
-    dark:    mix($color-black, $color-red, 50%)
+    dark:    mix($color-black, $color-red, 40%)
   ),
   orange: (
     light:   mix($color-white, $color-orange, 25%),

@@ -1,0 +1,154 @@
+/* ------------------------------------ *\
+   Card
+\* ------------------------------------ */
+
+.c-#{$ns}-card {
+  @include inset-spacing(cozy);
+  display: block;
+  color: $text-color;
+  text-decoration: none;
+  border-radius: border-radius(small);
+  background-color: $background-color;
+  box-shadow: 0 0 3px rgba($text-color, 0.1);
+  transition: all 200ms ease-in-out;
+
+  @at-root a#{&} {
+    &:hover,
+    &:focus {
+      box-shadow:
+        0 0 3px rgba($text-color, 0.1),
+        0 0 v-spacing(xsmall) rgba($text-color, 0.1),
+        0 h-spacing(small) v-spacing(medium) rgba($link-color, 0.2);
+      transform: translateY(v-spacing(xxsmall) * -1);
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto v-spacing(small) auto;
+    max-width: 100%;
+  }
+
+  // @todo
+  /*.figure {
+    width: 100%;
+
+    > .img {
+      width: 100%;
+    }
+  }
+
+  &.full-bleed-img {
+    .figure {
+      width: calc(#{$gutter*2 + rem} + 100%);
+      margin-top: calc(#{$line-height*-1 + rem} - #{$border-width});
+      margin-right: calc(#{$gutter*-1 + rem} - #{$border-width});
+      margin-left: calc(#{$gutter*-1 + rem} - #{$border-width});
+
+      > .img {
+        width: calc(#{$border-width*2} + 100%);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      > .figcaption {
+        width: calc(#{$border-width*2} + 100%);
+        padding-right: $gutter/2 + rem;
+        padding-left: $gutter/2 + rem;
+      }
+    }
+  }
+
+  &.comfortable {
+    padding-top: $line-height + rem;
+    padding-right: $gutter + rem;
+    padding-bottom: $line-height + rem;
+    padding-left: $gutter + rem;
+
+    &.full-bleed-img {
+      .figure {
+        width: calc(#{$gutter*2 + rem} + 100%);
+        margin-top: calc(#{$line-height*-1 + rem} - #{$border-width});
+        margin-right: calc(#{$gutter*-1 + rem} - #{$border-width});
+        margin-left: calc(#{$gutter*-1 + rem} - #{$border-width});
+
+        > .figcaption {
+          padding-right: $gutter + rem;
+          padding-left: $gutter + rem;
+        }
+      }
+    }
+  }
+
+  &.cozy {
+    padding-top: $line-height/1.5 + rem;
+    padding-right: $gutter/1.5 + rem;
+    padding-bottom: $line-height/1.5 + rem;
+    padding-left: $gutter/1.5 + rem;
+
+    &.full-bleed-img {
+      .figure {
+        width: calc(#{$gutter + rem} + 100%);
+        margin-top: calc(#{$line-height/1.5*-1 + rem} - #{$border-width});
+        margin-right: calc(#{$gutter/1.5*-1 + rem} - #{$border-width});
+        margin-left: calc(#{$gutter/1.5*-1 + rem} - #{$border-width});
+
+        > .figcaption {
+          padding-right: $gutter/1.5 + rem;
+          padding-left: $gutter/1.5 + rem;
+        }
+      }
+    }
+  }
+
+  &.compact {
+    padding-top: $line-height/4 + rem;
+    padding-right: $gutter/2 + rem;
+    padding-bottom: $line-height/4 + rem;
+    padding-left: $gutter/2 + rem;
+
+    &.full-bleed-img {
+      .figure {
+        width: calc(#{$gutter + rem} + 100%);
+        margin-top: calc(#{$line-height/4*-1 + rem} - #{$border-width});
+        margin-right: calc(#{$gutter/2*-1 + rem} - #{$border-width});
+        margin-left: calc(#{$gutter/2*-1 + rem} - #{$border-width});
+
+        > .figcaption {
+          padding-right: $gutter/2 + rem;
+          padding-left: $gutter/2 + rem;
+        }
+      }
+    }
+  }
+
+  &.collapsed-inset {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+
+    &.full-bleed-img {
+      .figure {
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+
+        > .img {
+          width: 100%;
+        }
+
+        > .figcaption {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  &.transparent {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+  }*/
+}

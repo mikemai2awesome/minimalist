@@ -1,0 +1,74 @@
+/* ------------------------------------ *\
+   Accordion
+\* ------------------------------------ */
+
+.c-#{$ns}-accordion {
+  display: block;
+  min-width: 150px;
+  margin-bottom: v-spacing(medium);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.c-#{$ns}-accordion__item {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-align: start;
+
+  & + #{&} {
+    margin-top: 1px;
+  }
+
+  &[open] .c-#{$ns}-accordion__trigger:after {
+    transform: rotate(-90deg) translateY(v-spacing(xsmall));
+  }
+}
+
+.c-#{$ns}-accordion__trigger {
+  @include inset-spacing(cozy);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0;
+  color: $text-color;
+  cursor: pointer;
+  user-select: none;
+  background-color: rgba($link-color, 0.05);
+  transition:
+    color 200ms ease-out,
+    background-color 200ms ease-out;
+
+  &:hover,
+  &:focus {
+    color: $link-color;
+    background-color: rgba($link-color, 0.1);
+  }
+
+  &:active {
+    color: $text-color;
+    background-color: rgba($link-color, 0.2);
+  }
+
+  &::-webkit-details-marker {
+    display: none
+  }
+
+  &:after {
+    content: '\0276F';
+    display: block;
+    margin: v-spacing(xsmall) h-spacing(xsmall);
+    color: $link-color;
+    line-height: 0;
+    font-family: typeface(mono);
+    font-weight: 700;
+    transform: rotate(90deg) translateY(v-spacing(xsmall) * -1);
+    transition: transform 200ms ease-in-out;
+  }
+}
+
+.c-#{$ns}-accordion__content {
+  padding: v-spacing(medium) h-spacing(small);
+}

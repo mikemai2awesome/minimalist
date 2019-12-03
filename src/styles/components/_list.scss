@@ -2,11 +2,10 @@
    List
 \* ------------------------------------ */
 
-$bullet-color: $link-color !default;
+$bullet-color: rgba($text-color, 0.4) !default;
 
 .c-#{$ns}-list {
   @include reset-spacing;
-
   display: block;
   margin-bottom: v-spacing(medium);
   list-style: none;
@@ -18,6 +17,7 @@ $bullet-color: $link-color !default;
 
 .c-#{$ns}-list__item {
   @include reset-spacing;
+  text-decoration: none;
 }
 
 .c-#{$ns}-list--unordered {
@@ -31,7 +31,7 @@ $bullet-color: $link-color !default;
 
     &:before {
       position: absolute;
-      left: h-spacing(xsmall) * -1;
+      left: h-spacing(xxsmall) * -1;
       content: '\2059';
       color: $bullet-color;
       transform: translateX(-100%);
@@ -53,10 +53,10 @@ $bullet-color: $link-color !default;
 
     &:before {
       position: absolute;
-      left: h-spacing(xsmall) * -1;
+      left: h-spacing(xxsmall) * -1;
       content: counter(ordered-list-item);
       color: $bullet-color;
-      /*font-weight: 700;*/
+      font-family: typeface(smallcap);
       transform: translateX(-100%);
     }
   }
@@ -99,8 +99,7 @@ $bullet-color: $link-color !default;
   flex-direction: column;
 
   > .c-#{$ns}-list__item {
-    display: flex;
-    flex-basis: 100%;
+    display: block;
     margin-bottom: v-spacing(medium);
 
     &:last-child {
@@ -114,7 +113,6 @@ $bullet-color: $link-color !default;
     margin-left: h-spacing(medium) * -1;
 
     > .c-#{$ns}-list__item {
-      display: inline-flex;
       flex: 1;
       flex-basis: 150px;
       margin-top: v-spacing(medium);
@@ -167,6 +165,15 @@ $bullet-color: $link-color !default;
 }
 
 .c-#{$ns}-list--inline {
+  justify-content: flex-start;
+}
+
+.c-#{$ns}-list--justified {
+  justify-content: space-between;
+}
+
+.c-#{$ns}-list--inline,
+.c-#{$ns}-list--justified {
   display: flex;
   flex-wrap: wrap;
   margin-top: v-spacing(small) * -1;
@@ -177,57 +184,105 @@ $bullet-color: $link-color !default;
     margin-top: v-spacing(small);
     margin-bottom: 0;
     margin-left: h-spacing(small);
-    vertical-align: middle;
+    vertical-align: basline;
+  }
+
+  &.is-compact {
+    margin-top: v-spacing(xsmall) * -1;
+    margin-left: h-spacing(xsmall) * -1;
+
+    > .c-#{$ns}-list__item {
+      margin-top: v-spacing(xsmall);
+      margin-left: h-spacing(xsmall);
+    }
   }
 }
 
+
 .c-#{$ns}-list--ui {
   position: relative;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: rgba(palette(black), 0.1);
+  margin-top: -1px;
+  margin-left: -1px;
 
   > .c-#{$ns}-list__item {
-    display: flex;
-    justify-content: space-between;
-    padding-top: v-spacing(small);
-    padding-right: h-spacing(medium);
-    padding-bottom: v-spacing(small);
-    padding-left: h-spacing(medium);
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgba(palette(black), 0.1);
+    @include inset-spacing(cozy);
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: 1px;
+    margin-left: 1px;
+    color: $text-color;
+    background-color: rgba($text-color, 0.05);
+  }
+
+  a.c-#{$ns}-list__item,
+  button.c-#{$ns}-list__item {
+    transition: color 200ms ease-out;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.1;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background:
+        linear-gradient(216deg, rgba(palette(blue), .6), rgba(palette(blue), 0) 70.71%),
+        linear-gradient(100deg, rgba(palette(purple), .6), rgba(palette(purple), 0) 70.71%),
+        linear-gradient(336deg, rgba(palette(orange), .6), rgba(palette(orange), 0) 70.71%);
+      background-blend-mode: color-dodge;
+      transition: opacity 200ms ease-out;
+    }
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+
+      &:before {
+        opacity: 0.2;
+      }
+    }
+
+    &:active {
+      color: $text-color;
+
+      &:before {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  button.c-#{$ns}-list__item {
+    text-align: inherit;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
   }
 
   &.is-horizontal {
     display: flex;
     flex-wrap: wrap;
-    border-left-width: 1px;
-    border-left-style: solid;
-    border-left-color: rgba(palette(black), 0.1);
 
     > .c-#{$ns}-list__item {
-      display: flex;
       flex: 1;
-      min-width: 150px;
-      border-right-width: 1px;
-      border-right-style: solid;
-      border-right-color: rgba(palette(black), 0.1);
+      flex-basis: 150px;
+      text-align: center;
     }
   }
 
   &.is-comfortable {
-    padding-top: v-spacing(large);
-    padding-right: h-spacing(medium);
-    padding-bottom: v-spacing(large);
-    padding-left: h-spacing(medium);
+    > .c-#{$ns}-list__item {
+      @include inset-spacing(comfortable);
+    }
   }
 
   &.is-compact {
-    padding-top: v-spacing(xsmall);
-    padding-right: h-spacing(xsmall);
-    padding-bottom: v-spacing(xsmall);
-    padding-left: h-spacing(xsmall);
+    > .c-#{$ns}-list__item {
+      @include inset-spacing(compact);
+    }
   }
 }
 

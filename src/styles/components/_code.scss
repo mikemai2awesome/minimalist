@@ -2,8 +2,8 @@
    Code
 \* ------------------------------------ */
 
-$code-text-color: $link-color !default;
-$code-border-color: rgba($code-text-color, 0.25) !default;
+$code-text-color: $text-color !default;
+$code-border-color: rgba($code-text-color, 0.1) !default;
 
 .c-#{$ns}-code-block,
 .c-#{$ns}-code-block .c-#{$ns}-code {
@@ -27,7 +27,7 @@ $code-border-color: rgba($code-text-color, 0.25) !default;
   font-family: typeface(mono);
   font-size: strip-unit(type-size(small)) + em;
   border-radius: border-radius(small);
-  background-color: rgba(lighten($code-text-color, 50%), 0.95);
+  background-color: rgba(mix($background-color, $code-text-color, 98%), 0.95);
 
   @at-root .c-#{$ns}-code-block & {
     @include shadow-border(thick, $code-border-color);
@@ -43,12 +43,10 @@ $code-border-color: rgba($code-text-color, 0.25) !default;
 
 .c-#{$ns}-code-block {
   display: flex;
-  margin-right: (h-spacing(small) * -1);
-  margin-left: (h-spacing(small) * -1);
   font-size: type-size(xsmall);
 
   &:before {
-    content: 'code';
+    content: attr(data-code);
     position: absolute;
     margin: 0 0 0 -0.5em;
     padding: 1px 0.5em 0 0.5em;
@@ -60,5 +58,11 @@ $code-border-color: rgba($code-text-color, 0.25) !default;
     border-radius: border-radius(small);
     background-color: $code-text-color;
     transform: translate3d(h-spacing(small), -50%, 0);
+  }
+
+  &:not([data-code]) {
+    &:before {
+      display: none;
+    }
   }
 }

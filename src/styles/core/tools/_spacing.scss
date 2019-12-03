@@ -18,3 +18,24 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin inset-spacing($name) {
+  @if $name == comfortable {
+    padding-top: v-spacing(large);
+    padding-right: h-spacing(medium);
+    padding-bottom: v-spacing(large);
+    padding-left: h-spacing(medium);
+  }
+  @elseif $name == cozy {
+    padding-top: v-spacing(xsmall);
+    padding-right: h-spacing(small);
+    padding-bottom: v-spacing(xsmall);
+    padding-left: h-spacing(small);
+  }
+  @else {
+    padding-top: v-spacing(xxsmall);
+    padding-right: h-spacing(xsmall);
+    padding-bottom: v-spacing(xxsmall);
+    padding-left: h-spacing(xsmall);
+  }
+}
