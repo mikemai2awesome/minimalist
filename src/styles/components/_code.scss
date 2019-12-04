@@ -20,7 +20,7 @@ $code-border-color: rgba($code-text-color, 0.1) !default;
   @include shadow-border(thin, $code-border-color);
 
   display: inline;
-  margin: 0;
+  margin-bottom: v-spacing(medium);
   padding: 1px h-spacing(xxsmall) 2px h-spacing(xxsmall);
   color: $code-text-color;
   text-align: left;
@@ -29,9 +29,12 @@ $code-border-color: rgba($code-text-color, 0.1) !default;
   border-radius: border-radius(small);
   background-color: rgba(mix($background-color, $code-text-color, 98%), 0.95);
 
-  @at-root .c-#{$ns}-code-block & {
-    @include shadow-border(thick, $code-border-color);
+  &:last-child {
+    margin-bottom: 0;
+  }
 
+
+  @at-root .c-#{$ns}-code-block & {
     display: block;
     overflow-y: auto;
     overflow-x: auto;
@@ -42,22 +45,20 @@ $code-border-color: rgba($code-text-color, 0.1) !default;
 }
 
 .c-#{$ns}-code-block {
+  position: relative;
   display: flex;
   font-size: type-size(xsmall);
 
   &:before {
     content: attr(data-code);
     position: absolute;
-    margin: 0 0 0 -0.5em;
-    padding: 1px 0.5em 0 0.5em;
-    color: $background-color;
+    right: h-spacing(xsmall);
+    bottom: v-spacing(xsmall);
+    color: rgba($code-text-color, 0.05);
+    line-height: 1;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
     font-family: typeface(heading);
-    font-size: type-size(xxsmall);
-    border-radius: border-radius(small);
-    background-color: $code-text-color;
-    transform: translate3d(h-spacing(small), -50%, 0);
+    font-size: type-size(xxlarge);
   }
 
   &:not([data-code]) {

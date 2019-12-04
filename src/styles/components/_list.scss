@@ -200,57 +200,26 @@ $bullet-color: rgba($text-color, 0.4) !default;
 
 
 .c-#{$ns}-list--ui {
-  position: relative;
   margin-top: -1px;
   margin-left: -1px;
 
   > .c-#{$ns}-list__item {
     @include inset-spacing(cozy);
     display: block;
-    position: relative;
-    width: 100%;
     margin-top: 1px;
     margin-left: 1px;
     color: $text-color;
+    border-radius: border-radius(small);
     background-color: rgba($text-color, 0.05);
   }
 
-  a.c-#{$ns}-list__item,
-  button.c-#{$ns}-list__item {
-    transition: color 200ms ease-out;
+  > a.c-#{$ns}-list__item,
+  > button.c-#{$ns}-list__item {
+    @include interactive-text-and-bg;
+    width: 100%;
 
     &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.1;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      background:
-        linear-gradient(216deg, rgba(palette(blue), .6), rgba(palette(blue), 0) 70.71%),
-        linear-gradient(100deg, rgba(palette(purple), .6), rgba(palette(purple), 0) 70.71%),
-        linear-gradient(336deg, rgba(palette(orange), .6), rgba(palette(orange), 0) 70.71%);
-      background-blend-mode: color-dodge;
-      transition: opacity 200ms ease-out;
-    }
-
-    &:hover,
-    &:focus {
-      color: $link-color;
-
-      &:before {
-        opacity: 0.2;
-      }
-    }
-
-    &:active {
-      color: $text-color;
-
-      &:before {
-        opacity: 0.4;
-      }
+      border-radius: border-radius(small);
     }
   }
 

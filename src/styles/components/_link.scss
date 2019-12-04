@@ -5,8 +5,8 @@
 .c-#{$ns}-link {
   text-decoration: none;
   transition:
-    color 200ms ease-in,
-    box-shadow 200ms ease-in;
+    color transition-timing(regular) ease-in,
+    box-shadow transition-timing(regular) ease-in;
 
   &:link {
     color: $link-color;

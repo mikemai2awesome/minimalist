@@ -10,6 +10,26 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  &.is-comfortable {
+    .c-#{$ns}-accordion__trigger {
+      @include inset-spacing(comfortable);
+    }
+
+    .c-#{$ns}-accordion__content {
+      @include inset-spacing(comfortable);
+    }
+  }
+
+  &.is-compact {
+    .c-#{$ns}-accordion__trigger {
+      @include inset-spacing(compact);
+    }
+
+    .c-#{$ns}-accordion__content {
+      @include inset-spacing(compact);
+    }
+  }
 }
 
 .c-#{$ns}-accordion__item {
@@ -23,52 +43,43 @@
   }
 
   &[open] .c-#{$ns}-accordion__trigger:after {
-    transform: rotate(-90deg) translateY(v-spacing(xsmall));
+    transform: rotate(-630deg) scale(0.8) scaleX(-1);
   }
 }
 
 .c-#{$ns}-accordion__trigger {
   @include inset-spacing(cozy);
+  @include interactive-text-and-bg;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  flex-wrap: nowrap;
   margin: 0;
   color: $text-color;
   cursor: pointer;
   user-select: none;
-  background-color: rgba($link-color, 0.05);
-  transition:
-    color 200ms ease-out,
-    background-color 200ms ease-out;
-
-  &:hover,
-  &:focus {
-    color: $link-color;
-    background-color: rgba($link-color, 0.1);
-  }
-
-  &:active {
-    color: $text-color;
-    background-color: rgba($link-color, 0.2);
-  }
 
   &::-webkit-details-marker {
     display: none
   }
 
+  &:before {
+    border-radius: border-radius(small);
+  }
+
   &:after {
     content: '\0276F';
     display: block;
-    margin: v-spacing(xsmall) h-spacing(xsmall);
+    margin-left: h-spacing(xsmall);
     color: $link-color;
     line-height: 0;
     font-family: typeface(mono);
     font-weight: 700;
-    transform: rotate(90deg) translateY(v-spacing(xsmall) * -1);
-    transition: transform 200ms ease-in-out;
+    transform: rotate(90deg) scale(0.8) scaleX(1);
+    transition: transform transition-timing(regular) ease-in-out;
   }
 }
 
 .c-#{$ns}-accordion__content {
-  padding: v-spacing(medium) h-spacing(small);
+  @include inset-spacing(cozy);
 }

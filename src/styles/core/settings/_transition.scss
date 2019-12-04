@@ -1,0 +1,9 @@
+/*------------------------------------*\
+  Transition Settings
+\*------------------------------------*/
+
+$transition-timing-values: (
+  fast:    50ms,
+  regular: 200ms,
+  slow:    400ms
+) !default;

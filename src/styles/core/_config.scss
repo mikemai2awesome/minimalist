@@ -19,7 +19,7 @@ $ns: 'mnml' !default; // Namespace for the CSS classes.
 
 $typefaces: (
   body:     #{'Spectral', 'Georgia', serif},
-  heading:  #{'Bungee', Impact, sans-serif},
+  heading:  #{'Bungee', sans-serif},
   smallcap: #{'Alegreya Sans SC', sans-serif},
   mono:     #{monospace, monospace}
 ) !global;

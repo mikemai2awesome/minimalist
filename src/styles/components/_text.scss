@@ -6,6 +6,7 @@
 .c-#{$ns}-text {
   font-family: typeface(body);
   font-weight: 400;
+  text-shadow: 0.15em 0.15em 0 rgba($background-color, 0.6);
 }
 
 .c-#{$ns}-text--heading {
@@ -121,7 +122,7 @@
         display: block;
         position: absolute;
         width: h-spacing(large);
-        height: 3px;
+        height: border-width(thick);
         color: inherit;
         background-color: currentColor;
         opacity: 0.1;

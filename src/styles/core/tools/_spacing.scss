@@ -27,15 +27,15 @@
     padding-left: h-spacing(medium);
   }
   @elseif $name == cozy {
-    padding-top: v-spacing(xsmall);
+    padding-top: v-spacing(small);
     padding-right: h-spacing(small);
-    padding-bottom: v-spacing(xsmall);
+    padding-bottom: v-spacing(small);
     padding-left: h-spacing(small);
   }
   @else {
-    padding-top: v-spacing(xxsmall);
+    padding-top: v-spacing(xsmall);
     padding-right: h-spacing(xsmall);
-    padding-bottom: v-spacing(xxsmall);
+    padding-bottom: v-spacing(xsmall);
     padding-left: h-spacing(xsmall);
   }
 }

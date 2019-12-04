@@ -1,0 +1,7 @@
+/*------------------------------------*\
+  Transition Tools
+\*------------------------------------*/
+
+@function transition-timing($name) {
+  @return map-get($transition-timing-values, $name);
+}

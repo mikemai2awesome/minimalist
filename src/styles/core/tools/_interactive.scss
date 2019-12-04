@@ -1,0 +1,46 @@
+/* ------------------------------------ *\
+   Interactive Tools
+\* ------------------------------------ */
+
+@mixin interactive-text-and-bg($position: relative) {
+  @if $position {
+    position: $position;
+  }
+
+  transition: color transition-timing(regular) ease-out;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background:
+      linear-gradient(216deg, rgba(palette(green), .6), rgba(palette(green), 0) 70.71%),
+      linear-gradient(100deg, rgba(palette(purple), .6), rgba(palette(purple), 0) 70.71%),
+      linear-gradient(336deg, rgba(palette(orange), .6), rgba(palette(orange), 0) 70.71%);
+    background-blend-mode: color-dodge;
+    transition: opacity transition-timing(regular) ease-out;
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-color;
+
+    &:before {
+      opacity: 0.25;
+    }
+  }
+
+  &:active {
+    color: $text-color;
+
+    &:before {
+      opacity: 0.4;
+    }
+  }
+}

@@ -4,13 +4,18 @@
 
 .c-#{$ns}-card {
   @include inset-spacing(cozy);
+  @include shadow-border(thick, rgba($text-color, 0.05));
   display: block;
+  margin-bottom: v-spacing(medium);
   color: $text-color;
   text-decoration: none;
-  border-radius: border-radius(small);
+  border-radius: border-radius(large);
   background-color: $background-color;
-  box-shadow: 0 0 3px rgba($text-color, 0.1);
-  transition: all 200ms ease-in-out;
+  transition: all transition-timing(regular) ease-in-out;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @at-root a#{&} {
     &:hover,
