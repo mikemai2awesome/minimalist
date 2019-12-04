@@ -223,12 +223,16 @@ $bullet-color: rgba($text-color, 0.4) !default;
     }
   }
 
-  button.c-#{$ns}-list__item {
+  > button.c-#{$ns}-list__item {
     text-align: inherit;
     font: inherit;
     border: none;
     cursor: pointer;
     -webkit-appearance: none;
+  }
+
+  .c-#{$ns}-list {
+    margin-top: v-spacing(small);
   }
 
   &.is-horizontal {
