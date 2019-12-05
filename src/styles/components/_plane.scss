@@ -36,7 +36,7 @@
       linear-gradient(216deg, rgba(palette(yellow), .6), rgba(palette(yellow), 0) 70.71%),
       linear-gradient(100deg, rgba(palette(orange), .6), rgba(palette(orange), 0) 70.71%),
       linear-gradient(336deg, rgba(palette(green), .6), rgba(palette(green), 0) 70.71%);
-    background-blend-mode: color-dodge;
+    background-blend-mode: darken;
     opacity: 0.2;
   }
 }

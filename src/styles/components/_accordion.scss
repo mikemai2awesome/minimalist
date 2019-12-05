@@ -14,6 +14,11 @@
   &.is-comfortable {
     .c-#{$ns}-accordion__trigger {
       @include inset-spacing(comfortable);
+      padding-right: h-spacing(small) * 3;
+    }
+
+    .c-#{$ns}-accordion__trigger__icon {
+      @include inset-spacing(comfortable);
     }
 
     .c-#{$ns}-accordion__content {
@@ -23,6 +28,11 @@
 
   &.is-compact {
     .c-#{$ns}-accordion__trigger {
+      @include inset-spacing(compact);
+      padding-right: h-spacing(xsmall) * 3;
+    }
+
+    .c-#{$ns}-accordion__trigger__icon {
       @include inset-spacing(compact);
     }
 
@@ -42,41 +52,51 @@
     margin-top: 1px;
   }
 
-  &[open] .c-#{$ns}-accordion__trigger:after {
-    transform: rotate(-630deg) scale(0.8) scaleX(-1);
+  &[open] .c-#{$ns}-accordion__trigger__icon {
+    transform: rotate(-630deg) scale3d(-0.8, 0.8, 0.8) translate3d(0, 0, 0);
   }
 }
 
 .c-#{$ns}-accordion__trigger {
   @include inset-spacing(cozy);
   @include interactive-text-and-bg;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  display: block;
   margin: 0;
+  padding-right: h-spacing(xsmall) * 4;
   color: $text-color;
   cursor: pointer;
   user-select: none;
 
   &::-webkit-details-marker {
-    display: none
+    display: none;
   }
 
   &:before {
     border-radius: border-radius(small);
   }
 
-  &:after {
+  &:focus {
+    .c-#{$ns}-accordion__trigger__icon {
+      right: 0.5px; /* This fixes the icon disappearing on focus in Safari. */
+    }
+  }
+}
+
+.c-#{$ns}-accordion__trigger__icon {
+  @include inset-spacing(cozy);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  color: $link-color;
+  font-family: typeface(mono);
+  font-weight: 700;
+  transform: rotate(90deg) scale3d(0.8, 0.8, 0.8) translate3d(0, 0, 0);
+  transition: transform transition-timing(regular) ease-in-out;
+
+  &:before {
     content: '\0276F';
-    display: block;
-    margin-left: h-spacing(xsmall);
-    color: $link-color;
-    line-height: 0;
-    font-family: typeface(mono);
-    font-weight: 700;
-    transform: rotate(90deg) scale(0.8) scaleX(1);
-    transition: transform transition-timing(regular) ease-in-out;
   }
 }
 

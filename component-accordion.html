@@ -23,26 +23,26 @@
           <p class="c-mnml-text c-mnml-text--block">This is the default accordion.</p>
           <div class="c-mnml-accordion">
             <details class="c-mnml-accordion__item" open>
-              <summary class="c-mnml-accordion__trigger">
-                Item 1
+              <summary class="c-mnml-accordion__trigger" aria-describedby="accordion-item-1">
+                Item 1 <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
               </summary>
-              <div class="c-mnml-accordion__content">
+              <div class="c-mnml-accordion__content" id="accordion-item-1">
                 Item 1 content. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
               </div>
             </details>
             <details class="c-mnml-accordion__item">
-              <summary class="c-mnml-accordion__trigger">
-                Item 2
+              <summary class="c-mnml-accordion__trigger" aria-describedby="accordion-item-2">
+                Item 2 <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
               </summary>
-              <div class="c-mnml-accordion__content">
+              <div class="c-mnml-accordion__content" id="accordion-item-2">
                 Item 2 content. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
               </div>
             </details>
             <details class="c-mnml-accordion__item">
-              <summary class="c-mnml-accordion__trigger">
-                Item 3
+              <summary class="c-mnml-accordion__trigger" aria-describedby="accordion-item-3">
+                Item 3 <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
               </summary>
-              <div class="c-mnml-accordion__content">
+              <div class="c-mnml-accordion__content" id="accordion-item-3">
                 Item 3 content. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
               </div>
             </details>
@@ -50,13 +50,13 @@
           <pre class="c-mnml-code-block" data-code="html"><code class="c-mnml-code">&#x3C;div class=&#x22;c-mnml-accordion&#x22;&#x3E;
   &#x3C;details class=&#x22;c-mnml-accordion__item&#x22;&#x3E;
     &#x3C;summary class=&#x22;c-mnml-accordion__trigger&#x22;&#x3E;
-      Trigger
+      Trigger &#x3C;span class=&#x22;c-mnml-accordion__trigger__icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
     &#x3C;/summary&#x3E;
     &#x3C;div class=&#x22;c-mnml-accordion__content&#x22;&#x3E;
       Content
     &#x3C;/div&#x3E;
   &#x3C;/details&#x3E;
-  ...
+  &#x3C;details class=&#x22;c-mnml-accordion__item&#x22;&#x3E;...&#x3C;/details&#x3E;
 &#x3C;/div&#x3E;</code></pre>
           <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Spacing</h2>
           <p class="c-mnml-text c-mnml-text--block">This component has 2 additional spacing options.</p>
@@ -64,7 +64,7 @@
           <div class="c-mnml-accordion is-compact">
             <details class="c-mnml-accordion__item">
               <summary class="c-mnml-accordion__trigger">
-                Item 1
+                Item 1 <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
               </summary>
               <div class="c-mnml-accordion__content">
                 Item 1 content. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
@@ -72,7 +72,7 @@
             </details>
             <details class="c-mnml-accordion__item">
               <summary class="c-mnml-accordion__trigger">
-                Item 2
+                Item 2 <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
               </summary>
               <div class="c-mnml-accordion__content">
                 Item 2 content. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
@@ -80,7 +80,7 @@
             </details>
             <details class="c-mnml-accordion__item">
               <summary class="c-mnml-accordion__trigger">
-                Item 3
+                Item 3 <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
               </summary>
               <div class="c-mnml-accordion__content">
                 Item 3 content. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
@@ -91,7 +91,7 @@
           <div class="c-mnml-accordion is-comfortable">
             <details class="c-mnml-accordion__item">
               <summary class="c-mnml-accordion__trigger">
-                Item 1
+                Item 1 <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
               </summary>
               <div class="c-mnml-accordion__content">
                 Item 1 content. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
@@ -99,7 +99,7 @@
             </details>
             <details class="c-mnml-accordion__item">
               <summary class="c-mnml-accordion__trigger">
-                Item 2
+                Item 2 <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
               </summary>
               <div class="c-mnml-accordion__content">
                 Item 2 content. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
@@ -107,13 +107,15 @@
             </details>
             <details class="c-mnml-accordion__item">
               <summary class="c-mnml-accordion__trigger">
-                Item 3
+                Item 3 <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
               </summary>
               <div class="c-mnml-accordion__content">
                 Item 3 content. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
               </div>
             </details>
           </div>
+          <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Accessibility</h2>
+          <p class="c-mnml-text c-mnml-text--block">In order to make the accordion accessible, some light Javascript and proper <code class="c-mnml-code">aria</code> attributes are needed. Read <a class="c-mnml-link" href="https://www.scottohara.me/blog/2018/09/03/details-and-summary.html" target="_blank">this article</a> to find out more.</p>
         </article>
       </div>
     </main>

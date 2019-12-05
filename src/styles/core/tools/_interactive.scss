@@ -17,11 +17,10 @@
 
   outline: none;
   backdrop-filter: blur(0.25rem);
-  transition: color transition-timing(regular) ease-out;
-
-  &::-moz-focus-inner {
-    border: 0;
-  }
+  transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  transition:
+    color transition-timing(regular) ease-out,
+    transform transition-timing(regular) ease-out;
 
   &:before {
     content: '';
@@ -37,7 +36,7 @@
       linear-gradient(216deg, rgba(palette(green), .6), rgba(palette(green), 0) 70.71%),
       linear-gradient(100deg, rgba(palette(purple), .6), rgba(palette(purple), 0) 70.71%),
       linear-gradient(336deg, rgba(palette(orange), .6), rgba(palette(orange), 0) 70.71%);
-    background-blend-mode: color-dodge;
+    background-blend-mode: darken;
     transition: opacity transition-timing(regular) ease-out;
   }
 
@@ -59,7 +58,8 @@
 
   &:active {
     color: $text-color;
-    animation-play-state: paused;
+    animation: none;
+    transform: scale3d(0.99, 0.99, 0.99) translate3d(0, 0, 0);
 
     &:before {
       opacity: 0.5;
@@ -69,12 +69,12 @@
 
 @keyframes pulse {
   0% {
-    transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   }
   50% {
-    transform: scale3d(1.01, 1.01, 1.01);
+    transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
   }
   100% {
-    transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   }
 }
