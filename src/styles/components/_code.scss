@@ -3,7 +3,7 @@
 \* ------------------------------------ */
 
 $code-text-color: $text-color !default;
-$code-border-color: rgba($code-text-color, 0.1) !default;
+$code-border-color: rgba($code-text-color, 0.05) !default;
 
 .c-#{$ns}-code-block,
 .c-#{$ns}-code-block .c-#{$ns}-code {
@@ -48,13 +48,14 @@ $code-border-color: rgba($code-text-color, 0.1) !default;
   position: relative;
   display: flex;
   font-size: type-size(xsmall);
+  backdrop-filter: blur(0.15rem);
 
   &:before {
     content: attr(data-code);
     position: absolute;
     right: h-spacing(xsmall);
     bottom: v-spacing(xsmall);
-    color: rgba($code-text-color, 0.05);
+    color: $code-border-color;
     line-height: 1;
     text-transform: uppercase;
     font-family: typeface(heading);

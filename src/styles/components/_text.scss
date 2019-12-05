@@ -6,11 +6,11 @@
 .c-#{$ns}-text {
   font-family: typeface(body);
   font-weight: 400;
-  text-shadow: 0.15em 0.15em 0 rgba($background-color, 0.6);
 }
 
 .c-#{$ns}-text--heading {
   letter-spacing: -0.025em;
+  text-shadow: 0.1em 0.1em 1px rgba($background-color, 0.6);
   font-family: typeface(heading);
   font-weight: 400;
 

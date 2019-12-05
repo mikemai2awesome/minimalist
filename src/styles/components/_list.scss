@@ -217,6 +217,7 @@ $bullet-color: rgba($text-color, 0.4) !default;
   > button.c-#{$ns}-list__item {
     @include interactive-text-and-bg;
     width: 100%;
+    background-color: transparent;
 
     &:before {
       border-radius: border-radius(small);
@@ -224,15 +225,7 @@ $bullet-color: rgba($text-color, 0.4) !default;
   }
 
   > button.c-#{$ns}-list__item {
-    text-align: inherit;
-    font: inherit;
-    border: none;
-    cursor: pointer;
-    -webkit-appearance: none;
-  }
-
-  .c-#{$ns}-list {
-    margin-top: v-spacing(small);
+    @include button-reset;
   }
 
   &.is-horizontal {

@@ -1,7 +1,7 @@
 .u-#{$ns}-visuallyhidden {
-  @include visuallyhidden;
+  @include visuallyhidden(important);
 }
 
 .u-#{$ns}-hidden {
-  display: none;
+  display: none !important;
 }

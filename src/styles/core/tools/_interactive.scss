@@ -2,12 +2,26 @@
    Interactive Tools
 \* ------------------------------------ */
 
+@mixin button-reset {
+  text-align: inherit;
+  font: inherit;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+}
+
 @mixin interactive-text-and-bg($position: relative) {
   @if $position {
     position: $position;
   }
 
+  outline: none;
+  backdrop-filter: blur(0.25rem);
   transition: color transition-timing(regular) ease-out;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
 
   &:before {
     content: '';
@@ -36,11 +50,31 @@
     }
   }
 
+  &:focus {
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+
   &:active {
     color: $text-color;
+    animation-play-state: paused;
 
     &:before {
-      opacity: 0.4;
+      opacity: 0.5;
     }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.01, 1.01, 1.01);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
   }
 }
