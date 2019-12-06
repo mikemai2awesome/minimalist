@@ -72,7 +72,7 @@
   }
 
   &:before {
-    border-radius: border-radius(small);
+    @include shape(box);
   }
 
   &:focus {

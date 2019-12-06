@@ -5,7 +5,8 @@
 @function border-radius($name) {
   @if map-has-key($border-radius-values, $name) {
     @return map-get($border-radius-values, $name)
-  } @else {
+  }
+  @else {
     @error 'A radius, #{$name}, was passed into border-radius() function that is not defined in $border-radius-values';
   }
 }
@@ -13,7 +14,8 @@
 @function border-width($name) {
   @if map-has-key($border-width-values, $name) {
     @return map-get($border-width-values, $name)
-  } @else {
+  }
+  @else {
     @error 'A width, #{$name}, was passed into border-width() function that is not defined in $border-width-values';
   }
 }
@@ -22,7 +24,26 @@
   @if map-has-key($border-width-values, $width-name) {
     $width-value: map-get-deep($border-width-values, $width-name);
     box-shadow: 0 0 0 $width-value $color;
-  } @else {
+  }
+  @else {
     @error 'A width, #{$width-name}, was passed into shadow-border() mixin that is not defined in $border-width-values';
+  }
+}
+
+@mixin shape($name) {
+  @if $name == box {
+    border-radius: border-radius(small);
+  }
+  @elseif $name == card {
+    border-radius: border-radius(large);
+  }
+  @elseif $name == pill {
+    border-radius: border-radius(full);
+  }
+  @elseif $name == bubble {
+    border-radius: 0 border-radius(large) border-radius(large) border-radius(large);
+  }
+  @else {
+    @error '#{$name} is not an option for the shape() mixin';
   }
 }

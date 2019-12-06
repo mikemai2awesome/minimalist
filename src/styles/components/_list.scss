@@ -205,11 +205,11 @@ $bullet-color: rgba($text-color, 0.4) !default;
 
   > .c-#{$ns}-list__item {
     @include inset-spacing(cozy);
+    @include shape(box);
     display: block;
     margin-top: 1px;
     margin-left: 1px;
     color: $text-color;
-    border-radius: border-radius(small);
     background-color: rgba($text-color, 0.05);
   }
 
@@ -220,7 +220,7 @@ $bullet-color: rgba($text-color, 0.4) !default;
     background-color: transparent;
 
     &:before {
-      border-radius: border-radius(small);
+      @include shape(box);
     }
   }
 

@@ -4,12 +4,12 @@
 
 .c-#{$ns}-card {
   @include inset-spacing(cozy);
+  @include shape(card);
   @include shadow-border(thin, rgba($text-color, 0.05));
   display: block;
   margin-bottom: v-spacing(medium);
   color: $text-color;
   text-decoration: none;
-  border-radius: border-radius(large);
   background-color: $background-color;
   transition: all transition-timing(regular) ease-in-out;
 

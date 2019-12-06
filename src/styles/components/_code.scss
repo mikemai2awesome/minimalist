@@ -7,18 +7,18 @@ $code-border-color: rgba($code-text-color, 0.05) !default;
 
 .c-#{$ns}-code-block,
 .c-#{$ns}-code-block .c-#{$ns}-code {
+  @include shape(card);
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
   white-space: pre-wrap;
   word-spacing: normal;
   word-break: break-word;
   word-wrap: break-word;
-  border-radius: border-radius(large);
 }
 
 .c-#{$ns}-code {
+  @include shape(pill);
   @include shadow-border(thin, $code-border-color);
-
   display: inline;
   margin-bottom: v-spacing(medium);
   padding: 1px h-spacing(xxsmall) 2px h-spacing(xxsmall);
@@ -26,7 +26,6 @@ $code-border-color: rgba($code-text-color, 0.05) !default;
   text-align: left;
   font-family: typeface(mono);
   font-size: strip-unit(type-size(small)) + em;
-  border-radius: border-radius(small);
   background-color: rgba(mix($background-color, $code-text-color, 98%), 0.95);
 
   &:last-child {
