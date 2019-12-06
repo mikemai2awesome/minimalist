@@ -6,6 +6,7 @@
   text-decoration: none;
   transition:
     color transition-timing(regular) ease-in,
+    background-color transition-timing(regular) ease-in,
     box-shadow transition-timing(regular) ease-in;
 
   &:link {
@@ -22,6 +23,12 @@
   &:focus {
     color: $link-color;
     box-shadow: 0 -0.4em 0 rgba($link-color, 0.2) inset;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: rgba($link-color, 0.1);
+    box-shadow: none;
   }
 
   &:active {

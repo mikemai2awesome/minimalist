@@ -3,7 +3,7 @@
 \* ------------------------------------ */
 
 $code-text-color: $text-color !default;
-$code-border-color: rgba($code-text-color, 0.05) !default;
+$code-border-color: rgba($code-text-color, 0.1) !default;
 
 .c-#{$ns}-code-block,
 .c-#{$ns}-code-block .c-#{$ns}-code {
