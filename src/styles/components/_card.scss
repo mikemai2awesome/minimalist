@@ -12,7 +12,6 @@
   text-align: left;
   text-align: start;
   background-color: $background-color;
-  transition: all transition-timing(regular) ease-in-out;
 
   &:last-child {
     margin-bottom: 0;
@@ -44,31 +43,34 @@
   }
 
   @at-root figure#{&} {
-    @include shadow-border(none);
+    @include shadow-border(thick, rgba($text-color, 0.1));
     @include shape(bubble);
     position: relative;
 
     img:first-child {
       @include offset-spacing(cozy);
-      @include shadow-border(thick, rgba($text-color, 0.05));
       @include shape(bubble);
     }
 
     > a {
-      img:first-child {
-        @include shadow-border(thick, rgba($link-color, 0.1));
-        transition: box-shadow transition-timing(regular) ease-out;
+      @include interactive-text-and-bg;
+      @include offset-spacing(cozy);
+      @include shape(bubble);
+      display: block;
+      outline: none;
+      background-color: transparent;
+
+      &:before {
+        @include shape(bubble);
+        z-index: 1;
       }
 
-      &:hover {
-        img:first-child {
-          @include shadow-border(thick, rgba($link-color, 0.2));
-        }
+      img:first-child {
+        @include offset-spacing(none);
       }
     }
 
     figcaption {
-      @include shape(bubble);
       position: absolute;
       top: 0;
       bottom: 0;
@@ -77,7 +79,9 @@
       color: rgba($background-color, 0.95);
       writing-mode: vertical-lr;
       font-family: typeface(smallcap);
+      font-weight: 800;
       font-size: type-size(xsmall);
+      border-radius: 0 0 0 border-radius(large);
       background-color: rgba($text-color, 0.6);
       backdrop-filter: blur(0.25rem);
     }

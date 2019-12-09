@@ -1,0 +1,46 @@
+/* ------------------------------------ *\
+   Button
+\* ------------------------------------ */
+
+.c-#{$ns}-button {
+  @include interactive-text-and-bg;
+  @include inset-spacing(cozy);
+  display: inline-flex;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  font-family: typeface(smallcap);
+  font-weight: 800;
+  font-size: type-size(small);
+  background-color: transparent;
+
+  &:before {
+    @include shape(pill);
+    @include shadow-border(thin, rgba($link-color, 0.8));
+  }
+
+  @at-root button#{&} {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  &.is-comfortable {
+    @include inset-spacing(comfortable);
+  }
+
+  &.is-compact {
+    @include inset-spacing(compact);
+    font-size: type-size(xsmall);
+  }
+}
+
+.c-#{$ns}-button--block {
+  display: block;
+  width: 100%;
+  margin: 0 auto v-spacing(medium) auto;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

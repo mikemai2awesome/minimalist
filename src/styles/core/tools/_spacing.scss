@@ -32,11 +32,17 @@
     padding-bottom: v-spacing(small);
     padding-left: h-spacing(small);
   }
-  @else {
+  @elseif $name == compact {
     padding-top: v-spacing(xsmall);
     padding-right: h-spacing(xsmall);
     padding-bottom: v-spacing(xsmall);
     padding-left: h-spacing(xsmall);
+  }
+  @else {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
   }
 }
 
@@ -57,12 +63,20 @@
     margin-bottom: v-spacing(small) * -1;
     margin-left: h-spacing(small) * -1;
   }
-  @else {
+  @elseif $name == compact {
     width: calc(100% + #{h-spacing(xsmall) * 2});
     max-width: calc(100% + #{h-spacing(xsmall) * 2});
     margin-top: v-spacing(xsmall) * -1;
     margin-right: h-spacing(xsmall) * -1;
     margin-bottom: v-spacing(xsmall) * -1;
     margin-left: h-spacing(xsmall) * -1;
+  }
+  @else {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
   }
 }
