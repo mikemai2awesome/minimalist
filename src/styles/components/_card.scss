@@ -7,9 +7,10 @@
   @include shape(card);
   @include shadow-border(thin, rgba($text-color, 0.05));
   display: block;
-  margin-bottom: v-spacing(medium);
+  margin: 0 auto v-spacing(medium) auto;
   color: $text-color;
-  text-decoration: none;
+  text-align: left;
+  text-align: start;
   background-color: $background-color;
   transition: all transition-timing(regular) ease-in-out;
 
@@ -31,19 +32,64 @@
     margin: v-spacing(xsmall) auto v-spacing(small) auto; /* Margin top helps to line up image card and text card if they are placed side by side. */
     max-width: 100%;
   }
-}
 
-a.c-#{$ns}-card,
-button.c-#{$ns}-card {
-  @include interactive-text-and-bg;
-  width: 100%;
-  background-color: transparent;
+  @at-root a#{&} {
+    @include interactive-text-and-bg;
+    text-decoration: none;
+    background-color: transparent;
 
-  &:before {
-    @include shape(card);
+    &:before {
+      @include shape(card);
+    }
+  }
+
+  @at-root figure#{&} {
+    @include shadow-border(none);
+    @include shape(bubble);
+    position: relative;
+
+    img:first-child {
+      @include offset-spacing(cozy);
+      @include shadow-border(thick, rgba($text-color, 0.05));
+      @include shape(bubble);
+    }
+
+    > a {
+      img:first-child {
+        @include shadow-border(thick, rgba($link-color, 0.1));
+        transition: box-shadow transition-timing(regular) ease-out;
+      }
+
+      &:hover {
+        img:first-child {
+          @include shadow-border(thick, rgba($link-color, 0.2));
+        }
+      }
+    }
+
+    figcaption {
+      @include shape(bubble);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      padding: v-spacing(small) h-spacing(xxsmall);
+      color: rgba($background-color, 0.95);
+      writing-mode: vertical-lr;
+      font-family: typeface(smallcap);
+      font-size: type-size(xsmall);
+      background-color: rgba($text-color, 0.6);
+      backdrop-filter: blur(0.25rem);
+    }
   }
 }
 
-button.c-#{$ns}-card {
-  @include button-reset;
+.c-#{$ns}-card--transparent {
+  @include shadow-border(none);
+  padding: 0;
+  background-color: transparent;
+
+  img:first-child {
+    @include shape(box);
+  }
 }

@@ -24,6 +24,7 @@ $code-border-color: rgba($code-text-color, 0.1) !default;
   padding: 1px h-spacing(xxsmall) 2px h-spacing(xxsmall);
   color: $code-text-color;
   text-align: left;
+  text-align: start;
   font-family: typeface(mono);
   font-size: strip-unit(type-size(small)) + em;
   background-color: rgba(mix($background-color, $code-text-color, 98%), 0.95);

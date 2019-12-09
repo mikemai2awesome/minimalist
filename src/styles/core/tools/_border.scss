@@ -20,7 +20,7 @@
   }
 }
 
-@mixin shadow-border($width-name, $color) {
+@mixin shadow-border($width-name, $color: null) {
   @if map-has-key($border-width-values, $width-name) {
     $width-value: map-get-deep($border-width-values, $width-name);
     box-shadow: 0 0 0 $width-value $color;

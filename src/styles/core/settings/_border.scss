@@ -3,12 +3,14 @@
 \*------------------------------------*/
 
 $border-radius-values: (
+  'none': 0,
   'small': 3px,
-  'large': 0.5em,
+  'large': 0.5rem,
   'full': 100em,
 ) !default;
 
 $border-width-values: (
+  'none': 0,
   'thin': 1px,
-  'thick': 0.15rem,
+  'thick': 0.25rem,
 ) !default;

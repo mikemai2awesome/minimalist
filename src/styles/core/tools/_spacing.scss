@@ -39,3 +39,30 @@
     padding-left: h-spacing(xsmall);
   }
 }
+
+@mixin offset-spacing($name) {
+  @if $name == comfortable {
+    width: calc(100% + #{h-spacing(medium) * 2});
+    max-width: calc(100% + #{h-spacing(medium) * 2});
+    margin-top: v-spacing(large) * -1;
+    margin-right: h-spacing(medium) * -1;
+    margin-bottom: v-spacing(large) * -1;
+    margin-left: h-spacing(medium) * -1;
+  }
+  @elseif $name == cozy {
+    width: calc(100% + #{h-spacing(small) * 2});
+    max-width: calc(100% + #{h-spacing(small) * 2});
+    margin-top: v-spacing(small) * -1;
+    margin-right: h-spacing(small) * -1;
+    margin-bottom: v-spacing(small) * -1;
+    margin-left: h-spacing(small) * -1;
+  }
+  @else {
+    width: calc(100% + #{h-spacing(xsmall) * 2});
+    max-width: calc(100% + #{h-spacing(xsmall) * 2});
+    margin-top: v-spacing(xsmall) * -1;
+    margin-right: h-spacing(xsmall) * -1;
+    margin-bottom: v-spacing(xsmall) * -1;
+    margin-left: h-spacing(xsmall) * -1;
+  }
+}

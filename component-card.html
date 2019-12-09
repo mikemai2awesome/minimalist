@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Card | Component | MNML CSS Framework</title>
+    <link rel="stylesheet" type="text/css" href="src/styles/main.css">
+  </head>
+  <body class="c-mnml-body">
+    <header role="banner" class="c-mnml-plane c-mnml-plane--trendy c-mnml-plane--trendy--af c-mnml-plane--article c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xxlarge t-mnml-dark u-mnml-text-align-center">
+      <div class="c-mnml-plane-background">
+        <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
+      </div>
+      <div class="c-mnml-plane-cabin">
+        <p class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xsmall">Component</p>
+        <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--display">Card</h1>
+      </div>
+    </header>
+    <main class="c-mnml-plane c-mnml-plane--article c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-large">
+      <article class="c-mnml-plane-cabin">
+        <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Base</h2>
+        <p class="c-mnml-text c-mnml-text--block">This is the default card.</p>
+        <article class="c-mnml-card">
+          <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
+          <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--large">Card heading</h1>
+          <p class="c-mnml-text c-mnml-text--block">Card body text.</p>
+        </article>
+        <pre class="c-mnml-code-block" data-code="html"><code class="c-mnml-code">&#x3C;article class=&#x22;c-mnml-card&#x22;&#x3E;
+  &#x3C;img src=&#x22;path/img.jpg&#x22; alt=&#x22;Image alt text.&#x22;&#x3E;
+  &#x3C;h1 class=&#x22;c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--large&#x22;&#x3E;Card heading&#x3C;/h1&#x3E;
+  &#x3C;p class=&#x22;c-mnml-text c-mnml-text--block&#x22;&#x3E;Card body text.&#x3C;/p&#x3E;
+&#x3C;/article&#x3E;</code></pre>
+        <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Card List</h2>
+        <p class="c-mnml-text c-mnml-text--block">This component can be combined with the List component.</p>
+        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Bare List</h3>
+        <div class="c-mnml-list c-mnml-list--bare is-horizontal is-compact">
+          <div class="c-mnml-list__item">
+            <article class="c-mnml-card">
+              <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
+              <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 1</h1>
+              <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
+            </article>
+          </div>
+          <div class="c-mnml-list__item">
+            <article class="c-mnml-card">
+              <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
+              <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 2</h1>
+              <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
+            </article>
+          </div>
+          <div class="c-mnml-list__item">
+            <article class="c-mnml-card">
+              <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
+              <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 3</h1>
+              <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
+            </article>
+          </div>
+        </div>
+        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">UI List</h3>
+        <div class="c-mnml-list c-mnml-list--ui is-horizontal">
+          <a href="javascript:" class="c-mnml-list__item">
+            <article class="c-mnml-card c-mnml-card--transparent">
+              <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
+              <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 1</h1>
+              <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
+            </article>
+          </a>
+          <a href="javascript:" class="c-mnml-list__item">
+            <article class="c-mnml-card c-mnml-card--transparent">
+              <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
+              <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 2</h1>
+              <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
+            </article>
+          </a>
+          <a href="javascript:" class="c-mnml-list__item">
+            <article class="c-mnml-card c-mnml-card--transparent">
+              <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
+              <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 3</h1>
+              <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
+            </article>
+          </a>
+        </div>
+        <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Image Card</h2>
+        <p class="c-mnml-text c-mnml-text--block">Use the <code class="c-mnml-code">figure</code> and <code class="c-mnml-code">figcaption</code> tags to create an image card.</p>
+        <figure class="c-mnml-card">
+          <a href="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" target="_blank"><img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image"></a>
+          <figcaption>
+            Fig 1: this is an image card.
+          </figcaption>
+        </figure>
+      </article>
+    </main>
+  </body>
+</html>
