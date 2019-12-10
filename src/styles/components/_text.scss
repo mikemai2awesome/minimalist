@@ -2,7 +2,7 @@
   Text
 \*------------------------------------*/
 
-// Type Options
+/* Type Options */
 .c-#{$ns}-text {
   font-family: typeface(body);
   font-weight: 400;
@@ -28,7 +28,7 @@
   font-weight: 800;
 }
 
-// Size Options
+/* Size Options */
 .c-#{$ns}-text--xxlarge {
   font-size: type-size(xxlarge);
 }
@@ -66,7 +66,7 @@
 }
 
 
-// Display Options
+/* Display Options */
 .c-#{$ns}-text {
   display: inline;
 }
