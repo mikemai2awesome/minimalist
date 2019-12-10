@@ -18,8 +18,14 @@
 }
 
 .c-#{$ns}-plane {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
+
+  > * {
+    width: 100%;
+  }
 }
 
 /* Plane trendy gradient */
@@ -86,6 +92,8 @@
 
 .c-#{$ns}-plane-cabin {
   display: block;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .c-#{$ns}-plane-deck {
@@ -133,25 +141,30 @@
 }
 
 /* Plane width options */
-.c-#{$ns}-plane--article {
+.c-#{$ns}-plane--article-width {
   .c-#{$ns}-plane-deck,
   .c-#{$ns}-plane-cabin {
     @include plane-max-width(article);
   }
 }
 
-.c-#{$ns}-plane--large {
+.c-#{$ns}-plane--large-width {
   .c-#{$ns}-plane-deck,
   .c-#{$ns}-plane-cabin {
     @include plane-max-width(large);
   }
 }
 
-.c-#{$ns}-plane--xlarge {
+.c-#{$ns}-plane--xlarge-width {
   .c-#{$ns}-plane-deck,
   .c-#{$ns}-plane-cabin {
     @include plane-max-width(xlarge);
   }
+}
+
+/* Plane height options */
+.c-#{$ns}-plane--full-height {
+  min-height: 100vh;
 }
 
 /* Plane background */

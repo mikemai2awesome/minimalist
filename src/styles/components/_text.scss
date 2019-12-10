@@ -55,6 +55,9 @@
 }
 
 .c-#{$ns}-text--display {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   font-size: type-size(xxxlarge-min);
 
   @include respond-to(small) {
