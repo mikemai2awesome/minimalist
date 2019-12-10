@@ -26,6 +26,10 @@
   -webkit-transition: all transition-timing(regular) ease-out;
   transition: all transition-timing(regular) ease-out;
 
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
   &:before {
     content: '';
     position: absolute;
