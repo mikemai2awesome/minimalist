@@ -78,7 +78,8 @@
     font-family: typeface(body);
     font-weight: 400;
     opacity: 0.2;
-    transform: translateX(calc(-100% - #{h-spacing(xxsmall)}));
+    -webkit-transform: translateX(calc(-100% - #{h-spacing(xxsmall)}));
+            transform: translateX(calc(-100% - #{h-spacing(xxsmall)}));
   }
 
   &:not(.c-#{$ns}-text--heading) {
@@ -126,7 +127,8 @@
         color: inherit;
         background-color: currentColor;
         opacity: 0.05;
-        transform: translateY(v-spacing(xsmall));
+        -webkit-transform: translateY(v-spacing(xsmall));
+                transform: translateY(v-spacing(xsmall));
       }
     }
 

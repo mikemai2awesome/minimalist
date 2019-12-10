@@ -7,7 +7,9 @@
   font: inherit;
   border: none;
   cursor: pointer;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 @mixin interactive-text-and-bg($position: relative) {
@@ -17,11 +19,23 @@
 
   color: $text-color;
   outline: none;
-  backdrop-filter: blur(0.25rem);
-  transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  -webkit-backdrop-filter: blur(0.25rem);
+          backdrop-filter: blur(0.25rem);
+  -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+          transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  -webkit-transition:
+    color transition-timing(regular) ease-out,
+    -webkit-transform transition-timing(regular) ease-out;
+  transition:
+    color transition-timing(regular) ease-out,
+    -webkit-transform transition-timing(regular) ease-out;
   transition:
     color transition-timing(regular) ease-out,
     transform transition-timing(regular) ease-out;
+  transition:
+    color transition-timing(regular) ease-out,
+    transform transition-timing(regular) ease-out,
+    -webkit-transform transition-timing(regular) ease-out;
 
   &:before {
     content: '';
@@ -38,6 +52,7 @@
       linear-gradient(100deg, rgba(palette(purple), .6), rgba(palette(purple), 0) 70.71%),
       linear-gradient(336deg, rgba(palette(orange), .6), rgba(palette(orange), 0) 70.71%);
     background-blend-mode: darken;
+    -webkit-transition: opacity transition-timing(regular) ease-out;
     transition: opacity transition-timing(regular) ease-out;
   }
 
@@ -51,16 +66,22 @@
   }
 
   &:focus {
-    animation-name: pulse;
-    animation-duration: 1.5s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: pulse;
+            animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
   }
 
   &:active {
     color: $text-color;
-    animation: none;
-    transform: scale3d(0.99, 0.99, 0.99) translate3d(0, 0, 0);
+    -webkit-animation: none;
+            animation: none;
+    -webkit-transform: scale3d(0.99, 0.99, 0.99) translate3d(0, 0, 0);
+            transform: scale3d(0.99, 0.99, 0.99) translate3d(0, 0, 0);
 
     &:before {
       opacity: 0.5;
@@ -68,14 +89,32 @@
   }
 }
 
-@keyframes pulse {
+@-webkit-keyframes pulse {
   0% {
-    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   }
   50% {
-    transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
+    -webkit-transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
+            transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
   }
   100% {
-    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
+            transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   }
 }

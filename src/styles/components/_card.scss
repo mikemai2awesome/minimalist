@@ -77,13 +77,26 @@
       left: 0;
       padding: v-spacing(small) h-spacing(xxsmall);
       color: rgba($background-color, 0.95);
-      writing-mode: vertical-lr;
+      -webkit-writing-mode: vertical-lr;
+          -ms-writing-mode: tb-lr;
+              writing-mode: vertical-lr;
       font-family: typeface(smallcap);
       font-weight: 800;
       font-size: type-size(xsmall);
       border-radius: 0 0 0 border-radius(large);
-      background-color: rgba($text-color, 0.6);
-      backdrop-filter: blur(0.25rem);
+      background: -webkit-gradient(
+        linear,
+        left top, right top,
+        from(rgba($text-color, 0.6)),
+        to(rgba($text-color, 0.4))
+      );
+      background: linear-gradient(
+        to right,
+        rgba($text-color, 0.6),
+        rgba($text-color, 0.4)
+      );
+      -webkit-backdrop-filter: blur(0.25rem);
+              backdrop-filter: blur(0.25rem);
     }
   }
 }

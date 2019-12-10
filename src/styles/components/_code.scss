@@ -48,7 +48,8 @@ $code-border-color: rgba($code-text-color, 0.1) !default;
   position: relative;
   display: flex;
   font-size: type-size(xsmall);
-  backdrop-filter: blur(0.15rem);
+  -webkit-backdrop-filter: blur(0.15rem);
+          backdrop-filter: blur(0.15rem);
 
   &:before {
     content: attr(data-code);

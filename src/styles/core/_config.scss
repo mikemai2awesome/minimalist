@@ -2,7 +2,7 @@
    Namespace
 \* ------------------------------------ */
 
-$ns: 'mnml' !default; // Namespace for the CSS classes.
+$ns: 'mnml' !default; /* Namespace for the CSS classes. */
 
 
 /* ------------------------------------ *\
@@ -25,7 +25,7 @@ $typefaces: (
 ) !global;
 
 $font-size:
-  // Only edit the px value.
+  /* Only edit the px value. */
   calc(
     16px
     + 0.25vw

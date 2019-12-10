@@ -36,7 +36,8 @@ $bullet-color: rgba($text-color, 0.4) !default;
       left: h-spacing(xxsmall) * -1;
       content: '\2059';
       color: $bullet-color;
-      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
     }
   }
 }
@@ -59,7 +60,8 @@ $bullet-color: rgba($text-color, 0.4) !default;
       content: counter(ordered-list-item);
       color: $bullet-color;
       font-family: typeface(smallcap);
-      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
     }
   }
 }

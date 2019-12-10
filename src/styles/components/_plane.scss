@@ -22,7 +22,7 @@
   position: relative;
 }
 
-// Plane trendy gradient
+/* Plane trendy gradient */
 .c-#{$ns}-plane--trendy {
   &:after {
     content: '';
@@ -56,7 +56,7 @@
   }
 }
 
-// Plane inset spacing options
+/* Plane inset spacing options */
 @each $value in $v-spacing-values {
   $value-name: nth($value, 1);
 
@@ -78,7 +78,7 @@
   }
 }
 
-// Plane cabin and deck
+/* Plane cabin and deck */
 .c-#{$ns}-plane-deck,
 .c-#{$ns}-plane-cabin {
   position: relative;
@@ -132,7 +132,7 @@
   }
 }
 
-// Plane width options
+/* Plane width options */
 .c-#{$ns}-plane--article {
   .c-#{$ns}-plane-deck,
   .c-#{$ns}-plane-cabin {
@@ -154,7 +154,7 @@
   }
 }
 
-// Plane background
+/* Plane background */
 .c-#{$ns}-plane-background {
   display: block;
   position: absolute;
@@ -166,11 +166,12 @@
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
-// Stacking context
+/* Stacking context */
 .c-#{$ns}-plane-deck,
 .c-#{$ns}-plane-cabin {
   z-index: 2; /* Places cabin and deck above background and gradient. */

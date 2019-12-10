@@ -22,7 +22,9 @@
   @at-root button#{&} {
     border: none;
     cursor: pointer;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   &.is-comfortable {

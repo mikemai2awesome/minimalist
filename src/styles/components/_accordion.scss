@@ -53,7 +53,8 @@
   }
 
   &[open] .c-#{$ns}-accordion__trigger__icon {
-    transform: rotate(-630deg) scale3d(-0.8, 0.8, 0.8) translate3d(0, 0, 0);
+    -webkit-transform: rotate(-630deg) scale3d(-0.8, 0.8, 0.8) translate3d(0, 0, 0);
+            transform: rotate(-630deg) scale3d(-0.8, 0.8, 0.8) translate3d(0, 0, 0);
   }
 }
 
@@ -65,7 +66,10 @@
   padding-right: h-spacing(xsmall) * 4;
   color: $text-color;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 
   &::-webkit-details-marker {
     display: none;
@@ -92,8 +96,12 @@
   color: $link-color;
   font-family: typeface(mono);
   font-weight: 700;
-  transform: rotate(90deg) scale3d(0.8, 0.8, 0.8) translate3d(0, 0, 0);
+  -webkit-transform: rotate(90deg) scale3d(0.8, 0.8, 0.8) translate3d(0, 0, 0);
+          transform: rotate(90deg) scale3d(0.8, 0.8, 0.8) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform transition-timing(regular) ease-in-out;
+  transition: -webkit-transform transition-timing(regular) ease-in-out;
   transition: transform transition-timing(regular) ease-in-out;
+  transition: transform transition-timing(regular) ease-in-out, -webkit-transform transition-timing(regular) ease-in-out;
 
   &:before {
     content: '\0276F';
