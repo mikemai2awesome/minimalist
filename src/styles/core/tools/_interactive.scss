@@ -23,19 +23,8 @@
           backdrop-filter: blur(0.25rem);
   -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
           transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-  -webkit-transition:
-    color transition-timing(regular) ease-out,
-    -webkit-transform transition-timing(regular) ease-out;
-  transition:
-    color transition-timing(regular) ease-out,
-    -webkit-transform transition-timing(regular) ease-out;
-  transition:
-    color transition-timing(regular) ease-out,
-    transform transition-timing(regular) ease-out;
-  transition:
-    color transition-timing(regular) ease-out,
-    transform transition-timing(regular) ease-out,
-    -webkit-transform transition-timing(regular) ease-out;
+  -webkit-transition: all transition-timing(regular) ease-out;
+  transition: all transition-timing(regular) ease-out;
 
   &:before {
     content: '';

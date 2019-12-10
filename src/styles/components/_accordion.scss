@@ -98,10 +98,8 @@
   font-weight: 700;
   -webkit-transform: rotate(90deg) scale3d(0.8, 0.8, 0.8) translate3d(0, 0, 0);
           transform: rotate(90deg) scale3d(0.8, 0.8, 0.8) translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform transition-timing(regular) ease-in-out;
-  transition: -webkit-transform transition-timing(regular) ease-in-out;
-  transition: transform transition-timing(regular) ease-in-out;
-  transition: transform transition-timing(regular) ease-in-out, -webkit-transform transition-timing(regular) ease-in-out;
+  -webkit-transition: all transition-timing(regular) ease-in;
+          transition: all transition-timing(regular) ease-in;
 
   &:before {
     content: '\0276F';

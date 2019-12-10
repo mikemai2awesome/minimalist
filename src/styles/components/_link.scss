@@ -4,14 +4,8 @@
 
 .c-#{$ns}-link {
   text-decoration: none;
-  -webkit-transition:
-    color transition-timing(regular) ease-in,
-    background-color transition-timing(regular) ease-in,
-    box-shadow transition-timing(regular) ease-in;
-  transition:
-    color transition-timing(regular) ease-in,
-    background-color transition-timing(regular) ease-in,
-    box-shadow transition-timing(regular) ease-in;
+  -webkit-transition: all transition-timing(regular) ease-in;
+  transition: all transition-timing(regular) ease-in;
 
   &:link {
     color: $link-color;
