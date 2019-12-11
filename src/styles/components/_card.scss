@@ -62,7 +62,7 @@
 
       &:before {
         @include shape(bubble);
-        z-index: 1;
+        z-index: 1; /* Brings the gradient on top of the image. */
       }
 
       img:first-child {
