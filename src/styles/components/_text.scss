@@ -4,6 +4,7 @@
 
 /* Type Options */
 .c-#{$ns}-text {
+  text-shadow: 1px 1px 1px rgba($background-color, 0.6);
   font-family: typeface(body);
   font-weight: 400;
 }
@@ -23,7 +24,6 @@
 }
 
 .c-#{$ns}-text--lede {
-  text-transform: capitalize;
   font-family: typeface(smallcap);
   font-weight: 800;
 }
@@ -55,14 +55,18 @@
 }
 
 .c-#{$ns}-text--display {
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   font-size: type-size(xxxlarge-min);
 
   @include respond-to(small) {
     font-size: type-size(xxxlarge-max);
   }
+}
+
+.c-#{$ns}-text--xxlarge,
+.c-#{$ns}-text--display {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 
@@ -73,6 +77,7 @@
 
 .c-#{$ns}-text--block {
   display: block;
+  width: 100%;
   margin-top: 0;
   line-height: line-height(regular);
 
