@@ -122,10 +122,6 @@ $bullet-color: rgba($text-color, 0.4) !default;
       margin-top: v-spacing(medium);
       margin-bottom: 0;
       margin-left: h-spacing(medium);
-
-      > * {
-        min-height: 100%;
-      }
     }
   }
 
