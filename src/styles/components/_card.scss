@@ -5,7 +5,7 @@
 .c-#{$ns}-card {
   @include inset-spacing(cozy);
   @include shape(card);
-  @include shadow-border(thin, rgba($text-color, 0.05));
+  @include shadow-border(thick, rgba($text-color, 0.05));
   display: block;
   margin: 0 auto v-spacing(medium) auto;
   color: $text-color;

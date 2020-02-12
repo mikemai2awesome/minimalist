@@ -1,18 +1,18 @@
 .t-#{$ns}-dark {
   /* Set the regular light theme colors */
-  color: $text-color;
-  background-color: $background-color;
+  color: $text-color !important;
+  background-color: $background-color !important;
 
   /* Then invert the colors */
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+  -webkit-filter: invert(100%) !important;
+          filter: invert(100%) !important;
 
   /* Preserving raster images and embeds */
   img:not([src*='.svg']),
   video,
   embed,
   iframe {
-    -webkit-filter: invert(100%);
-            filter: invert(100%);
+    -webkit-filter: invert(100%) !important;
+            filter: invert(100%) !important;
   }
 }
