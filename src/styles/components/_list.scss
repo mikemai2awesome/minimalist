@@ -204,15 +204,15 @@ $bullet-color: rgba($text-color, 0.4) !default;
 
 
 .c-#{$ns}-list--ui {
-  margin-top: -1px;
-  margin-left: -1px;
+  margin-top: -2px;
+  margin-left: -2px;
 
   > .c-#{$ns}-list__item {
     @include inset-spacing(cozy);
-    @include shape(box);
+    @include shape(card);
     display: block;
-    margin-top: 1px;
-    margin-left: 1px;
+    margin-top: 2px;
+    margin-left: 2px;
     color: $text-color;
     background-color: rgba($text-color, 0.05);
   }
@@ -224,7 +224,7 @@ $bullet-color: rgba($text-color, 0.4) !default;
     background-color: transparent;
 
     &:before {
-      @include shape(box);
+      @include shape(card);
     }
   }
 

@@ -15,8 +15,8 @@
   background-color: transparent;
 
   &:before {
-    @include shape(pill);
-    @include shadow-border(thin, rgba($link-color, 0.8));
+    @include shape(card);
+    @include shadow-border(thick, rgba($link-color, 0.2));
   }
 
   @at-root button#{&} {

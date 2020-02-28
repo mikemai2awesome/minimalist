@@ -49,7 +49,7 @@
   padding: 0;
 
   & + #{&} {
-    margin-top: 1px;
+    margin-top: 2px;
   }
 
   &[open] .c-#{$ns}-accordion__trigger__icon {
@@ -76,7 +76,7 @@
   }
 
   &:before {
-    @include shape(box);
+    @include shape(card);
   }
 
   &:focus {
