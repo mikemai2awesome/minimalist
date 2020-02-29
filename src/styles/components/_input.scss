@@ -1,0 +1,46 @@
+/* ------------------------------------ *\
+   Input
+\* ------------------------------------ */
+
+.c-#{$ns}-input {
+  @include shape(card);
+  display: block;
+  width: 100%;
+  height: calc((#{v-spacing(small)} * 2 + #{line-height(tight) * type-size(small)}));
+  margin: 0;
+  padding-top: 0;
+  padding-right: h-spacing(small);
+  padding-bottom: 0;
+  padding-left: h-spacing(small);
+  line-height: line-height(tight);
+  font-family: typeface(body);
+  font-weight: 400;
+  font-size: type-size(small);
+  border: 1px solid rgba($link-color, 0.2);
+  background-color: rgba($link-color, 0.05);
+  background-image: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-transition: border transition-timing(regular) ease-out;
+  transition: border transition-timing(regular) ease-out;
+
+  &:focus {
+    border: 1px solid rgba($link-color, 0.8);
+  }
+
+  &.is-comfortable {
+    height: calc((#{v-spacing(large)} * 2 + #{line-height(tight) * type-size(large)}));
+    padding-right: h-spacing(medium);
+    padding-left: h-spacing(medium);
+    font-size: type-size(large);
+  }
+
+  &.is-compact {
+    height: calc((#{v-spacing(xsmall)} * 2 + #{line-height(tight) * type-size(xsmall)}));
+    padding-right: h-spacing(xsmall);
+    padding-left: h-spacing(xsmall);
+    font-size: type-size(xsmall);
+  }
+}
