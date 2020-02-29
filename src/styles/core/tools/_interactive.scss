@@ -36,7 +36,7 @@
     top: 0;
     left: 0;
     z-index: 0; /* Puts the gradient below all content by default. */
-    opacity: 0.2;
+    opacity: 0.25;
     width: 100%;
     height: 100%;
     pointer-events: none;
@@ -73,8 +73,8 @@
     color: $text-color;
     -webkit-animation: none;
             animation: none;
-    -webkit-transform: scale3d(0.99, 0.99, 0.99) translate3d(0, 0, 0);
-            transform: scale3d(0.99, 0.99, 0.99) translate3d(0, 0, 0);
+    -webkit-transform: scale3d(0.96, 0.96, 0.96) translate3d(0, 0, 0);
+            transform: scale3d(0.96, 0.96, 0.96) translate3d(0, 0, 0);
 
     &:before {
       opacity: 0.5;
@@ -88,8 +88,8 @@
             transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   }
   50% {
-    -webkit-transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
-            transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
+    -webkit-transform: scale3d(1.04, 1.04, 1.04) translate3d(0, 0, 0);
+            transform: scale3d(1.04, 1.04, 1.04) translate3d(0, 0, 0);
   }
   100% {
     -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
@@ -103,8 +103,8 @@
             transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   }
   50% {
-    -webkit-transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
-            transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
+    -webkit-transform: scale3d(1.04, 1.04, 1.04) translate3d(0, 0, 0);
+            transform: scale3d(1.04, 1.04, 1.04) translate3d(0, 0, 0);
   }
   100% {
     -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);

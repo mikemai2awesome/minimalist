@@ -17,6 +17,8 @@
   &:before {
     @include shape(card);
     @include shadow-border(thick, rgba($link-color, 0.2));
+
+    border: 1px solid rgba($link-color, 0.8);
   }
 
   @at-root button#{&} {
@@ -29,6 +31,7 @@
 
   &.is-comfortable {
     @include inset-spacing(comfortable);
+    font-size: type-size(large);
   }
 
   &.is-compact {

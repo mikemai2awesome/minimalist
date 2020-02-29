@@ -9,8 +9,6 @@ $bullet-color: rgba($text-color, 0.4) !default;
   display: block;
   margin-bottom: v-spacing(medium);
   list-style: none;
-  text-align: left;
-  text-align: start;
 
   &:last-child {
     margin-bottom: 0;
@@ -226,6 +224,11 @@ $bullet-color: rgba($text-color, 0.4) !default;
     &:before {
       @include shape(card);
     }
+
+    &:focus {
+      @include shadow-border(thin, rgba($link-color, 0.8));
+      z-index: 1;
+    }
   }
 
   > button.c-#{$ns}-list__item {
@@ -255,3 +258,11 @@ $bullet-color: rgba($text-color, 0.4) !default;
   }
 }
 
+
+.c-#{$ns}-list--align-center {
+  justify-content: center;
+}
+
+.c-#{$ns}-list--valign-center {
+  align-items: center;
+}
