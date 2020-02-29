@@ -4,6 +4,7 @@
 
 .c-#{$ns}-input {
   @include shape(card);
+  @include shadow-border(thin, rgba($link-color, 0.2));
   display: block;
   width: 100%;
   height: calc((#{v-spacing(small)} * 2 + #{line-height(tight) * type-size(small)}));
@@ -12,22 +13,21 @@
   padding-right: h-spacing(small);
   padding-bottom: 0;
   padding-left: h-spacing(small);
-  line-height: line-height(tight);
   font-family: typeface(body);
   font-weight: 400;
   font-size: type-size(small);
-  border: 1px solid rgba($link-color, 0.2);
+  border: 0;
   background-color: rgba($link-color, 0.05);
   background-image: none;
   outline: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  -webkit-transition: border transition-timing(regular) ease-out;
-  transition: border transition-timing(regular) ease-out;
+  -webkit-transition: box-shadow transition-timing(regular) ease-out;
+  transition: box-shadow transition-timing(regular) ease-out;
 
   &:focus {
-    border: 1px solid rgba($link-color, 0.8);
+    @include shadow-border(thin, rgba($link-color, 0.8));
   }
 
   &.is-comfortable {
