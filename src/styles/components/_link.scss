@@ -24,9 +24,8 @@
   }
 
   &:focus {
+    text-decoration: underline;
     outline: none;
-    background-color: rgba($link-color, 0.1);
-    box-shadow: none;
   }
 
   &:active {
