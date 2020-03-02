@@ -79,7 +79,7 @@ $bullet-color: rgba($text-color, 0.4) !default;
     }
   }
 
-  &.is-horizontal {
+  &.lay-horizontal {
     display: flex;
     flex-wrap: wrap;
     margin-top: v-spacing(xxsmall) * -1;
@@ -109,14 +109,14 @@ $bullet-color: rgba($text-color, 0.4) !default;
     }
   }
 
-  &.is-horizontal {
+  &.lay-horizontal {
     flex-direction: row;
     margin-top: v-spacing(medium) * -1;
     margin-left: h-spacing(medium) * -1;
 
     > .c-#{$ns}-list__item {
       flex: 1;
-      flex-basis: 150px;
+      flex-basis: 200px;
       margin-top: v-spacing(medium);
       margin-bottom: 0;
       margin-left: h-spacing(medium);
@@ -132,7 +132,7 @@ $bullet-color: rgba($text-color, 0.4) !default;
       }
     }
 
-    &.is-horizontal {
+    &.lay-horizontal {
       margin-top: v-spacing(large) * -1;
       margin-left: h-spacing(large) * -1;
 
@@ -153,7 +153,7 @@ $bullet-color: rgba($text-color, 0.4) !default;
       }
     }
 
-    &.is-horizontal {
+    &.lay-horizontal {
       margin-top: v-spacing(xsmall) * -1;
       margin-left: h-spacing(xsmall) * -1;
 
@@ -170,12 +170,7 @@ $bullet-color: rgba($text-color, 0.4) !default;
   justify-content: flex-start;
 }
 
-.c-#{$ns}-list--justified {
-  justify-content: space-between;
-}
-
-.c-#{$ns}-list--inline,
-.c-#{$ns}-list--justified {
+.c-#{$ns}-list--inline {
   display: flex;
   flex-wrap: wrap;
   margin-top: v-spacing(small) * -1;
@@ -235,13 +230,13 @@ $bullet-color: rgba($text-color, 0.4) !default;
     @include button-reset;
   }
 
-  &.is-horizontal {
+  &.lay-horizontal {
     display: flex;
     flex-wrap: wrap;
 
     > .c-#{$ns}-list__item {
       flex: 1;
-      flex-basis: 150px;
+      flex-basis: 200px;
     }
   }
 
@@ -259,8 +254,20 @@ $bullet-color: rgba($text-color, 0.4) !default;
 }
 
 
+.c-#{$ns}-list--align-start {
+  justify-content: flex-start;
+}
+
 .c-#{$ns}-list--align-center {
   justify-content: center;
+}
+
+.c-#{$ns}-list--align-end {
+  justify-content: flex-end;
+}
+
+.c-#{$ns}-list--align-justify {
+  justify-content: space-between;
 }
 
 .c-#{$ns}-list--valign-center {

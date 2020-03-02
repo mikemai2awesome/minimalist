@@ -26,10 +26,13 @@
   &:focus {
     text-decoration: underline;
     outline: none;
+    box-shadow: none;
+    background-color: rgba($link-color, 0.1);
   }
 
   &:active {
     color: $text-color;
-    box-shadow: 0 -0.4em 0 $text-color inset;
+    box-shadow: none;
+    background-color: rgba($text-color, 0.1);
   }
 }

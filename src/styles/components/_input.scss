@@ -5,8 +5,7 @@
 .c-#{$ns}-input {
   @include shape(card);
   @include shadow-border(thin, rgba($link-color, 0.2));
-  display: block;
-  width: 100%;
+  display: inline-flex;
   height: calc((#{v-spacing(small)} * 2 + #{line-height(tight) * type-size(small)}));
   margin: 0;
   padding-top: 0;
@@ -26,6 +25,10 @@
   -webkit-transition: box-shadow transition-timing(regular) ease-out;
   transition: box-shadow transition-timing(regular) ease-out;
 
+  &:hover {
+    @include shadow-border(thin, rgba($link-color, 0.4));
+  }
+
   &:focus {
     @include shadow-border(thin, rgba($link-color, 0.8));
   }
@@ -42,5 +45,18 @@
     padding-right: h-spacing(xsmall);
     padding-left: h-spacing(xsmall);
     font-size: type-size(xsmall);
+  }
+}
+
+.c-#{$ns}-input--block {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: v-spacing(medium);
+  margin-left: 0;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }

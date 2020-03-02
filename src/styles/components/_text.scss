@@ -70,16 +70,42 @@
 }
 
 
+/* Line Height */
+.c-#{$ns}-text {
+  line-height: line-height(regular);
+}
+
+.c-#{$ns}-text--lede {
+  line-height: line-height(tight);
+}
+
+.c-#{$ns}-text--heading {
+  line-height: line-height(tight);
+
+  &.c-#{$ns}-text--xxlarge,
+  &.c-#{$ns}-text--xlarge {
+    line-height: line-height(xtight);
+  }
+
+  &.c-#{$ns}-text--display {
+    line-height: line-height(xtight);
+
+    @include respond-to(small) {
+      line-height: line-height(xxtight);
+    }
+  }
+}
+
+
 /* Display Options */
 .c-#{$ns}-text {
   display: inline;
+  margin: 0;
 }
 
 .c-#{$ns}-text--block {
   display: block;
   width: 100%;
-  margin-top: 0;
-  line-height: line-height(regular);
 
   &:before {
     position: absolute;
@@ -100,8 +126,6 @@
   }
 
   &.c-#{$ns}-text--lede {
-    line-height: line-height(tight);
-
     &:before {
       display: none;
     }
@@ -109,13 +133,11 @@
 
   &.c-#{$ns}-text--heading {
     margin-bottom: v-spacing(xsmall);
-    line-height: line-height(tight);
 
     &.c-#{$ns}-text--xxlarge {
       margin-bottom: v-spacing(medium);
       padding-top: v-spacing(medium);
       padding-bottom: v-spacing(xsmall);
-      line-height: line-height(xtight);
 
       &:first-child {
         padding-top: 0;
@@ -143,15 +165,22 @@
     &.c-#{$ns}-text--display {
       margin-bottom: v-spacing(xsmall);
       margin-left: -0.05em;
-      line-height: line-height(xtight);
-
-      @include respond-to(small) {
-        line-height: line-height(xxtight);
-      }
     }
   }
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+
+/* Heading Link */
+.c-#{$ns}-text--heading {
+  .c-#{$ns}-link {
+    box-shadow: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

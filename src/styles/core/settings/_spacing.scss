@@ -13,8 +13,8 @@ $line-height-values: (
   loose:       $line-height * 1.17
 ) !default;
 
-$h-spacing:   $gutter !default;
-$v-spacing:   ($line-height - (($line-height - 1) / 2)) * 1rem !default;
+$h-spacing:    $gutter !default;
+$v-spacing:    1rem !default;
 
 $v-spacing-values: (
   xxlarge:     $v-spacing * 8,

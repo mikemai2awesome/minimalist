@@ -43,3 +43,13 @@ sub {
 sup {
   top: -0.5em;
 }
+
+hr {
+  margin-top: v-spacing(medium);
+  margin-bottom: v-spacing(medium);
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: none;
+  border-bottom: border-width(thin) solid rgba($text-color, 0.1);
+}
