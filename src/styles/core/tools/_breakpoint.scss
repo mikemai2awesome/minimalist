@@ -28,11 +28,11 @@
     $query-widths: "(min-width: #{$min}) and (max-width: #{$max})";
   }
   /* Set just min */
-  @elseif $min != 0 and $max == 0 {
+  @else if $min != 0 and $max == 0 {
     $query-widths: "(min-width: #{$min})";
   }
   /* Set just max */
-  @elseif $min == 0 and $max != 0 {
+  @else if $min == 0 and $max != 0 {
     $query-widths: "(max-width: #{$max})";
   }
 

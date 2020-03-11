@@ -17,7 +17,7 @@ $block-elements-list: 'p',
 $unquoted-block-elements-list: ();
 
 @each $block-element-type in $block-elements-list {
-  $unquoted-block-elements-list: append($unquoted-block-elements-list, unquote($block-element-type), comma) !global;
+  $unquoted-block-elements-list: append($unquoted-block-elements-list, unquote($block-element-type), comma);
 }
 
 $all-block-elements: $unquoted-block-elements-list;
@@ -37,7 +37,7 @@ $heading-elements-list: 'h1',
 $unquoted-heading-elements-list: ();
 
 @each $heading-element-type in $heading-elements-list {
-  $unquoted-heading-elements-list: append($unquoted-heading-elements-list, unquote($heading-element-type), comma) !global;
+  $unquoted-heading-elements-list: append($unquoted-heading-elements-list, unquote($heading-element-type), comma);
 }
 
 $all-heading-elements: $unquoted-heading-elements-list;
@@ -65,7 +65,7 @@ $text-input-elements-list: 'input[type=text]',
 $unquoted-text-input-elements-list: ();
 
 @each $text-input-element-type in $text-input-elements-list {
-  $unquoted-text-input-elements-list: append($unquoted-text-input-elements-list, unquote($text-input-element-type), comma) !global;
+  $unquoted-text-input-elements-list: append($unquoted-text-input-elements-list, unquote($text-input-element-type), comma);
 }
 
 $all-text-input-elements: $unquoted-text-input-elements-list;
@@ -84,7 +84,7 @@ $button-elements-list: 'button',
 $unquoted-button-elements-list: ();
 
 @each $button-element-type in $button-elements-list {
-  $unquoted-button-elements-list: append($unquoted-button-elements-list, unquote($button-element-type), comma) !global;
+  $unquoted-button-elements-list: append($unquoted-button-elements-list, unquote($button-element-type), comma);
 }
 
 $all-button-elements: $unquoted-button-elements-list;

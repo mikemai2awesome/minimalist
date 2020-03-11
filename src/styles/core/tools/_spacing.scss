@@ -26,13 +26,13 @@
     padding-bottom: v-spacing(large);
     padding-left: h-spacing(medium);
   }
-  @elseif $name == cozy {
+  @else if $name == cozy {
     padding-top: v-spacing(small);
     padding-right: h-spacing(small);
     padding-bottom: v-spacing(small);
     padding-left: h-spacing(small);
   }
-  @elseif $name == compact {
+  @else if $name == compact {
     padding-top: v-spacing(xsmall);
     padding-right: h-spacing(xsmall);
     padding-bottom: v-spacing(xsmall);
@@ -55,7 +55,7 @@
     margin-bottom: v-spacing(large) * -1;
     margin-left: h-spacing(medium) * -1;
   }
-  @elseif $name == cozy {
+  @else if $name == cozy {
     width: calc(100% + #{h-spacing(small) * 2});
     max-width: calc(100% + #{h-spacing(small) * 2});
     margin-top: v-spacing(small) * -1;
@@ -63,7 +63,7 @@
     margin-bottom: v-spacing(small) * -1;
     margin-left: h-spacing(small) * -1;
   }
-  @elseif $name == compact {
+  @else if $name == compact {
     width: calc(100% + #{h-spacing(xsmall) * 2});
     max-width: calc(100% + #{h-spacing(xsmall) * 2});
     margin-top: v-spacing(xsmall) * -1;

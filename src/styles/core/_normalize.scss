@@ -13,12 +13,12 @@ $normalize-block-elements-list: 'p',
   'li',
   'ol',
   'pre',
-  'ul';
+  'ul';Allblockelements$normalize-block-elements-list
 
 $normalize-unquoted-block-elements-list: ();
 
 @each $element in $normalize-block-elements-list {
-  $normalize-unquoted-block-elements-list: append($normalize-unquoted-block-elements-list, unquote($element), comma) !global;
+  $normalize-unquoted-block-elements-list: append($normalize-unquoted-block-elements-list, unquote($element), comma);
 }
 
 $normalize-all-block-elements: $normalize-unquoted-block-elements-list;
@@ -30,12 +30,12 @@ $normalize-heading-elements-list: 'h1',
   'h3',
   'h4',
   'h5',
-  'h6';
+  'h6';Allheadingelements$normalize-heading-elements-list
 
 $normalize-unquoted-heading-elements-list: ();
 
 @each $element in $normalize-heading-elements-list {
-  $normalize-unquoted-heading-elements-list: append($normalize-unquoted-heading-elements-list, unquote($element), comma) !global;
+  $normalize-unquoted-heading-elements-list: append($normalize-unquoted-heading-elements-list, unquote($element), comma);
 }
 
 $normalize-all-heading-elements: $normalize-unquoted-heading-elements-list;
@@ -55,12 +55,12 @@ $normalize-text-input-elements-list: 'input[type=text]',
   'input[type=time]',
   'input[type=url]',
   'input[type=week]',
-  'textarea';
+  'textarea';Alltextinputs$normalize-text-input-elements-list
 
 $normalize-unquoted-text-input-elements-list: ();
 
 @each $element in $normalize-text-input-elements-list {
-  $normalize-unquoted-text-input-elements-list: append($normalize-unquoted-text-input-elements-list, unquote($element), comma) !global;
+  $normalize-unquoted-text-input-elements-list: append($normalize-unquoted-text-input-elements-list, unquote($element), comma);
 }
 
 $normalize-all-text-input-elements: $normalize-unquoted-text-input-elements-list;
@@ -71,12 +71,12 @@ $normalize-button-elements-list: 'button',
   '[type=button]',
   '[type=reset]',
   '[type=submit]',
-  '::-webkit-file-upload-button';
+  '::-webkit-file-upload-button';Allbuttonelements$normalize-button-elements-list
 
 $normalize-unquoted-button-elements-list: ();
 
 @each $element in $normalize-button-elements-list {
-  $normalize-unquoted-button-elements-list: append($normalize-unquoted-button-elements-list, unquote($element), comma) !global;
+  $normalize-unquoted-button-elements-list: append($normalize-unquoted-button-elements-list, unquote($element), comma);
 }
 
 $normalize-all-button-elements: $normalize-unquoted-button-elements-list;
@@ -148,7 +148,8 @@ $normalize-border:       $normalize-border-width $normalize-border-style $normal
 *, *:before, *:after {
   box-sizing: border-box;
   font-feature-settings: 'kern';
-  font-kerning: normal;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
   -moz-osx-font-smoothing: grayscale !important;
   -webkit-font-smoothing: antialiased !important;
 }
@@ -306,7 +307,8 @@ blockquote {
 
   q:before {
     position: absolute;
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
@@ -396,7 +398,8 @@ abbr[title] {
   color: inherit;
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline solid currentColor; /* 2 */
+  -webkit-text-decoration: underline solid currentColor;
+          text-decoration: underline solid currentColor; /* 2 */
 }
 
 /**

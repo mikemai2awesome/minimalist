@@ -22,15 +22,15 @@ $typefaces: (
   heading:  #{'Bungee', sans-serif},
   smallcap: #{'Alegreya Sans SC', sans-serif},
   mono:     #{monospace, monospace}
-) !global;
+);
 
 $font-size:
   /* Only edit the px value. */
   calc(
     16px
     + 0.25vw
-  ) !global;
+  );
 
-$text-color:       palette(gray, dark) !global;
-$background-color: palette(gray, light) !global;
-$link-color:       palette(red, dark) !global;
+$text-color:       palette(gray, dark);
+$background-color: palette(gray, light);
+$link-color:       palette(red, dark);

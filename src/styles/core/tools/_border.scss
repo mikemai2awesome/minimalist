@@ -45,13 +45,13 @@
   @if $name == box {
     border-radius: border-radius(small);
   }
-  @elseif $name == card {
+  @else if $name == card {
     border-radius: border-radius(large);
   }
-  @elseif $name == pill {
+  @else if $name == pill {
     border-radius: border-radius(full);
   }
-  @elseif $name == bubble {
+  @else if $name == bubble {
     border-radius: 0 border-radius(large) border-radius(large) border-radius(large);
   }
   @else {
