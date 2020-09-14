@@ -167,12 +167,9 @@ $bullet-color: rgba($text-color, 0.4) !default;
 }
 
 .c-#{$ns}-list--inline {
-  justify-content: flex-start;
-}
-
-.c-#{$ns}-list--inline {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   margin-top: calc(#{v-spacing(small)} * -1);
   margin-left: calc(#{h-spacing(small)} * -1);
 
