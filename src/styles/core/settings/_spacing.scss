@@ -2,18 +2,7 @@
   Spacing Settings
 \*------------------------------------*/
 
-$line-height:  1.5 !default;
-$gutter:       2rem !default;
-
-$line-height-values: (
-  xxtight:     $line-height * 0.75,
-  xtight:      $line-height * 0.83,
-  tight:       $line-height * 0.92,
-  regular:     $line-height * 1,
-  loose:       $line-height * 1.17
-) !default;
-
-$h-spacing:    $gutter !default;
+$h-spacing:    2rem !default;
 $v-spacing:    1rem !default;
 
 $v-spacing-values: (

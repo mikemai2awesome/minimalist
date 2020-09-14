@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accordion | Component | MNML CSS Framework</title>
+    <link rel="stylesheet" type="text/css" href="src/styles/main.css">
+  </head>
+  <body class="c-mnml-body">
+    <header role="banner" class="c-mnml-plane c-mnml-plane--trendy c-mnml-plane--trendy--af c-mnml-plane--article-width c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xxlarge t-mnml-dark u-mnml-text-align-center">
+      <div class="c-mnml-plane-background">
+        <img src="https://images.unsplash.com/photo-1567428565732-6076d6f42a7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2900&q=80" alt="placeholder+image">
+      </div>
+      <div class="c-mnml-plane-cabin">
+        <p class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xsmall">Component</p>
+        <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--display">Accordion</h1>
+      </div>
+    </header>
+    <main class="c-mnml-plane c-mnml-plane--article-width c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-large">
+      <article class="c-mnml-plane-cabin">
+        <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Base</h2>
+        <p class="c-mnml-text c-mnml-text--block">This is the default accordion.</p>
+        <div class="c-mnml-accordion">
+          <details class="c-mnml-accordion__item" open>
+            <summary class="c-mnml-accordion__trigger" aria-describedby="accordion-item-1">
+              Item 1 summary <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="c-mnml-accordion__content" id="accordion-item-1">
+              Item 1 details. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
+            </div>
+          </details>
+          <details class="c-mnml-accordion__item">
+            <summary class="c-mnml-accordion__trigger" aria-describedby="accordion-item-2">
+              Item 2 summary <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="c-mnml-accordion__content" id="accordion-item-2">
+              Item 2 details. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
+            </div>
+          </details>
+          <details class="c-mnml-accordion__item">
+            <summary class="c-mnml-accordion__trigger" aria-describedby="accordion-item-3">
+              Item 3 summary <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="c-mnml-accordion__content" id="accordion-item-3">
+              Item 3 details. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
+            </div>
+          </details>
+        </div>
+        <pre class="c-mnml-code-block" data-code="html"><code class="c-mnml-code">&#x3C;div class=&#x22;c-mnml-accordion&#x22;&#x3E;
+  &#x3C;details class=&#x22;c-mnml-accordion__item&#x22;&#x3E;
+    &#x3C;summary class=&#x22;c-mnml-accordion__trigger&#x22;&#x3E;
+      Trigger &#x3C;span class=&#x22;c-mnml-accordion__trigger__icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
+    &#x3C;/summary&#x3E;
+    &#x3C;div class=&#x22;c-mnml-accordion__content&#x22;&#x3E;
+      Content
+    &#x3C;/div&#x3E;
+  &#x3C;/details&#x3E;
+  &#x3C;details class=&#x22;c-mnml-accordion__item&#x22;&#x3E;...&#x3C;/details&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+        <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Spacing</h2>
+        <p class="c-mnml-text c-mnml-text--block">This component has 2 additional spacing options.</p>
+        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Compact</h3>
+        <div class="c-mnml-accordion is-compact">
+          <details class="c-mnml-accordion__item">
+            <summary class="c-mnml-accordion__trigger">
+              Item 1 summary <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="c-mnml-accordion__content">
+              Item 1 details. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
+            </div>
+          </details>
+          <details class="c-mnml-accordion__item">
+            <summary class="c-mnml-accordion__trigger">
+              Item 2 summary <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="c-mnml-accordion__content">
+              Item 2 details. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
+            </div>
+          </details>
+          <details class="c-mnml-accordion__item">
+            <summary class="c-mnml-accordion__trigger">
+              Item 3 summary <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="c-mnml-accordion__content">
+              Item 3 details. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
+            </div>
+          </details>
+        </div>
+        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Comfortable</h3>
+        <div class="c-mnml-accordion is-comfortable">
+          <details class="c-mnml-accordion__item">
+            <summary class="c-mnml-accordion__trigger">
+              Item 1 summary <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="c-mnml-accordion__content">
+              Item 1 details. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
+            </div>
+          </details>
+          <details class="c-mnml-accordion__item">
+            <summary class="c-mnml-accordion__trigger">
+              Item 2 summary <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="c-mnml-accordion__content">
+              Item 2 details. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
+            </div>
+          </details>
+          <details class="c-mnml-accordion__item">
+            <summary class="c-mnml-accordion__trigger">
+              Item 3 summary <span class="c-mnml-accordion__trigger__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="c-mnml-accordion__content">
+              Item 3 details. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna.
+            </div>
+          </details>
+        </div>
+        <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Accessibility</h2>
+        <p class="c-mnml-text c-mnml-text--block">In order to make the accordion accessible, some light Javascript and proper <code class="c-mnml-code">aria</code> attributes are needed. Read <a class="c-mnml-link" href="https://www.scottohara.me/blog/2018/09/03/details-and-summary.html" target="_blank">this article</a> to find out more.</p>
+      </article>
+    </main>
+  </body>
+</html>

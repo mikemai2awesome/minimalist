@@ -2,16 +2,12 @@
   Spacing Tools
 \*------------------------------------*/
 
-@function line-height($name) {
-  @return map-get($line-height-values, $name);
-}
-
 @function v-spacing($name) {
-  @return map-get($v-spacing-values, $name);
+  @return var(--#{$ns}-v-spacing-#{$name});
 }
 
 @function h-spacing($name) {
-  @return map-get($h-spacing-values, $name);
+  @return var(--#{$ns}-h-spacing-#{$name});
 }
 
 @mixin reset-spacing {
@@ -48,28 +44,28 @@
 
 @mixin offset-spacing($name) {
   @if $name == comfortable {
-    width: calc(100% + #{h-spacing(medium) * 2});
-    max-width: calc(100% + #{h-spacing(medium) * 2});
-    margin-top: v-spacing(large) * -1;
-    margin-right: h-spacing(medium) * -1;
-    margin-bottom: v-spacing(large) * -1;
-    margin-left: h-spacing(medium) * -1;
+    width: calc(100% + #{h-spacing(medium)} * 2);
+    max-width: calc(100% + #{h-spacing(medium)} * 2);
+    margin-top: calc(#{v-spacing(large)} * -1);
+    margin-right: calc(#{h-spacing(medium)} * -1);
+    margin-bottom: calc(#{v-spacing(large)} * -1);
+    margin-left: calc(#{h-spacing(medium)} * -1);
   }
   @else if $name == cozy {
-    width: calc(100% + #{h-spacing(small) * 2});
-    max-width: calc(100% + #{h-spacing(small) * 2});
-    margin-top: v-spacing(small) * -1;
-    margin-right: h-spacing(small) * -1;
-    margin-bottom: v-spacing(small) * -1;
-    margin-left: h-spacing(small) * -1;
+    width: calc(100% + #{h-spacing(small)} * 2);
+    max-width: calc(100% + #{h-spacing(small)} * 2);
+    margin-top: calc(#{v-spacing(small)} * -1);
+    margin-right: calc(#{h-spacing(small)} * -1);
+    margin-bottom: calc(#{v-spacing(small)} * -1);
+    margin-left: calc(#{h-spacing(small)} * -1);
   }
   @else if $name == compact {
-    width: calc(100% + #{h-spacing(xsmall) * 2});
-    max-width: calc(100% + #{h-spacing(xsmall) * 2});
-    margin-top: v-spacing(xsmall) * -1;
-    margin-right: h-spacing(xsmall) * -1;
-    margin-bottom: v-spacing(xsmall) * -1;
-    margin-left: h-spacing(xsmall) * -1;
+    width: calc(100% + #{h-spacing(xsmall)} * 2);
+    max-width: calc(100% + #{h-spacing(xsmall)} * 2);
+    margin-top: calc(#{v-spacing(xsmall)} * -1);
+    margin-right: calc(#{h-spacing(xsmall)} * -1);
+    margin-bottom: calc(#{v-spacing(xsmall)} * -1);
+    margin-left: calc(#{h-spacing(xsmall)} * -1);
   }
   @else {
     width: 100%;

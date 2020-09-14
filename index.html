@@ -1,27 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Minimalist CSS Framework</title>
-    <link rel="stylesheet" type="text/css" href="src/styles/main.css">
-  </head>
-  <body class="c-mnml-body">
-    <header role="banner" class="c-mnml-plane c-mnml-plane--xlarge-width c-mnml-plane--full-height c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-medium u-mnml-text-align-center">
-      <div class="c-mnml-plane-deck c-mnml-plane-deck--upper">
-        <div class="c-mnml-plane-deck__content">
-          <div class="c-mnml-plane-deck__content__item">M</div>
-          <div class="c-mnml-plane-deck__content__item">N</div>
-        </div>
+---
+index: true
+mode: dark
+---
+{% include body-start.html %}
+
+  <header role="banner" class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--xlarge-width c-{{ site.ns }}-plane--full-height c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-medium u-{{ site.ns }}-text-align-center">
+    <div class="c-{{ site.ns }}-plane-deck c-{{ site.ns }}-plane-deck--upper">
+      <div class="c-{{ site.ns }}-plane-deck__content">
+        <div class="c-{{ site.ns }}-plane-deck__content__item">M</div>
+        <div class="c-{{ site.ns }}-plane-deck__content__item">I</div>
+        <div class="c-{{ site.ns }}-plane-deck__content__item">N</div>
       </div>
-      <div class="c-mnml-plane-cabin">
-        <p class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xsmall">CSS Framework</p>
-        <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--display">Minimalist</h1>
+    </div>
+    <div class="c-{{ site.ns }}-plane-cabin">
+      <!-- <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xsmall">Mike Mai Network Design System</p> -->
+      <!-- <h1 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--display">Minimalist</h1> -->
+      <h1 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--display">I</h1>
+    </div>
+    <div class="c-{{ site.ns }}-plane-deck c-{{ site.ns }}-plane-deck--lower">
+      <div class="c-{{ site.ns }}-plane-deck__content">
+        <div class="c-{{ site.ns }}-plane-deck__content__item">M</div>
+        <div class="c-{{ site.ns }}-plane-deck__content__item">A</div>
+        <div class="c-{{ site.ns }}-plane-deck__content__item">L</div>
       </div>
-      <div class="c-mnml-plane-deck c-mnml-plane-deck--lower">
-        <div class="c-mnml-plane-deck__content">
-          <div class="c-mnml-plane-deck__content__item">M</div>
-          <div class="c-mnml-plane-deck__content__item">L</div>
-        </div>
-      </div>
-    </header>
-  </body>
-</html>
+    </div>
+  </header>
+
+{% include body-end.html %}

@@ -19,15 +19,15 @@ $ns: 'mnml' !default; /* Namespace for the CSS classes. */
 
 $typefaces: (
   body:     #{'Spectral', 'Georgia', serif},
-  heading:  #{'Bungee', sans-serif},
-  smallcap: #{'Alegreya Sans SC', sans-serif},
-  mono:     #{monospace, monospace}
+  heading:  #{'Bungee', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif},
+  smallcap: #{'Alegreya Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif},
+  mono:     #{'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace}
 );
 
 $font-size:
-  /* Only edit the px value. */
+  /* Only edit the % value. */
   calc(
-    16px
+    100%
     + 0.25vw
   );
 

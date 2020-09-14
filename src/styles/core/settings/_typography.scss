@@ -5,8 +5,8 @@
 $typefaces: (
   body:     #{'Georgia', serif},
   heading:  #{-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif},
-  smallcap: (),
-  mono:     #{monospace, monospace}
+  smallcap: #{-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif},
+  mono:     #{'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace}
 ) !default;
 
 $type-size-values: (
@@ -19,4 +19,14 @@ $type-size-values: (
   small:        0.85rem,
   xsmall:       0.65rem,
   xxsmall:      0.5rem
+) !default;
+
+$line-height:  1.5 !default;
+
+$line-height-values: (
+  xxtight:     $line-height * 0.75,
+  xtight:      $line-height * 0.83,
+  tight:       $line-height * 0.92,
+  regular:     $line-height * 1,
+  loose:       $line-height * 1.17
 ) !default;

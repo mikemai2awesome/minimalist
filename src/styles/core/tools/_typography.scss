@@ -3,9 +3,17 @@
 \*------------------------------------*/
 
 @function typeface($name) {
-  @return map-get($typefaces, $name);
+  @return var(--#{$ns}-typeface-#{$name});
 }
 
 @function type-size($name) {
-  @return map-get($type-size-values, $name);
+  @return var(--#{$ns}-type-size-#{$name});
+}
+
+@function type-size-unitless($name) {
+  @return var(--#{$ns}-type-size-unitless-#{$name});
+}
+
+@function line-height($name) {
+  @return var(--#{$ns}-line-height-#{$name});
 }

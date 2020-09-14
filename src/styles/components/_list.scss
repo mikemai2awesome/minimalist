@@ -31,7 +31,7 @@ $bullet-color: rgba($text-color, 0.4) !default;
 
     &:before {
       position: absolute;
-      left: h-spacing(xxsmall) * -1;
+      left: calc(#{h-spacing(xxsmall)} * -1);
       content: '\2059';
       color: $bullet-color;
       -webkit-transform: translateX(-100%);
@@ -54,7 +54,7 @@ $bullet-color: rgba($text-color, 0.4) !default;
 
     &:before {
       position: absolute;
-      left: h-spacing(xxsmall) * -1;
+      left: calc(#{h-spacing(xxsmall)} * -1);
       content: counter(ordered-list-item);
       color: $bullet-color;
       font-family: typeface(smallcap);
@@ -82,14 +82,14 @@ $bullet-color: rgba($text-color, 0.4) !default;
   &.lay-horizontal {
     display: flex;
     flex-wrap: wrap;
-    margin-top: v-spacing(xxsmall) * -1;
-    margin-left: h-spacing(small) * -2.25;
+    margin-top: calc(#{v-spacing(xxsmall)} * -1);
+    margin-left: calc(#{h-spacing(small)} * -2.25);
 
     .c-#{$ns}-list__item {
       display: inline-flex;
       margin-top: v-spacing(xxsmall);
       margin-bottom: 0;
-      margin-left: h-spacing(small) * 2.25;
+      margin-left: calc(#{h-spacing(small)} * 2.25);
       vertical-align: middle;
     }
   }
@@ -111,8 +111,8 @@ $bullet-color: rgba($text-color, 0.4) !default;
 
   &.lay-horizontal {
     flex-direction: row;
-    margin-top: v-spacing(medium) * -1;
-    margin-left: h-spacing(medium) * -1;
+    margin-top: calc(#{v-spacing(medium)} * -1);
+    margin-left: calc(#{h-spacing(medium)} * -1);
 
     > .c-#{$ns}-list__item {
       flex: 1;
@@ -133,8 +133,8 @@ $bullet-color: rgba($text-color, 0.4) !default;
     }
 
     &.lay-horizontal {
-      margin-top: v-spacing(large) * -1;
-      margin-left: h-spacing(large) * -1;
+      margin-top: calc(#{v-spacing(large)} * -1);
+      margin-left: calc(#{h-spacing(large)} * -1);
 
       > .c-#{$ns}-list__item {
         margin-top: v-spacing(large);
@@ -154,8 +154,8 @@ $bullet-color: rgba($text-color, 0.4) !default;
     }
 
     &.lay-horizontal {
-      margin-top: v-spacing(xsmall) * -1;
-      margin-left: h-spacing(xsmall) * -1;
+      margin-top: calc(#{v-spacing(xsmall)} * -1);
+      margin-left: calc(#{h-spacing(xsmall)} * -1);
 
       > .c-#{$ns}-list__item {
         margin-top: v-spacing(xsmall);
@@ -173,8 +173,8 @@ $bullet-color: rgba($text-color, 0.4) !default;
 .c-#{$ns}-list--inline {
   display: flex;
   flex-wrap: wrap;
-  margin-top: v-spacing(small) * -1;
-  margin-left: h-spacing(small) * -1;
+  margin-top: calc(#{v-spacing(small)} * -1);
+  margin-left: calc(#{h-spacing(small)} * -1);
 
   > .c-#{$ns}-list__item {
     display: inline-flex;
@@ -185,8 +185,8 @@ $bullet-color: rgba($text-color, 0.4) !default;
   }
 
   &.is-compact {
-    margin-top: v-spacing(xsmall) * -1;
-    margin-left: h-spacing(xsmall) * -1;
+    margin-top: calc(#{v-spacing(xsmall)} * -1);
+    margin-left: calc(#{h-spacing(xsmall)} * -1);
 
     > .c-#{$ns}-list__item {
       margin-top: v-spacing(xsmall);
@@ -221,7 +221,6 @@ $bullet-color: rgba($text-color, 0.4) !default;
     }
 
     &:focus {
-      @include shadow-border(thin, rgba($link-color, 0.8));
       z-index: 1;
     }
   }

@@ -1,0 +1,23 @@
+:root {
+  @each $type in $typefaces {
+    $type-name: nth($type, 1);
+    $type-value: nth($type, 2);
+
+    --#{$ns}-typeface-#{$type-name}: #{$type-value};
+  }
+
+  @each $size in $type-size-values{
+    $size-name: nth($size, 1);
+    $size-value: nth($size, 2);
+
+    --#{$ns}-type-size-#{$size-name}: #{$size-value};
+    --#{$ns}-type-size-unitless-#{$size-name}: #{strip-unit($size-value)};
+  }
+
+  @each $height in $line-height-values{
+    $height-name: nth($height, 1);
+    $height-value: nth($height, 2);
+
+    --#{$ns}-line-height-#{$height-name}: #{$height-value};
+  }
+}

@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-feature-settings: 'kern';
   -webkit-font-kerning: normal;
-          font-kerning: normal;
+  font-kerning: normal;
   -moz-osx-font-smoothing: grayscale !important;
   -webkit-font-smoothing: antialiased !important;
 }
@@ -16,7 +16,6 @@ html {
   letter-spacing: 0.005rem;
   font-family: typeface(body);
   font-size: $font-size;
-  -webkit-text-size-adjust: 100%;
 }
 
 #{$all-block-elements} {
@@ -33,7 +32,7 @@ sup {
   position: relative;
   line-height: 0;
   vertical-align: baseline;
-  font-size: strip-unit(type-size(xsmall)) + em;
+  font-size: calc(#{type-size-unitless(xsmall)} * 1em);
 }
 
 sub {

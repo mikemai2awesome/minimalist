@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}en{% endif %}">
+<head>
+  <meta charset="utf-8">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3">
+  <meta http-equiv="cleartype" content="on">
+  {% if page.name == "index.html" %}
+  <title>{{ site.title }}: {{ site.subtitle }} | {{ site.author }}</title>
+  {% else %}
+  <title>{{ page.title }} | {{ site.title }}</title>
+  {% endif %}
+  <link rel="stylesheet" href="src/styles/main.css">
+  {% if page.name == "index.html" %}
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ site.url }}">
+  {% else %}
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% endif %}
+  <link rel="image_src" href="{{ site.s3 }}/assets/img/ios/h/apple-touch-icon.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.s3 }}/assets/img/ios/h/touch-icon-ipad-retina.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.s3 }}/assets/img/ios/h/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.s3 }}/assets/img/ios/m/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="{{ site.s3 }}/assets/img/ios/l/apple-touch-icon-precomposed.png">
+  <link rel="icon" href="{{ site.s3 }}/assets/img/favicon.ico">
+</head>
+<body class="c-{{ site.ns }}-body {% if page.mode %}t-{{ site.ns }}-{{ page.mode }}{% endif %}">

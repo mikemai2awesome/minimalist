@@ -1,0 +1,15 @@
+:root {
+  @each $spacing in $v-spacing-values {
+    $spacing-name: nth($spacing, 1);
+    $spacing-value: nth($spacing, 2);
+
+    --#{$ns}-v-spacing-#{$spacing-name}: #{$spacing-value};
+  }
+
+  @each $spacing in $h-spacing-values {
+    $spacing-name: nth($spacing, 1);
+    $spacing-value: nth($spacing, 2);
+
+    --#{$ns}-h-spacing-#{$spacing-name}: #{$spacing-value};
+  }
+}

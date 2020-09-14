@@ -59,6 +59,7 @@
   }
 
   &:focus {
+    @include shadow-border(thin, rgba($link-color, 0.8));
     -webkit-animation-name: pulse;
             animation-name: pulse;
     -webkit-animation-duration: 1.5s;
@@ -73,8 +74,8 @@
     color: $text-color;
     -webkit-animation: none;
             animation: none;
-    -webkit-transform: scale3d(0.96, 0.96, 0.96) translate3d(0, 0, 0);
-            transform: scale3d(0.96, 0.96, 0.96) translate3d(0, 0, 0);
+    -webkit-transform: scale3d(0.98, 0.98, 0.98) translate3d(0, 0, 0);
+            transform: scale3d(0.98, 0.98, 0.98) translate3d(0, 0, 0);
 
     &:before {
       opacity: 0.5;
@@ -88,8 +89,8 @@
             transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   }
   50% {
-    -webkit-transform: scale3d(1.04, 1.04, 1.04) translate3d(0, 0, 0);
-            transform: scale3d(1.04, 1.04, 1.04) translate3d(0, 0, 0);
+    -webkit-transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
+            transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
   }
   100% {
     -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
@@ -103,8 +104,8 @@
             transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   }
   50% {
-    -webkit-transform: scale3d(1.04, 1.04, 1.04) translate3d(0, 0, 0);
-            transform: scale3d(1.04, 1.04, 1.04) translate3d(0, 0, 0);
+    -webkit-transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
+            transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
   }
   100% {
     -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);

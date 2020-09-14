@@ -6,7 +6,7 @@
   @include shape(card);
   @include shadow-border(thin, rgba($link-color, 0.2));
   display: inline-flex;
-  height: calc((#{v-spacing(small)} * 2 + #{line-height(tight) * type-size(small)}));
+  height: calc(#{v-spacing(small)} * 2 + #{line-height(tight)} * #{type-size(small)});
   margin: 0;
   padding-top: 0;
   padding-right: h-spacing(small);
@@ -34,14 +34,14 @@
   }
 
   &.is-comfortable {
-    height: calc((#{v-spacing(large)} * 2 + #{line-height(tight) * type-size(large)}));
+    height: calc(#{v-spacing(large)} * 2 + #{line-height(tight)} * #{type-size(large)});
     padding-right: h-spacing(medium);
     padding-left: h-spacing(medium);
     font-size: type-size(large);
   }
 
   &.is-compact {
-    height: calc((#{v-spacing(xsmall)} * 2 + #{line-height(tight) * type-size(xsmall)}));
+    height: calc(#{v-spacing(xsmall)} * 2 + #{line-height(tight)} * #{type-size(xsmall)});
     padding-right: h-spacing(xsmall);
     padding-left: h-spacing(xsmall);
     font-size: type-size(xsmall);
