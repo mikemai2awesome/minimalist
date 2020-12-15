@@ -107,28 +107,8 @@
   display: block;
   width: 100%;
 
-  &:before {
-    position: absolute;
-    font-family: typeface(body);
-    font-weight: 400;
-    opacity: 0.2;
-    -webkit-transform: translateX(calc(-100% - #{h-spacing(xxsmall)}));
-            transform: translateX(calc(-100% - #{h-spacing(xxsmall)}));
-  }
-
   &:not(.c-#{$ns}-text--heading) {
     margin-bottom: v-spacing(medium);
-
-    &:before {
-      content: '\00B6';
-      font-size: type-size(xsmall);
-    }
-  }
-
-  &.c-#{$ns}-text--lede {
-    &:before {
-      display: none;
-    }
   }
 
   &.c-#{$ns}-text--heading {
@@ -141,11 +121,6 @@
 
       &:first-child {
         padding-top: 0;
-      }
-
-      &:before {
-        content: '\00A7';
-        font-size: type-size(medium);
       }
 
       &:after {
