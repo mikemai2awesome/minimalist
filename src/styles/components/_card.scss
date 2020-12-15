@@ -102,6 +102,7 @@
 }
 
 .c-#{$ns}-card--clickable {
+  @include shadow-border(none);
   @include interactive-text-and-bg;
   background-color: transparent;
 
