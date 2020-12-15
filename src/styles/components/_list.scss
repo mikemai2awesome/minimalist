@@ -146,7 +146,7 @@ $_bullet-color: hsla(var(--#{$ns}-text-color), 0.4);
 
   &.is-compact {
     > .c-#{$ns}-list__item {
-      margin-bottom: v-spacing(xsmall);
+      margin-bottom: v-spacing(small);
 
       &:last-child {
         margin-bottom: 0;
@@ -154,11 +154,11 @@ $_bullet-color: hsla(var(--#{$ns}-text-color), 0.4);
     }
 
     &.lay-horizontal {
-      margin-top: calc(#{v-spacing(xsmall)} * -1);
+      margin-top: calc(#{v-spacing(small)} * -1);
       margin-left: calc(#{h-spacing(xsmall)} * -1);
 
       > .c-#{$ns}-list__item {
-        margin-top: v-spacing(xsmall);
+        margin-top: v-spacing(small);
         margin-bottom: 0;
         margin-left: h-spacing(xsmall);
       }

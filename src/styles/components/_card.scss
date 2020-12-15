@@ -101,6 +101,15 @@
   }
 }
 
+.c-#{$ns}-card--clickable {
+  @include interactive-text-and-bg;
+  background-color: transparent;
+
+  &:before {
+    @include shape(card);
+  }
+}
+
 .c-#{$ns}-card--transparent {
   @include shadow-border(none);
   padding: 0;

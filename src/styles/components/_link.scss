@@ -36,3 +36,14 @@
     background-color: hsla(var(--#{$ns}-text-color), 0.1);
   }
 }
+
+.c-#{$ns}-link--expand-click-target {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

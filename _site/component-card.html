@@ -42,14 +42,14 @@
 &#x3C;/article&#x3E;</code></pre>
         <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Card List</h2>
         <p class="c-mnml-text c-mnml-text--block">This component can be combined with the List component.</p>
-        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Bare List</h3>
-        <div class="c-mnml-list c-mnml-list--bare lay-horizontal">
+        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Regular Card List</h3>
+        <div class="c-mnml-list c-mnml-list--bare is-compact lay-horizontal">
           <div class="c-mnml-list__item">
             <article class="c-mnml-card">
               <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
               <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 1</h1>
               <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
-              <button type="button" class="c-mnml-button c-mnml-button--block is-compact">
+              <button type="button" class="c-mnml-button c-mnml-button--block">
                 Button
               </button>
             </article>
@@ -59,7 +59,7 @@
               <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
               <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 2</h1>
               <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
-              <button type="button" class="c-mnml-button c-mnml-button--block is-compact">
+              <button type="button" class="c-mnml-button c-mnml-button--block">
                 Button
               </button>
             </article>
@@ -69,32 +69,38 @@
               <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
               <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 3</h1>
               <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
-              <button type="button" class="c-mnml-button c-mnml-button--block is-compact">
+              <button type="button" class="c-mnml-button c-mnml-button--block">
                 Button
               </button>
             </article>
           </div>
         </div>
-        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">UI List</h3>
-        <div class="c-mnml-list c-mnml-list--ui lay-horizontal">
-          <button type="button" class="c-mnml-list__item">
-            <article class="c-mnml-card c-mnml-card--transparent">
-              <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
-              <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 1</h1>
-              <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
-            </article>
-          </button>
+        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Clickable Card List</h3>
+        <div class="c-mnml-list c-mnml-list--bare is-compact lay-horizontal">
           <div class="c-mnml-list__item">
-            <article class="c-mnml-card c-mnml-card--transparent">
+            <article class="c-mnml-card c-mnml-card--clickable">
               <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
-              <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 2</h1>
+              <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">
+                <a href="javascript:" class="c-mnml-link c-mnml-link--expand-click-target">Card 1</a>
+              </h1>
               <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
             </article>
           </div>
           <div class="c-mnml-list__item">
-            <article class="c-mnml-card c-mnml-card--transparent">
+            <article class="c-mnml-card c-mnml-card--clickable">
               <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
-              <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 3</h1>
+              <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">
+                <a href="javascript:" class="c-mnml-link c-mnml-link--expand-click-target">Card 2</a>
+              </h1>
+              <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
+            </article>
+          </div>
+          <div class="c-mnml-list__item">
+            <article class="c-mnml-card c-mnml-card--clickable">
+              <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
+              <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">
+                <a href="javascript:" class="c-mnml-link c-mnml-link--expand-click-target">Card 3</a>
+              </h1>
               <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
             </article>
           </div>
