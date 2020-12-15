@@ -3,31 +3,26 @@
 \* ------------------------------------ */
 
 .c-#{$ns}-link {
+  @include native-button-reset;
+  color: hsl(var(--#{$ns}-link-color));
   text-decoration: none;
+  box-shadow: 0 -0.125em 0 hsla(var(--#{$ns}-link-color), 0.1) inset;
   -webkit-transition: all transition-timing(regular) ease-in;
   transition: all transition-timing(regular) ease-in;
-
-  &:link {
-    color: hsl(var(--#{$ns}-link-color));
-    box-shadow: 0 -0.125em 0 hsla(var(--#{$ns}-link-color), 0.1) inset;
-  }
 
   &:visited {
     color: hsl(var(--#{$ns}-text-color));
     box-shadow: 0 -0.125em 0 hsla(var(--#{$ns}-text-color), 0.1) inset;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: hsl(var(--#{$ns}-link-color));
     box-shadow: 0 -0.375em 0 hsla(var(--#{$ns}-link-color), 0.2) inset;
   }
 
   &:focus {
-    text-decoration: underline;
+    @include shadow-border(thin, hsl(var(--#{$ns}-link-color)));
     outline: none;
-    box-shadow: none;
-    background-color: hsla(var(--#{$ns}-link-color), 0.1);
   }
 
   &:active {

@@ -22,18 +22,6 @@
           <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
           <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--large">Card heading</h1>
           <p class="c-mnml-text c-mnml-text--block">Card body text.</p>
-          <div class="c-mnml-list c-mnml-list--bare lay-horizontal is-compact">
-            <div class="c-mnml-list__item">
-              <button type="button" class="c-mnml-button c-mnml-button--block">
-                Button 1
-              </button>
-            </div>
-            <div class="c-mnml-list__item">
-              <button type="button" class="c-mnml-button c-mnml-button--block">
-                Button 2
-              </button>
-            </div>
-          </div>
         </article>
         <pre class="c-mnml-code-block" data-code="html"><code class="c-mnml-code">&#x3C;article class=&#x22;c-mnml-card&#x22;&#x3E;
   &#x3C;img src=&#x22;path/img.jpg&#x22; alt=&#x22;Image alt text.&#x22;&#x3E;
@@ -45,31 +33,40 @@
         <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Default Card List</h3>
         <div class="c-mnml-list c-mnml-list--bare is-compact lay-horizontal">
           <div class="c-mnml-list__item">
-            <article class="c-mnml-card">
+            <article class="c-mnml-card c-mnml-card--full-height">
               <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
               <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 1</h1>
               <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
-              <button type="button" class="c-mnml-button c-mnml-button--block">
+              <button type="button" class="c-mnml-button c-mnml-button--block u-mnml-margin-top-auto is-compact">
                 Button
               </button>
             </article>
           </div>
           <div class="c-mnml-list__item">
-            <article class="c-mnml-card">
+            <article class="c-mnml-card c-mnml-card--full-height">
               <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
               <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 2</h1>
-              <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
-              <button type="button" class="c-mnml-button c-mnml-button--block">
-                Button
-              </button>
+              <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text. And some more text. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante.</p>
+              <ul class="c-mnml-list c-mnml-list--bare lay-horizontal is-compact u-mnml-margin-top-auto" style="--mnml-list-item-basis: auto;">
+                <li class="c-mnml-list__item">
+                  <button type="button" class="c-mnml-button c-mnml-button--block is-compact">
+                    Button 1
+                  </button>
+                </li>
+                <li class="c-mnml-list__item">
+                  <button type="button" class="c-mnml-button c-mnml-button--block is-compact">
+                    Button 2
+                  </button>
+                </li>
+              </ul>
             </article>
           </div>
           <div class="c-mnml-list__item">
-            <article class="c-mnml-card">
+            <article class="c-mnml-card c-mnml-card--full-height">
               <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
               <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">Card 3</h1>
               <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
-              <button type="button" class="c-mnml-button c-mnml-button--block">
+              <button type="button" class="c-mnml-button c-mnml-button--block u-mnml-margin-top-auto is-compact">
                 Button
               </button>
             </article>
@@ -78,25 +75,25 @@
         <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Clickable Card List</h3>
         <div class="c-mnml-list c-mnml-list--bare is-compact lay-horizontal">
           <div class="c-mnml-list__item">
-            <article class="c-mnml-card c-mnml-card--clickable">
+            <article class="c-mnml-card c-mnml-card--full-height c-mnml-card--clickable">
               <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
               <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">
-                <a href="javascript:" class="c-mnml-link c-mnml-link--expand-click-target">Card 1</a>
+                <a href="javascript:" class="c-mnml-link c-mnml-link--expand-click-target">Card 1 (link)</a>
               </h1>
               <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
             </article>
           </div>
           <div class="c-mnml-list__item">
-            <article class="c-mnml-card c-mnml-card--clickable">
+            <article class="c-mnml-card c-mnml-card--full-height c-mnml-card--clickable">
               <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
               <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">
-                <a href="javascript:" class="c-mnml-link c-mnml-link--expand-click-target">Card 2</a>
+                <button type="button" class="c-mnml-link c-mnml-link--expand-click-target">Card 2 (button)</button>
               </h1>
-              <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text.</p>
+              <p class="c-mnml-text c-mnml-text--block c-mnml-text--small">Card body text. And some more text. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante.</p>
             </article>
           </div>
           <div class="c-mnml-list__item">
-            <article class="c-mnml-card c-mnml-card--clickable">
+            <article class="c-mnml-card c-mnml-card--full-height c-mnml-card--clickable">
               <img src="https://images.unsplash.com/photo-1533740795835-8f0320846018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2902&q=80" alt="placeholder+image">
               <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--small">
                 <a href="javascript:" class="c-mnml-link c-mnml-link--expand-click-target">Card 3</a>

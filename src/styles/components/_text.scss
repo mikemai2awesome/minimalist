@@ -159,3 +159,11 @@
     }
   }
 }
+
+/* Block Text Link */
+.c-#{$ns}-text--block {
+  .c-#{$ns}-link {
+    display: block;
+    width: 100%;
+  }
+}

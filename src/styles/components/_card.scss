@@ -6,7 +6,9 @@
   @include inset-spacing(cozy);
   @include shape(card);
   @include shadow-border(thick, hsla(var(--#{$ns}-text-color), 0.05));
-  display: block;
+  display: flex;
+  flex: 0 1 100%;
+  flex-direction: column;
   margin: 0 auto v-spacing(medium) auto;
   color: hsl(var(--#{$ns}-text-color));
   text-align: left;
@@ -101,6 +103,10 @@
   }
 }
 
+.c-#{$ns}-card--full-height {
+  height: 100%;
+}
+
 .c-#{$ns}-card--clickable {
   @include shadow-border(none);
   @include interactive-text-and-bg;
@@ -108,6 +114,14 @@
 
   &:before {
     @include shape(card);
+  }
+
+  &:focus-within {
+    @include shadow-border(thin, hsl(var(--#{$ns}-link-color)));
+
+    &:before {
+      opacity: 0;
+    }
   }
 }
 

@@ -2,16 +2,6 @@
    Interactive Tools
 \* ------------------------------------ */
 
-@mixin button-reset {
-  text-align: inherit;
-  font: inherit;
-  border: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
 @mixin interactive-text-and-bg($position: relative) {
   @if $position {
     position: $position;
@@ -20,9 +10,9 @@
   color: hsl(var(--#{$ns}-text-color));
   outline: none;
   -webkit-backdrop-filter: blur(0.25rem);
-          backdrop-filter: blur(0.25rem);
+  backdrop-filter: blur(0.25rem);
   -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-          transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   -webkit-transition: all transition-timing(regular) ease-out;
   transition: all transition-timing(regular) ease-out;
 
@@ -52,63 +42,29 @@
   &:hover,
   &:focus {
     color: hsl(var(--#{$ns}-link-color));
+  }
 
+  &:hover {
     &:before {
       opacity: 0.35;
     }
   }
 
   &:focus {
-    @include shadow-border(thin, hsla(var(--#{$ns}-link-color), 0.8));
-    -webkit-animation-name: pulse;
-            animation-name: pulse;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    @include shadow-border(thin, hsl(var(--#{$ns}-link-color)));
+
+    &:before {
+      opacity: 0;
+    }
   }
 
   &:active {
     color: hsl(var(--#{$ns}-text-color));
-    -webkit-animation: none;
-            animation: none;
     -webkit-transform: scale3d(0.98, 0.98, 0.98) translate3d(0, 0, 0);
-            transform: scale3d(0.98, 0.98, 0.98) translate3d(0, 0, 0);
+    transform: scale3d(0.98, 0.98, 0.98) translate3d(0, 0, 0);
 
     &:before {
       opacity: 0.5;
     }
-  }
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-  }
-  50% {
-    -webkit-transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
-            transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-  }
-  50% {
-    -webkit-transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
-            transform: scale3d(1.01, 1.01, 1.01) translate3d(0, 0, 0);
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   }
 }

@@ -1,9 +1,9 @@
-@import 'map-get-deep';
-
+@import 'map-get-deep'; // Must import first
 @import 'border';
 @import 'breakpoint';
 @import 'colors';
 @import 'interactive';
+@import 'native-button-reset';
 @import 'spacing';
 @import 'strip-unit';
 @import 'transition';
