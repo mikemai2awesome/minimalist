@@ -24,13 +24,15 @@ $typefaces: (
   mono:     #{'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace}
 );
 
-$font-size:
-  /* Only edit the % value. */
-  calc(
-    100%
-    + 0.25vw
-  );
+:root {
+  --#{$ns}-font-size:
+    /* Only edit the % value. */
+    calc(
+      100%
+      + 0.25vw
+    );
 
-$text-color:       palette(gray, dark);
-$background-color: palette(gray, light);
-$link-color:       palette(red, dark);
+  --#{$ns}-text-color: var(--#{$ns}-color-gray-dark);
+  --#{$ns}-bg-color: var(--#{$ns}-color-gray-light);
+  --#{$ns}-link-color: var(--#{$ns}-color-red-dark);
+}

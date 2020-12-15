@@ -1,5 +1,5 @@
 :root,
 .t-#{$ns}-light {
-  color: $text-color !important;
-  background-color: $background-color !important;
+  color: hsl(var(--#{$ns}-text-color)) !important;
+  background-color: hsl(var(--#{$ns}-bg-color)) !important;
 }

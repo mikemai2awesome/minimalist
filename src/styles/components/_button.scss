@@ -5,7 +5,7 @@
 .c-#{$ns}-button {
   @include inset-spacing(cozy);
   @include shape(card);
-  @include shadow-border(thick, rgba($link-color, 0.05));
+  @include shadow-border(thick, hsla(var(--#{$ns}-link-color), 0.05));
   @include interactive-text-and-bg;
   display: inline-flex;
   overflow: hidden;
@@ -21,7 +21,7 @@
 
   &:before {
     @include shape(card);
-    border: 2px solid rgba($link-color, 0.8);
+    border: 2px solid hsla(var(--#{$ns}-link-color), 0.8);
   }
 
   &:after {
@@ -37,8 +37,8 @@
     height: 100%;
     pointer-events: none;
     border-radius: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba($link-color, 0)), to(rgba($link-color, 0.04)));
-    background: linear-gradient(to bottom, rgba($link-color, 0) 50%, rgba($link-color, 0.04) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, hsla(var(--#{$ns}-link-color), 0)), to(hsla(var(--#{$ns}-link-color), 0.04)));
+    background: linear-gradient(to bottom, hsla(var(--#{$ns}-link-color), 0) 50%, hsla(var(--#{$ns}-link-color), 0.04) 100%);
   }
 
   @at-root button#{&} {

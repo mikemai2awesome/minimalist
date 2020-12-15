@@ -1,0 +1,13 @@
+:root {
+  @each $color in $hsl-color-values {
+    $color-name: nth($color, 1);
+
+    @each $color-shade, $color-value in nth($color, 2) {
+      @if ($color-shade == initial) {
+        --#{$ns}-color-#{$color-name}: #{$color-value};
+      } @else {
+        --#{$ns}-color-#{$color-name}-#{$color-shade}: #{$color-value};
+      }
+    }
+  }
+}

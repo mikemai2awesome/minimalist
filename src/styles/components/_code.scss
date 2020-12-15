@@ -2,9 +2,6 @@
    Code
 \* ------------------------------------ */
 
-$code-text-color: $text-color !default;
-$code-border-color: rgba($code-text-color, 0.1) !default;
-
 .c-#{$ns}-code-block,
 .c-#{$ns}-code-block .c-#{$ns}-code {
   @include shape(card);
@@ -18,21 +15,20 @@ $code-border-color: rgba($code-text-color, 0.1) !default;
 
 .c-#{$ns}-code {
   @include shape(pill);
-  @include shadow-border(thin, $code-border-color);
+  @include shadow-border(thin, hsla(var(--#{$ns}-text-color), 0.1));
   display: inline;
   margin-bottom: v-spacing(medium);
   padding: 1px h-spacing(xsmall) 2px h-spacing(xsmall);
-  color: $code-text-color;
-  text-align: left;
+  color: hsl(var(--#{$ns}-bg-color));
   text-align: start;
+  text-shadow: none;
   font-family: typeface(mono);
   font-size: calc(#{type-size-unitless(small)} * 1em);
-  background-color: rgba(mix($background-color, $code-text-color, 98%), 0.95);
+  background-color: hsla(var(--#{$ns}-text-color), 0.95);
 
   &:last-child {
     margin-bottom: 0;
   }
-
 
   @at-root .c-#{$ns}-code-block & {
     display: block;
@@ -56,7 +52,6 @@ $code-border-color: rgba($code-text-color, 0.1) !default;
     position: absolute;
     right: h-spacing(xsmall);
     bottom: v-spacing(xsmall);
-    color: $code-border-color;
     line-height: 1;
     text-transform: uppercase;
     font-family: typeface(heading);

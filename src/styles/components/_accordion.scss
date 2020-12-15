@@ -65,7 +65,7 @@
   display: block;
   margin: 0;
   padding-right: calc(#{h-spacing(xsmall)} * 4);
-  color: $text-color;
+  color: hsl(var(--#{$ns}-text-color));
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -94,7 +94,7 @@
   top: 0;
   right: 0;
   pointer-events: none;
-  color: $link-color;
+  color: hsl(var(--#{$ns}-link-color));
   font-family: typeface(mono);
   font-weight: 700;
   -webkit-transform: rotate(90deg) scale3d(0.8, 0.8, 0.8) translate3d(0, 0, 0);

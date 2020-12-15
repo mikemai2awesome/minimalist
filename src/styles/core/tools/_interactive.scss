@@ -17,7 +17,7 @@
     position: $position;
   }
 
-  color: $text-color;
+  color: hsl(var(--#{$ns}-text-color));
   outline: none;
   -webkit-backdrop-filter: blur(0.25rem);
           backdrop-filter: blur(0.25rem);
@@ -41,9 +41,9 @@
     height: 100%;
     pointer-events: none;
     background:
-      linear-gradient(216deg, rgba(palette(green), .6), rgba(palette(green), 0) 70.71%),
-      linear-gradient(100deg, rgba(palette(purple), .6), rgba(palette(purple), 0) 70.71%),
-      linear-gradient(336deg, rgba(palette(orange), .6), rgba(palette(orange), 0) 70.71%);
+      linear-gradient(216deg, hsla(var(--#{$ns}-color-red-light), .6), hsla(var(--#{$ns}-color-red-light), 0) 70.71%),
+      linear-gradient(100deg, hsla(var(--#{$ns}-color-purple-light), .6), hsla(var(--#{$ns}-color-purple-light), 0) 70.71%),
+      linear-gradient(336deg, hsla(var(--#{$ns}-color-blue), .6), hsla(var(--#{$ns}-color-blue), 0) 70.71%);
     background-blend-mode: darken;
     -webkit-transition: opacity transition-timing(regular) ease-out;
     transition: opacity transition-timing(regular) ease-out;
@@ -51,7 +51,7 @@
 
   &:hover,
   &:focus {
-    color: $link-color;
+    color: hsl(var(--#{$ns}-link-color));
 
     &:before {
       opacity: 0.35;
@@ -59,7 +59,7 @@
   }
 
   &:focus {
-    @include shadow-border(thin, rgba($link-color, 0.8));
+    @include shadow-border(thin, hsla(var(--#{$ns}-link-color), 0.8));
     -webkit-animation-name: pulse;
             animation-name: pulse;
     -webkit-animation-duration: 1.5s;
@@ -71,7 +71,7 @@
   }
 
   &:active {
-    color: $text-color;
+    color: hsl(var(--#{$ns}-text-color));
     -webkit-animation: none;
             animation: none;
     -webkit-transform: scale3d(0.98, 0.98, 0.98) translate3d(0, 0, 0);

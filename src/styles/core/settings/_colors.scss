@@ -2,67 +2,48 @@
    Color Settings
 \* ------------------------------------ */
 
-$color-white:     white !default;
-$color-black:     darken($color-white,100%) !default;
-$color-gray:      darken($color-white,45%) !default;
-$color-off-white: darken($color-white,4%) !default;
-$color-off-black: darken($color-white,90%) !default;
-$color-yellow:    yellow !default;
-$color-green:     #28a228 !default;
-$color-blue:      #3455db !default;
-$color-purple:    #9b59b6 !default;
-$color-gold:      #b8860b !default;
-$color-orange:    #ff4500 !default;
-$color-red:       #ff0000 !default;
-
-/* Color palettes */
-$palettes: (
-  blue: (
-    xlight:  mix($color-white, $color-blue, 65%),
-    light:   mix($color-white, $color-blue, 10%),
-    initial: $color-blue,
-    dark:    mix($color-black, $color-blue, 25%),
-    xdark:   mix($color-black, $color-blue, 55%),
+$hsl-color-values: (
+  'blue': (
+    xlight: (228.1, 70%, 70%),
+    light: (228.1, 70%, 60%),
+    initial: (228.1, 70%, 50%),
+    dark: (228.1, 70%, 35%),
+    xdark: (228.1, 70%, 20%),
   ),
-  purple: (
-    light:   mix($color-white, $color-purple, 25%),
-    initial: $color-purple,
-    dark:    mix($color-black, $color-purple, 50%)
+  'purple': (
+    light: (282.6, 55%, 60%),
+    initial: (282.6, 55%, 45%),
+    dark: (282.6, 55%, 25%),
   ),
-  yellow: (
-    light:   mix($color-white, $color-yellow, 25%),
-    initial: $color-yellow,
-    dark:    mix($color-black, $color-yellow, 50%)
+  'green': (
+    light: (120, 60%, 55%),
+    initial: (120, 60%, 40%),
+    dark: (120, 60%, 25%),
   ),
-  green: (
-    light:   mix($color-white, $color-green, 25%),
-    initial: $color-green,
-    dark:    mix($color-black, $color-green, 40%)
+  'red': (
+    light: (0, 100%, 55%),
+    initial: (0, 100%, 40%),
+    dark: (0, 100%, 30%),
   ),
-  red: (
-    light:   mix($color-white, $color-red, 25%),
-    initial: $color-red,
-    dark:    mix($color-black, $color-red, 40%)
+  'orange': (
+    light: (16.2, 100%, 60%),
+    initial: (16.2, 100%, 50%),
+    dark: (16.2, 100%, 35%),
   ),
-  orange: (
-    light:   mix($color-white, $color-orange, 25%),
-    initial: $color-orange,
-    dark:    mix($color-black, $color-orange, 50%)
+  'gold': (
+    light: (42.7, 90%, 60%),
+    initial: (42.7, 90%, 50%),
+    dark: (42.7, 90%, 35%),
   ),
-  gold: (
-    light:   mix($color-white, $color-gold, 25%),
-    initial: $color-gold,
-    dark:    mix($color-black, $color-gold, 50%)
+  'gray': (
+    light: (0, 0%, 96%),
+    initial: (0, 0%, 55%),
+    dark: (0, 0%, 10%),
   ),
-  gray: (
-    light:   $color-off-white,
-    initial: $color-gray,
-    dark:    $color-off-black
+  'black': (
+    initial: (0, 0%, 1%),
   ),
-  black: (
-    initial: $color-black
+  'white': (
+    initial: (0, 0%, 100%),
   ),
-  white: (
-    initial: $color-white
-  ),
-) !default;
+);

@@ -2,7 +2,7 @@
    List
 \* ------------------------------------ */
 
-$bullet-color: rgba($text-color, 0.4) !default;
+$_bullet-color: hsla(var(--#{$ns}-text-color), 0.4);
 
 .c-#{$ns}-list {
   @include reset-spacing;
@@ -33,7 +33,7 @@ $bullet-color: rgba($text-color, 0.4) !default;
       position: absolute;
       left: calc(#{h-spacing(xxsmall)} * -1);
       content: '\2059';
-      color: $bullet-color;
+      color: $_bullet-color;
       -webkit-transform: translateX(-100%);
               transform: translateX(-100%);
     }
@@ -56,7 +56,7 @@ $bullet-color: rgba($text-color, 0.4) !default;
       position: absolute;
       left: calc(#{h-spacing(xxsmall)} * -1);
       content: counter(ordered-list-item);
-      color: $bullet-color;
+      color: $_bullet-color;
       font-family: typeface(smallcap);
       -webkit-transform: translateX(-100%);
               transform: translateX(-100%);
@@ -203,8 +203,8 @@ $bullet-color: rgba($text-color, 0.4) !default;
     display: block;
     margin-top: 2px;
     margin-left: 2px;
-    color: $text-color;
-    background-color: rgba($text-color, 0.05);
+    color: hsl(var(--#{$ns}-text-color));
+    background-color: hsla(var(--#{$ns}-text-color), 0.05);
   }
 
   > a.c-#{$ns}-list__item,

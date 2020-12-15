@@ -4,14 +4,14 @@
 
 /* Type Options */
 .c-#{$ns}-text {
-  text-shadow: 1px 1px 1px rgba($background-color, 0.6);
+  text-shadow: 1px 1px 1px hsla(var(--#{$ns}-bg-color), 0.6);
   font-family: typeface(body);
   font-weight: 400;
 }
 
 .c-#{$ns}-text--heading {
   letter-spacing: -0.025em;
-  text-shadow: 0.1em 0.1em 1px rgba($background-color, 0.6);
+  text-shadow: 0.1em 0.1em 1px hsla(var(--#{$ns}-bg-color), 0.6);
   font-family: typeface(heading);
   font-weight: 400;
 

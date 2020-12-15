@@ -2,18 +2,13 @@
    Color Tools
 \* ------------------------------------ */
 
-/* Palette function */
-@function palette($color, $tone: 'initial') {
-  @return map-get-deep($palettes, $color, $tone);
-}
-
 /* Text contrast */
 @function text-contrast($color) {
   @if (lightness($color) > 60) {
-    @return palette(black);
+    @return hsl(var(--#{$ns}-color-black));
   }
 
   @else {
-    @return palette(white);
+    @return hsl(var(--#{$ns}-color-white));
   }
 }

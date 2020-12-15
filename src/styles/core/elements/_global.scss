@@ -15,7 +15,7 @@ html {
   line-height: $line-height;
   letter-spacing: 0.005rem;
   font-family: typeface(body);
-  font-size: $font-size;
+  font-size: var(--#{$ns}-font-size);
 }
 
 #{$all-block-elements} {
@@ -50,5 +50,5 @@ hr {
   height: 0;
   overflow: visible;
   border: none;
-  border-bottom: border-width(thin) solid rgba($text-color, 0.1);
+  border-bottom: border-width(thin) solid hsla(var(--#{$ns}-text-color), 0.1);
 }

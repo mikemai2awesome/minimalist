@@ -5,13 +5,13 @@
 .c-#{$ns}-card {
   @include inset-spacing(cozy);
   @include shape(card);
-  @include shadow-border(thick, rgba($text-color, 0.05));
+  @include shadow-border(thick, hsla(var(--#{$ns}-text-color), 0.05));
   display: block;
   margin: 0 auto v-spacing(medium) auto;
-  color: $text-color;
+  color: hsl(var(--#{$ns}-text-color));
   text-align: left;
   text-align: start;
-  background-color: $background-color;
+  background-color: hsl(var(--#{$ns}-bg-color));
 
   &:last-child {
     margin-bottom: 0;
@@ -43,7 +43,7 @@
   }
 
   @at-root figure#{&} {
-    @include shadow-border(thick, rgba($text-color, 0.1));
+    @include shadow-border(thick, hsla(var(--#{$ns}-text-color), 0.05));
     @include shape(bubble);
     position: relative;
 
@@ -76,7 +76,7 @@
       bottom: 0;
       left: 0;
       padding: v-spacing(small) h-spacing(xxsmall);
-      color: rgba($background-color, 0.95);
+      color: hsla(var(--#{$ns}-bg-color), 0.95);
       -webkit-writing-mode: vertical-lr;
           -ms-writing-mode: tb-lr;
               writing-mode: vertical-lr;
@@ -87,13 +87,13 @@
       background: -webkit-gradient(
         linear,
         left top, right top,
-        from(rgba($text-color, 0.6)),
-        to(rgba($text-color, 0.4))
+        from(hsla(var(--#{$ns}-text-color), 0.6)),
+        to(hsla(var(--#{$ns}-text-color), 0.4))
       );
       background: linear-gradient(
         to right,
-        rgba($text-color, 0.6),
-        rgba($text-color, 0.4)
+        hsla(var(--#{$ns}-text-color), 0.6),
+        hsla(var(--#{$ns}-text-color), 0.4)
       );
       -webkit-backdrop-filter: blur(0.25rem);
               backdrop-filter: blur(0.25rem);

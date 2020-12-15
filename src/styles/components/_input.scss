@@ -4,7 +4,7 @@
 
 .c-#{$ns}-input {
   @include shape(card);
-  @include shadow-border(thin, rgba($link-color, 0.2));
+  @include shadow-border(thin, hsla(var(--#{$ns}-link-color), 0.2));
   display: inline-flex;
   height: calc(#{v-spacing(small)} * 2 + #{line-height(tight)} * #{type-size(small)});
   margin: 0;
@@ -16,7 +16,7 @@
   font-weight: 400;
   font-size: type-size(small);
   border: 0;
-  background-color: rgba($link-color, 0.05);
+  background-color: hsla(var(--#{$ns}-link-color), 0.05);
   background-image: none;
   outline: none;
   -webkit-appearance: none;
@@ -26,11 +26,11 @@
   transition: box-shadow transition-timing(regular) ease-out;
 
   &:hover {
-    @include shadow-border(thin, rgba($link-color, 0.4));
+    @include shadow-border(thin, hsla(var(--#{$ns}-link-color), 0.4));
   }
 
   &:focus {
-    @include shadow-border(thin, rgba($link-color, 0.8));
+    @include shadow-border(thin, hsla(var(--#{$ns}-link-color), 0.8));
   }
 
   &.is-comfortable {

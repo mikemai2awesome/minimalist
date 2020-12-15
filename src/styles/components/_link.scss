@@ -8,31 +8,31 @@
   transition: all transition-timing(regular) ease-in;
 
   &:link {
-    color: $link-color;
-    box-shadow: 0 -0.125em 0 rgba($link-color, 0.1) inset;
+    color: hsl(var(--#{$ns}-link-color));
+    box-shadow: 0 -0.125em 0 hsla(var(--#{$ns}-link-color), 0.1) inset;
   }
 
   &:visited {
-    color: $text-color;
-    box-shadow: 0 -0.125em 0 rgba($text-color, 0.1) inset;
+    color: hsl(var(--#{$ns}-text-color));
+    box-shadow: 0 -0.125em 0 hsla(var(--#{$ns}-text-color), 0.1) inset;
   }
 
   &:hover,
   &:focus {
-    color: $link-color;
-    box-shadow: 0 -0.375em 0 rgba($link-color, 0.2) inset;
+    color: hsl(var(--#{$ns}-link-color));
+    box-shadow: 0 -0.375em 0 hsla(var(--#{$ns}-link-color), 0.2) inset;
   }
 
   &:focus {
     text-decoration: underline;
     outline: none;
     box-shadow: none;
-    background-color: rgba($link-color, 0.1);
+    background-color: hsla(var(--#{$ns}-link-color), 0.1);
   }
 
   &:active {
-    color: $text-color;
+    color: hsl(var(--#{$ns}-text-color));
     box-shadow: none;
-    background-color: rgba($text-color, 0.1);
+    background-color: hsla(var(--#{$ns}-text-color), 0.1);
   }
 }
