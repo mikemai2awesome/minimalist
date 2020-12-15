@@ -148,7 +148,6 @@
   }
 }
 
-
 /* Heading Link */
 .c-#{$ns}-text--heading {
   .c-#{$ns}-link {
@@ -157,13 +156,5 @@
     &:hover {
       text-decoration: underline;
     }
-  }
-}
-
-/* Block Text Link */
-.c-#{$ns}-text--block {
-  .c-#{$ns}-link {
-    display: block;
-    width: 100%;
   }
 }

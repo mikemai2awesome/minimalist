@@ -198,7 +198,7 @@ $_bullet-color: hsla(var(--#{$ns}-text-color), 0.4);
   margin-left: -2px;
 
   > .c-#{$ns}-list__item {
-    @include native-button-reset;
+    @include native-button-reset($cursor: auto);
     @include inset-spacing(cozy);
     @include shape(card);
     display: block;
