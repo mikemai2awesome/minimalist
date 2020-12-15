@@ -6,26 +6,26 @@
 .c-#{$ns}-text {
   text-shadow: 1px 1px 1px hsla(var(--#{$ns}-bg-color), 0.6);
   font-family: typeface(body);
-  font-weight: 400;
+  font-weight: var(--#{$ns}-custom-font-text-weight, 300);
 }
 
 .c-#{$ns}-text--heading {
   letter-spacing: -0.025em;
   text-shadow: 0.1em 0.1em 1px hsla(var(--#{$ns}-bg-color), 0.6);
   font-family: typeface(heading);
-  font-weight: 400;
+  font-weight: var(--#{$ns}-custom-font-heading-weight, 900);
 
   &.c-#{$ns}-text--xsmall {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-family: typeface(smallcap);
-    font-weight: 800;
+    font-weight: var(--#{$ns}-custom-font-xsmall-heading-weight, 800);
   }
 }
 
 .c-#{$ns}-text--lede {
   font-family: typeface(smallcap);
-  font-weight: 800;
+  font-weight: var(--#{$ns}-custom-font-lede-weight, 200);
 }
 
 /* Size Options */

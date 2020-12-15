@@ -1,15 +1,16 @@
 /* ------------------------------------ *\
-   Namespace
+   Namespace for the CSS classes
 \* ------------------------------------ */
 
-$ns: 'mnml' !default; /* Namespace for the CSS classes. */
+$ns: 'mnml' !default;
 
 
 /* ------------------------------------ *\
    Google Fonts
 \* ------------------------------------ */
 
-@import url('https://fonts.googleapis.com/css?family=Spectral:400,400i,700,700i|Alegreya+Sans+SC:800|Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@800&family=Bungee+Inline&family=Spectral:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 
 /* ------------------------------------ *\
    Basic Configurations
@@ -19,19 +20,22 @@ $ns: 'mnml' !default; /* Namespace for the CSS classes. */
 
 $typefaces: (
   body:     #{'Spectral', 'Georgia', serif},
-  heading:  #{'Bungee', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif},
+  heading:  #{'Bungee Inline', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif},
   smallcap: #{'Alegreya Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif},
   mono:     #{'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace}
 );
 
 :root {
-  --#{$ns}-font-size:
-    /* Only edit the % value. */
-    calc(
-      100%
-      + 0.25vw
-    );
+  /* Custom font settings */
+  --#{$ns}-custom-font-text-weight: 400;
+  --#{$ns}-custom-font-heading-weight: 400;
+  --#{$ns}-custom-font-xsmall-heading-weight: 800;
+  --#{$ns}-custom-font-lede-weight: 800;
 
+  /* Responsive page font-size. Only edit the vw value, never set this less than 100%. */
+  --#{$ns}-font-size: calc(100% + 0.25vw);
+
+  /* Global design tokens */
   --#{$ns}-text-color: var(--#{$ns}-color-gray-dark);
   --#{$ns}-bg-color: var(--#{$ns}-color-gray-light);
   --#{$ns}-link-color: var(--#{$ns}-color-red-dark);

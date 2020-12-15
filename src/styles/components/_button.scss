@@ -3,21 +3,20 @@
 \* ------------------------------------ */
 
 .c-#{$ns}-button {
+  @include native-button-reset;
   @include inset-spacing(cozy);
   @include shape(card);
   @include shadow-border(thick, hsla(var(--#{$ns}-link-color), 0.05));
   @include interactive-text-and-bg;
   display: inline-flex;
-  overflow: hidden;
-  margin: 0;
   text-align: center;
   text-decoration: none;
   line-height: line-height(tight);
   white-space: nowrap;
   font-family: typeface(smallcap);
-  font-weight: 800;
+  font-weight: var(--#{$ns}-custom-font-heading-weight, 900);
   font-size: type-size(small);
-  background-color: transparent;
+  background-color: hsla(var(--#{$ns}-bg-color), 0.95);
 
   &:before {
     @include shape(card);
@@ -28,25 +27,15 @@
     content: '';
     display: block;
     position: absolute;
-    top: 0;
-    left: 50%;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(-50%, -50%, 0);
+    top: 2px;
+    right: 2px;
+    bottom: 45%;
+    left: 2px;
     z-index: 0;
-    width: 150%;
-    height: 100%;
     pointer-events: none;
     border-radius: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, hsla(var(--#{$ns}-link-color), 0)), to(hsla(var(--#{$ns}-link-color), 0.04)));
-    background: linear-gradient(to bottom, hsla(var(--#{$ns}-link-color), 0) 50%, hsla(var(--#{$ns}-link-color), 0.04) 100%);
-  }
-
-  @at-root button#{&} {
-    cursor: pointer;
-    border: none;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(35%, hsla(var(--#{$ns}-link-color), 0)), to(hsla(var(--#{$ns}-link-color), 0.08)));
+    background: linear-gradient(to bottom, hsla(var(--#{$ns}-link-color), 0) 35%, hsla(var(--#{$ns}-link-color), 0.08) 100%);
   }
 
   &.is-comfortable {

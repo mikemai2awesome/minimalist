@@ -194,16 +194,16 @@ $_bullet-color: hsla(var(--#{$ns}-text-color), 0.4);
 
 
 .c-#{$ns}-list--ui {
-  margin-top: -2px;
-  margin-left: -2px;
+  margin-top: -3px;
+  margin-left: -3px;
 
   > .c-#{$ns}-list__item {
     @include native-button-reset($cursor: auto);
     @include inset-spacing(cozy);
     @include shape(card);
     display: block;
-    margin-top: 2px;
-    margin-left: 2px;
+    margin-top: 3px;
+    margin-left: 3px;
     color: hsl(var(--#{$ns}-text-color));
     background-color: hsla(var(--#{$ns}-text-color), 0.05);
   }
