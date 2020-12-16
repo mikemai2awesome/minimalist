@@ -7,7 +7,6 @@
   @include shape(card);
   @include shadow-border(thick, hsla(var(--#{$ns}-text-color), 0.05));
   display: flex;
-  flex: 0 1 100%;
   flex-direction: column;
   margin: 0 auto v-spacing(medium) auto;
   color: hsl(var(--#{$ns}-text-color));

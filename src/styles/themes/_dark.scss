@@ -11,7 +11,8 @@
   img:not([src*='.svg']),
   video,
   embed,
-  iframe {
+  iframe,
+  emoji {
     -webkit-filter: invert(100%) !important;
             filter: invert(100%) !important;
   }

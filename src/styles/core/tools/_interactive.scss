@@ -10,8 +10,8 @@
   color: hsl(var(--#{$ns}-text-color));
   cursor: pointer;
   outline: none;
-  -webkit-backdrop-filter: blur(0.25rem);
-  backdrop-filter: blur(0.25rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(0.5rem);
   -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   -webkit-transition: color transition-timing(regular) ease-in-out, transform transition-timing(regular) ease-in-out;

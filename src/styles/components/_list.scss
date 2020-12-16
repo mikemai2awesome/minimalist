@@ -3,6 +3,7 @@
 \* ------------------------------------ */
 
 $_bullet-color: hsla(var(--#{$ns}-text-color), 0.4);
+$_item-min-width: 230px;
 
 .c-#{$ns}-list {
   @include reset-spacing;
@@ -34,8 +35,8 @@ $_bullet-color: hsla(var(--#{$ns}-text-color), 0.4);
       left: calc(#{h-spacing(xxsmall)} * -1);
       content: '\2059';
       color: $_bullet-color;
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
+      -webkit-transform: translateX(-0.5em);
+              transform: translateX(-0.5em);
     }
   }
 }
@@ -116,7 +117,7 @@ $_bullet-color: hsla(var(--#{$ns}-text-color), 0.4);
 
     > .c-#{$ns}-list__item {
       flex: 1;
-      flex-basis: var(--#{$ns}-list-item-basis, 200px);
+      flex-basis: var(--#{$ns}-list-item-basis, #{$_item-min-width});
       margin-top: v-spacing(medium);
       margin-bottom: 0;
       margin-left: h-spacing(medium);
@@ -201,11 +202,14 @@ $_bullet-color: hsla(var(--#{$ns}-text-color), 0.4);
     @include native-button-reset($cursor: auto);
     @include inset-spacing(cozy);
     @include shape(card);
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin-top: 3px;
     margin-left: 3px;
     color: hsl(var(--#{$ns}-text-color));
-    background-color: hsla(var(--#{$ns}-text-color), 0.05);
+    background-color: hsla(var(--#{$ns}-text-color), 0.03);
+    -webkit-backdrop-filter: blur(0.35rem);
+    backdrop-filter: blur(0.35rem);
   }
 
   > a.c-#{$ns}-list__item,
@@ -229,7 +233,7 @@ $_bullet-color: hsla(var(--#{$ns}-text-color), 0.4);
 
     > .c-#{$ns}-list__item {
       flex: 1;
-      flex-basis: 200px;
+      flex-basis: var(--#{$ns}-list-item-basis, #{$_item-min-width});
     }
   }
 

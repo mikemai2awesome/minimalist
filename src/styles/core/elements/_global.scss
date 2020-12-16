@@ -44,11 +44,20 @@ sup {
 }
 
 hr {
-  margin-top: v-spacing(medium);
+  display: block;
+  margin-top: 0;
   margin-bottom: v-spacing(medium);
   box-sizing: content-box;
+  width: 100%;
   height: 0;
   overflow: visible;
   border: none;
   border-bottom: border-width(thin) solid hsla(var(--#{$ns}-text-color), 0.1);
+}
+
+emoji {
+  display: inline;
+  font-size: 0.8em;
+  text-shadow: none;
+  vertical-align: baseline;
 }
