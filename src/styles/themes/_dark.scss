@@ -1,11 +1,11 @@
-.t-#{$ns}-dark {
+@mixin _dark-rules {
   /* Set the regular light theme colors */
   color: hsl(var(--#{$ns}-text-color)) !important;
   background-color: hsl(var(--#{$ns}-bg-color)) !important;
 
   /* Then invert the colors */
   -webkit-filter: invert(100%) !important;
-          filter: invert(100%) !important;
+  filter: invert(100%) !important;
 
   /* Preserving raster images and embeds */
   img:not([src*='.svg']),
@@ -14,6 +14,16 @@
   iframe,
   emoji {
     -webkit-filter: invert(100%) !important;
-            filter: invert(100%) !important;
+    filter: invert(100%) !important;
+  }
+}
+
+.t-#{$ns}-dark {
+  @include _dark-rules;
+}
+
+@media (prefers-color-scheme: dark) {
+  .t-#{$ns}-auto {
+    @include _dark-rules;
   }
 }

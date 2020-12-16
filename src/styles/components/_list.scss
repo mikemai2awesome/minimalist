@@ -223,6 +223,7 @@ $_item-min-width: 230px;
     }
 
     &:focus {
+      background-color: hsla(var(--#{$ns}-bg-color), 0.95);
       z-index: 1;
     }
   }
