@@ -1,0 +1,81 @@
+.cs-#{$ns}-switch {
+  @include shape(pill);
+  @include shadow-border(thick, hsla(var(--#{$ns}-link-color), 0.2));
+
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: hsl(var(--#{$ns}-link-color));
+    transition: box-shadow transition-timing(regular) ease-out;
+  }
+}
+
+.cs-#{$ns}-switch__text {
+  display: none;
+  position: absolute;
+  left: 0;
+  transform: translateX(calc(var(--#{$ns}-h-spacing-xsmall) * -1 - 100%));
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  @at-root .cs-#{$ns}-switch:hover #{&} {
+    display: block;
+  }
+}
+
+input#color-scheme {
+  position: absolute;
+  top: -200vh;
+  left: -200vw;
+
+  &:focus:before {
+    content: 'Press space to switch color scheme.\ATap anywhere to exit.';
+    white-space: pre-wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: z-index(overlay);
+    padding: var(--#{$ns}-v-spacing-medium) var(--#{$ns}-h-spacing-medium);
+    font-size: var(--#{$ns}-type-size-xxlarge);
+    font-family: var(--#{$ns}-typeface-heading);
+    font-weight: var(--#{$ns}-custom-font-heading-weight, 900);
+    line-height: var(--#{$ns}-line-height-xxlarge);
+    color: hsl(var(--#{$ns}-link-color));
+    background-color: hsla(var(--#{$ns}-bg-color), 0.9);
+    text-align: center;
+    pointer-events: none;
+  }
+
+  &:checked ~ * .cs-#{$ns}-switch {
+    box-shadow: none;
+
+    &:after {
+      background-color: transparent;
+      box-shadow: inset -6px -2px 0 1px hsl(var(--#{$ns}-link-color));
+    }
+  }
+
+  &:checked ~ .c-#{$ns}-plane {
+    @include _dark-rules;
+  }
+}

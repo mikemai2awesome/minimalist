@@ -12,9 +12,7 @@
   outline: none;
   -webkit-backdrop-filter: blur(0.5rem);
   backdrop-filter: blur(0.5rem);
-  -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-  -webkit-transition: color transition-timing(regular) ease-in-out, transform transition-timing(regular) ease-in-out;
   transition: color transition-timing(regular) ease-in-out, transform transition-timing(regular) ease-in-out;
 
   &::-moz-focus-inner {
@@ -31,12 +29,12 @@
     z-index: 0; /* Puts the gradient below all content by default. */
     opacity: 0.25;
     pointer-events: none;
+    border-radius: inherit;
     background:
       linear-gradient(216deg, hsla(var(--#{$ns}-color-red-light), .6), hsla(var(--#{$ns}-color-red-light), 0) 70.71%),
       linear-gradient(100deg, hsla(var(--#{$ns}-color-purple-light), .6), hsla(var(--#{$ns}-color-purple-light), 0) 70.71%),
       linear-gradient(336deg, hsla(var(--#{$ns}-color-blue), .6), hsla(var(--#{$ns}-color-blue), 0) 70.71%);
     background-blend-mode: darken;
-    -webkit-transition: opacity transition-timing(regular) ease-out;
     transition: opacity transition-timing(regular) ease-out;
   }
 
@@ -61,7 +59,6 @@
 
   &:active {
     color: hsl(var(--#{$ns}-text-color));
-    -webkit-transform: scale3d(0.98, 0.98, 0.98) translate3d(0, 0, 0);
     transform: scale3d(0.98, 0.98, 0.98) translate3d(0, 0, 0);
 
     &:before {

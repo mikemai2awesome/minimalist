@@ -1,0 +1,34 @@
+/* ------------------------------------ *\
+   Avatar
+\* ------------------------------------ */
+
+.c-#{$ns}-avatar {
+  @include shape(card);
+
+  --c-#{$ns}-avatar-size: 0.85em;
+  transform: translateY(0.1em);
+  width: var(--c-#{$ns}-avatar-size);
+  height: var(--c-#{$ns}-avatar-size);
+  vertical-align: baseline;
+}
+
+.c-#{$ns}-avatar--small {
+  --c-#{$ns}-avatar-size: 1rem;
+}
+
+.c-#{$ns}-avatar--medium {
+  --c-#{$ns}-avatar-size: 2rem;
+}
+
+.c-#{$ns}-avatar--large {
+  --c-#{$ns}-avatar-size: 3rem;
+}
+
+.c-#{$ns}-avatar--transparent {
+  border-radius: 0;
+}
+
+.c-#{$ns}-avatar--block {
+  display: block;
+  transform: none;
+}

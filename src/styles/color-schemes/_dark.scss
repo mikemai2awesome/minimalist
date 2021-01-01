@@ -4,7 +4,6 @@
   background-color: hsl(var(--#{$ns}-bg-color)) !important;
 
   /* Then invert the colors */
-  -webkit-filter: invert(100%) !important;
   filter: invert(100%) !important;
 
   /* Preserving raster images and embeds */
@@ -13,17 +12,16 @@
   embed,
   iframe,
   emoji {
-    -webkit-filter: invert(100%) !important;
     filter: invert(100%) !important;
   }
 }
 
-.t-#{$ns}-dark {
+.cs-#{$ns}-dark {
   @include _dark-rules;
 }
 
 @media (prefers-color-scheme: dark) {
-  .t-#{$ns}-auto {
+  .cs-#{$ns}-auto {
     @include _dark-rules;
   }
 }

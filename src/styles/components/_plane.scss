@@ -30,7 +30,8 @@
 }
 
 /* Plane trendy gradient */
-.c-#{$ns}-plane--trendy {
+.c-#{$ns}-plane--trendy,
+.c-#{$ns}-plane--trendy-af {
   &:after {
     content: '';
     position: absolute;
@@ -48,7 +49,7 @@
   }
 }
 
-.c-#{$ns}-plane--trendy--af {
+.c-#{$ns}-plane--trendy-af {
   &:after {
     opacity: 0.6; /* Makes the gradient stronger. */
   }
@@ -126,9 +127,9 @@
     flex-direction: row;
     justify-content: space-between;
     flex: 1;
-    margin-top: v-spacing(xsmall);
+    margin-top: v-spacing(small);
     margin-right: calc(#{h-spacing(xsmall)} / 2 * -1);
-    margin-bottom: v-spacing(xsmall);
+    margin-bottom: v-spacing(small);
     margin-left: calc(#{h-spacing(xsmall)} / 2 * -1);
 
     &__item {
@@ -189,6 +190,9 @@
   bottom: 0;
   left: 0;
   pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 
   img {
