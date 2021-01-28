@@ -1,172 +1,172 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>List | Component | MNML CSS Framework</title>
-    <link rel="stylesheet" type="text/css" href="src/styles/main.css">
-  </head>
-  <body class="c-mnml-body cs-mnml-dark">
-    <header role="banner" class="c-mnml-plane c-mnml-plane--trendy c-mnml-plane--article-width c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xxlarge u-mnml-text-align-center">
-      <div class="c-mnml-plane-cabin">
-        <p class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xsmall">Layout component</p>
-        <h1 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--display">List</h1>
+---
+mode: auto
+title: List of all the lists
+description: Building layouts with lists.
+---
+{% include body-start.html %}
+
+  <header role="banner" class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--trendy c-{{ site.ns }}-plane--article-width c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-xxlarge u-{{ site.ns }}-text-align-center">
+    <div class="c-{{ site.ns }}-plane-cabin">
+      <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xsmall">Layout component</p>
+      <h1 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--display">List</h1>
+    </div>
+  </header>
+  <main class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--article-width c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-large">
+    <article class="c-{{ site.ns }}-plane-cabin">
+      <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xxlarge">Unordered List</h2>
+      <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xlarge">Vertical</h3>
+      <ul class="c-{{ site.ns }}-list c-{{ site.ns }}-list--unordered">
+        <li class="c-{{ site.ns }}-list__item">
+          First level item
+        </li>
+        <li class="c-{{ site.ns }}-list__item">
+          First level item
+          <ul class="c-{{ site.ns }}-list c-{{ site.ns }}-list--unordered">
+            <li class="c-{{ site.ns }}-list__item">
+              Second level item
+              <ul class="c-{{ site.ns }}-list c-{{ site.ns }}-list--unordered">
+                <li class="c-{{ site.ns }}-list__item">
+                  Third level item
+                </li>
+                <li class="c-{{ site.ns }}-list__item">
+                  Third level item
+                </li>
+              </ul>
+            </li>
+            <li class="c-{{ site.ns }}-list__item">
+              Second level item
+            </li>
+          </ul>
+        </li>
+        <li class="c-{{ site.ns }}-list__item">
+          First level item
+        </li>
+      </ul>
+      <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xlarge">Horizontal</h3>
+      <ul class="c-{{ site.ns }}-list c-{{ site.ns }}-list--unordered lay-horizontal">
+        <li class="c-{{ site.ns }}-list__item">
+          Horizontal item
+        </li>
+        <li class="c-{{ site.ns }}-list__item">
+          Horizontal item
+        </li>
+        <li class="c-{{ site.ns }}-list__item">
+          Horizontal item
+        </li>
+      </ul>
+      <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xxlarge">Ordered List</h2>
+      <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xlarge">Vertical</h3>
+      <ol class="c-{{ site.ns }}-list c-{{ site.ns }}-list--ordered">
+        <li class="c-{{ site.ns }}-list__item">
+          First level item
+        </li>
+        <li class="c-{{ site.ns }}-list__item">
+          First level item
+          <ol class="c-{{ site.ns }}-list c-{{ site.ns }}-list--ordered">
+            <li class="c-{{ site.ns }}-list__item">
+              Second level item
+              <ol class="c-{{ site.ns }}-list c-{{ site.ns }}-list--ordered">
+                <li class="c-{{ site.ns }}-list__item">
+                  Third level item
+                </li>
+                <li class="c-{{ site.ns }}-list__item">
+                  Third level item
+                </li>
+              </ol>
+            </li>
+            <li class="c-{{ site.ns }}-list__item">
+              Second level item
+            </li>
+          </ol>
+        </li>
+        <li class="c-{{ site.ns }}-list__item">
+          First level item
+        </li>
+      </ol>
+      <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xlarge">Horizontal</h3>
+      <ol class="c-{{ site.ns }}-list c-{{ site.ns }}-list--ordered lay-horizontal">
+        <li class="c-{{ site.ns }}-list__item">
+          Horizontal item
+        </li>
+        <li class="c-{{ site.ns }}-list__item">
+          Horizontal item
+        </li>
+        <li class="c-{{ site.ns }}-list__item">
+          Horizontal item
+        </li>
+      </ol>
+      <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xxlarge">Bare List</h2>
+      <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xlarge">Vertical</h3>
+      <div class="c-{{ site.ns }}-list c-{{ site.ns }}-list--bare">
+        <div class="c-{{ site.ns }}-list__item">
+          Bare item
+        </div>
+        <div class="c-{{ site.ns }}-list__item">
+          Bare item
+        </div>
+        <div class="c-{{ site.ns }}-list__item">
+          Bare item
+        </div>
       </div>
-    </header>
-    <main class="c-mnml-plane c-mnml-plane--article-width c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-large">
-      <article class="c-mnml-plane-cabin">
-        <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Unordered List</h2>
-        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Vertical</h3>
-        <ul class="c-mnml-list c-mnml-list--unordered">
-          <li class="c-mnml-list__item">
-            First level item
-          </li>
-          <li class="c-mnml-list__item">
-            First level item
-            <ul class="c-mnml-list c-mnml-list--unordered">
-              <li class="c-mnml-list__item">
-                Second level item
-                <ul class="c-mnml-list c-mnml-list--unordered">
-                  <li class="c-mnml-list__item">
-                    Third level item
-                  </li>
-                  <li class="c-mnml-list__item">
-                    Third level item
-                  </li>
-                </ul>
-              </li>
-              <li class="c-mnml-list__item">
-                Second level item
-              </li>
-            </ul>
-          </li>
-          <li class="c-mnml-list__item">
-            First level item
-          </li>
-        </ul>
-        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Horizontal</h3>
-        <ul class="c-mnml-list c-mnml-list--unordered lay-horizontal">
-          <li class="c-mnml-list__item">
-            Horizontal item
-          </li>
-          <li class="c-mnml-list__item">
-            Horizontal item
-          </li>
-          <li class="c-mnml-list__item">
-            Horizontal item
-          </li>
-        </ul>
-        <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Ordered List</h2>
-        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Vertical</h3>
-        <ol class="c-mnml-list c-mnml-list--ordered">
-          <li class="c-mnml-list__item">
-            First level item
-          </li>
-          <li class="c-mnml-list__item">
-            First level item
-            <ol class="c-mnml-list c-mnml-list--ordered">
-              <li class="c-mnml-list__item">
-                Second level item
-                <ol class="c-mnml-list c-mnml-list--ordered">
-                  <li class="c-mnml-list__item">
-                    Third level item
-                  </li>
-                  <li class="c-mnml-list__item">
-                    Third level item
-                  </li>
-                </ol>
-              </li>
-              <li class="c-mnml-list__item">
-                Second level item
-              </li>
-            </ol>
-          </li>
-          <li class="c-mnml-list__item">
-            First level item
-          </li>
-        </ol>
-        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Horizontal</h3>
-        <ol class="c-mnml-list c-mnml-list--ordered lay-horizontal">
-          <li class="c-mnml-list__item">
-            Horizontal item
-          </li>
-          <li class="c-mnml-list__item">
-            Horizontal item
-          </li>
-          <li class="c-mnml-list__item">
-            Horizontal item
-          </li>
-        </ol>
-        <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Bare List</h2>
-        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Vertical</h3>
-        <div class="c-mnml-list c-mnml-list--bare">
-          <div class="c-mnml-list__item">
-            Bare item
-          </div>
-          <div class="c-mnml-list__item">
-            Bare item
-          </div>
-          <div class="c-mnml-list__item">
-            Bare item
-          </div>
+      <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xlarge">Horizontal</h3>
+      <div class="c-{{ site.ns }}-list c-{{ site.ns }}-list--bare lay-horizontal">
+        <div class="c-{{ site.ns }}-list__item">
+          Bare item
         </div>
-        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Horizontal</h3>
-        <div class="c-mnml-list c-mnml-list--bare lay-horizontal">
-          <div class="c-mnml-list__item">
-            Bare item
-          </div>
-          <div class="c-mnml-list__item">
-            Bare item
-          </div>
-          <div class="c-mnml-list__item">
-            Bare item
-          </div>
+        <div class="c-{{ site.ns }}-list__item">
+          Bare item
         </div>
-        <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Inline List</h2>
-        <div class="c-mnml-list c-mnml-list--inline">
-          <div class="c-mnml-list__item">
-            Inline item
-          </div>
-          <div class="c-mnml-list__item">
-            Inline item
-          </div>
-          <div class="c-mnml-list__item">
-            Inline item
-          </div>
+        <div class="c-{{ site.ns }}-list__item">
+          Bare item
         </div>
-        <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Justify List</h2>
-        <div class="c-mnml-list c-mnml-list--inline c-mnml-list--align-justify">
-          <div class="c-mnml-list__item">
-            Justify item
-          </div>
-          <div class="c-mnml-list__item">
-            Justify item
-          </div>
+      </div>
+      <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xxlarge">Inline List</h2>
+      <div class="c-{{ site.ns }}-list c-{{ site.ns }}-list--inline">
+        <div class="c-{{ site.ns }}-list__item">
+          Inline item
         </div>
-        <h2 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">UI List</h2>
-        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Vertical</h3>
-        <div class="c-mnml-list c-mnml-list--ui">
-          <a href="javascript:" class="c-mnml-list__item">
-            UI item (link)
-          </a>
-          <button type="button" class="c-mnml-list__item">
-            UI item (button)
-          </button>
-          <div class="c-mnml-list__item">
-            UI item
-          </div>
+        <div class="c-{{ site.ns }}-list__item">
+          Inline item
         </div>
-        <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Horizontal</h3>
-        <div class="c-mnml-list c-mnml-list--ui lay-horizontal">
-          <a href="javascript:" class="c-mnml-list__item">
-            UI item (link)
-          </a>
-          <button type="button" class="c-mnml-list__item">
-            UI item (button)
-          </button>
-          <div class="c-mnml-list__item">
-            UI item
-          </div>
+        <div class="c-{{ site.ns }}-list__item">
+          Inline item
         </div>
-      </article>
-    </main>
-  </body>
-</html>
+      </div>
+      <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xxlarge">Justify List</h2>
+      <div class="c-{{ site.ns }}-list c-{{ site.ns }}-list--inline c-{{ site.ns }}-list--align-justify">
+        <div class="c-{{ site.ns }}-list__item">
+          Justify item
+        </div>
+        <div class="c-{{ site.ns }}-list__item">
+          Justify item
+        </div>
+      </div>
+      <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xxlarge">UI List</h2>
+      <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xlarge">Vertical</h3>
+      <div class="c-{{ site.ns }}-list c-{{ site.ns }}-list--ui">
+        <a href="javascript:" class="c-{{ site.ns }}-list__item">
+          UI item (link)
+        </a>
+        <button type="button" class="c-{{ site.ns }}-list__item">
+          UI item (button)
+        </button>
+        <div class="c-{{ site.ns }}-list__item">
+          UI item
+        </div>
+      </div>
+      <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xlarge">Horizontal</h3>
+      <div class="c-{{ site.ns }}-list c-{{ site.ns }}-list--ui lay-horizontal">
+        <a href="javascript:" class="c-{{ site.ns }}-list__item">
+          UI item (link)
+        </a>
+        <button type="button" class="c-{{ site.ns }}-list__item">
+          UI item (button)
+        </button>
+        <div class="c-{{ site.ns }}-list__item">
+          UI item
+        </div>
+      </div>
+    </article>
+  </main>
+
+{% include body-end.html %}

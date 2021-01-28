@@ -35,8 +35,7 @@ $_item-min-width: 230px;
       left: calc(#{h-spacing(xxsmall)} * -1);
       content: '\2059';
       color: $_bullet-color;
-      -webkit-transform: translateX(-0.5em);
-              transform: translateX(-0.5em);
+      transform: translateX(-0.5em);
     }
   }
 }
@@ -59,8 +58,7 @@ $_item-min-width: 230px;
       content: counter(ordered-list-item);
       color: $_bullet-color;
       font-family: typeface(smallcap);
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
+      transform: translateX(-100%);
     }
   }
 }
@@ -97,9 +95,7 @@ $_item-min-width: 230px;
 }
 
 .c-#{$ns}-list--bare {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: block;
 
   > .c-#{$ns}-list__item {
     display: block;
@@ -111,7 +107,8 @@ $_item-min-width: 230px;
   }
 
   &.lay-horizontal {
-    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: calc(#{v-spacing(medium)} * -1);
     margin-left: calc(#{h-spacing(medium)} * -1);
 
