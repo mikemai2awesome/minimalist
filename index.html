@@ -3,8 +3,11 @@ index: true
 ---
 {% include body-start.html %}
 
-  <div class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--trendy-af c-{{ site.ns }}-plane--xlarge-width c-{{ site.ns }}-plane--full-height c-{{ site.ns }}-plane--h-inset-small c-{{ site.ns }}-plane--v-inset-xlarge">
-    <header class="c-{{ site.ns }}-plane-deck c-{{ site.ns }}-plane-deck--upper">
+  <header class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--trendy-af c-{{ site.ns }}-plane--xlarge-width c-{{ site.ns }}-plane--full-height c-{{ site.ns }}-plane--h-inset-small c-{{ site.ns }}-plane--v-inset-xlarge">
+    <div class="c-{{ site.ns }}-plane-background" style="opacity: 0.1">
+      <img src="src/img/hero-walk.jpg" alt="">
+    </div>
+    <div class="c-{{ site.ns }}-plane-deck c-{{ site.ns }}-plane-deck--upper">
       <div class="c-{{ site.ns }}-plane-deck__content">
         <div class="c-{{ site.ns }}-plane-deck__content__item">
           <h1 class="u-{{ site.ns }}-visuallyhidden">Mike Mai, Designer/Coder</h1>
@@ -17,9 +20,9 @@ index: true
           </label>
         </div>
       </div>
-    </header>
-    <main class="c-{{ site.ns }}-plane-cabin">
-      <article class="c-{{ site.ns }}-list c-{{ site.ns }}-list--ui is-comfortable lay-horizontal">
+    </div>
+    <div class="c-{{ site.ns }}-plane-cabin">
+      <div class="c-{{ site.ns }}-list c-{{ site.ns }}-list--ui is-comfortable lay-horizontal">
         <a href="#bio" class="c-{{ site.ns }}-list__item">
           <span class="c-{{ site.ns }}-text c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xsmall">Hello, I am Mike Mai.</span>
           <span class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xlarge">UIX designer &amp; coder str8 outta China</span>
@@ -68,9 +71,9 @@ index: true
             </li>
           </ul>
         </section>
-      </article>
-    </main>
-    <footer class="c-{{ site.ns }}-plane-deck c-{{ site.ns }}-plane-deck--lower">
+      </div>
+    </div>
+    <div class="c-{{ site.ns }}-plane-deck c-{{ site.ns }}-plane-deck--lower">
       <div class="c-{{ site.ns }}-plane-deck__content">
         <span class="c-{{ site.ns }}-plane-deck__content__item">
           <span class="c-{{ site.ns }}-text c-{{ site.ns }}-text--xsmall">&copy; Mike Mai Network</span>
@@ -79,19 +82,19 @@ index: true
           <span class="c-{{ site.ns }}-text c-{{ site.ns }}-text--xsmall">Since 1984</span>
         </span>
       </div>
-    </footer>
-  </div>
+    </div>
+  </header>
 
-  <div class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--trendy c-{{ site.ns }}-plane--article-width c-{{ site.ns }}-plane--full-height c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-xlarge cs-{{ site.ns }}-dark">
+  <aside class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--trendy c-{{ site.ns }}-plane--article-width c-{{ site.ns }}-plane--full-height c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-xlarge cs-{{ site.ns }}-dark">
     <div class="c-{{ site.ns }}-plane-background">
-      <img src="src/img/hero-walk.jpg" alt="Mike smiling and walking.">
+      <img src="src/img/hero-walk.jpg" alt="Black and white photo of Mike smiling and walking.">
     </div>
     <div class="c-{{ site.ns }}-plane-cabin">
       <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--lede">Great design requires both form and function. Favoring one over the other will greatly affect a design&rsquo;s ability to communicate. Striking a balance between the two is something I dwell on every single day.</p>
     </div>
-  </div>
+  </aside>
 
-  <article class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--trendy c-{{ site.ns }}-plane--article-width c-{{ site.ns }}-plane--full-height c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-xxlarge" id="bio">
+  <article class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--article-width c-{{ site.ns }}-plane--full-height c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-xxlarge" id="bio">
     <div class="c-{{ site.ns }}-plane-cabin">
       <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xxlarge">Designer</h3>
       <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block">I have been working as a designer for 11+ years. I received my BFA in graphic design from Massachusetts College of Art and Design, where I developed my passion for typography. That passion drove me to what I wanted to be: designing for the web. Because the web is 99% text <mark>(unverified <emoji>😅</emoji>)</mark>, typography is the most important foundation of a website. Picking typefaces and typesetting are my first tasks when starting any web projects.</p>
@@ -104,7 +107,7 @@ index: true
     </div>
   </article>
 
-  <div class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--article-width c-{{ site.ns }}-plane--full-height c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-xlarge">
+  <!-- <div class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--article-width c-{{ site.ns }}-plane--full-height c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-xlarge">
     <div class="c-{{ site.ns }}-plane-cabin">
       <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--display">Never gonna give you up&hellip;</p>
     </div>
@@ -126,6 +129,6 @@ index: true
     <div class="c-{{ site.ns }}-plane-cabin">
       <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--display">Bonus content unlocked!</p>
     </div>
-  </div>
+  </div> -->
 
 {% include body-end.html %}
