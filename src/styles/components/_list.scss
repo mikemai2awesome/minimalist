@@ -3,7 +3,7 @@
 \* ------------------------------------ */
 
 $_bullet-color: hsla(var(--#{$ns}-text-color), 0.4);
-$_item-min-width: 230px;
+$_item-min-width: 200px;
 
 .c-#{$ns}-list {
   @include reset-spacing;
@@ -107,18 +107,9 @@ $_item-min-width: 230px;
   }
 
   &.lay-horizontal {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(#{v-spacing(medium)} * -1);
-    margin-left: calc(#{h-spacing(medium)} * -1);
-
-    > .c-#{$ns}-list__item {
-      flex: 1;
-      flex-basis: var(--#{$ns}-list-item-basis, #{$_item-min-width});
-      margin-top: v-spacing(medium);
-      margin-bottom: 0;
-      margin-left: h-spacing(medium);
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--#{$ns}-list-item-basis, #{$_item-min-width}), 1fr));
+    grid-gap: h-spacing(medium);
   }
 
   &.is-comfortable {

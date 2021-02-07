@@ -6,19 +6,16 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3">
   <meta http-equiv="cleartype" content="on">
-  {% if page.name == "index.html" %}
-  <title>{{ site.title }}: {{ site.subtitle }} | {{ site.author }}</title>
-  {% else %}
-  <title>{{ page.title }} | {{ site.title }}</title>
-  {% endif %}
+  <title>{% if page.name == "index.html" %}{{ site.author }}: {{ site.title }} | {{ site.subtitle }}{% else %}{{ page.title }} | {{ site.author }}{% endif %}</title>
   <link rel="stylesheet" href="src/styles/main.css">
-  {% if page.name == "index.html" %}
-  <meta name="description" content="{{ site.description }}">
-  <link rel="canonical" href="{{ site.url }}">
-  {% else %}
-  <meta name="description" content="{{ page.description }}">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  {% endif %}
+  <meta name="description" content="{% if page.name == 'index.html' %}{{ site.description }}{% else %}{{ page.description }}{% endif %}">
+  <link rel="canonical" href="{% if page.name == 'index.html' %}{{ site.url }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
+  <meta property="og:description" content="{% if page.name == 'index.html' %}{{ site.description }}{% else %}{{ page.description }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ site.s3 }}/assets/img/ios/h/touch-icon-ipad-retina.png">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:site_name" content="{{ site.author }}: {{ site.title }} | {{ site.subtitle }}">
+  <meta property="og:title" content="{{ site.author }}: {{ site.title }} | {{ site.subtitle }}">
   <link rel="image_src" href="{{ site.s3 }}/assets/img/ios/h/apple-touch-icon.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.s3 }}/assets/img/ios/h/touch-icon-ipad-retina.png" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.s3 }}/assets/img/ios/h/apple-touch-icon.png">
@@ -26,5 +23,5 @@
   <link rel="apple-touch-icon-precomposed" href="{{ site.s3 }}/assets/img/ios/l/apple-touch-icon-precomposed.png">
   <link rel="icon" href="{{ site.s3 }}/assets/img/favicon.ico">
 </head>
-<body class="c-{{ site.ns }}-body {% if page.mode %}t-{{ site.ns }}-{{ page.mode }}{% endif %}">
-  <input type="checkbox" name="color-scheme" id="color-scheme" checked>
+<body class="c-{{ site.ns }}-body {% if page.color-scheme %}cs-{{ site.ns }}-{{ page.color-scheme }}{% endif %}">
+  {% if page.color-scheme-switch %}<input type="checkbox" name="color-scheme" id="color-scheme" checked>{% endif %}
