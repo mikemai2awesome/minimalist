@@ -1,0 +1,42 @@
+/* ------------------------------------ *\
+   End Credits
+\* ------------------------------------ */
+
+.c-#{$ns}-end-credits {
+  @include reset-spacing;
+  display: block;
+  margin-bottom: v-spacing(medium);
+  list-style: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .c-#{$ns}-end-credits__item {
+    @include reset-spacing;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: h-spacing(medium);
+    grid-row-gap: v-spacing(medium);
+    margin-bottom: v-spacing(small);
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    border-bottom: 2px dotted hsla(var(--#{$ns}-text-color), 0.1);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    > *:nth-child(odd) {
+      font-family: typeface(smallcap);
+      text-align: start;
+    }
+
+    > *:nth-child(even) {
+      font-style: italic;
+      text-align: end;
+    }
+  }
+}

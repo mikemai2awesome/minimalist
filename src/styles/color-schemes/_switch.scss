@@ -83,7 +83,7 @@ input#color-scheme {
     }
   }
 
-  &:checked ~ .c-#{$ns}-plane {
+  &:checked ~ *:not(.cs-#{$ns}-dark) {
     @include _dark-rules;
   }
 }
