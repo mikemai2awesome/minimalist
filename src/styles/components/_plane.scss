@@ -4,13 +4,13 @@
 
 @mixin plane-max-width($width) {
   @if $width == 'article' {
-    max-width: 75ch;
+    max-width: min(80vw, 75ch);
   }
   @else if $width == 'large' {
-    max-width: breakpoint(large);
+    max-width: min(90vw, #{breakpoint(large)});
   }
   @else if $width == 'xlarge' {
-    max-width: breakpoint(xlarge);
+    max-width: min(90vw, #{breakpoint(xlarge)});
   }
 
   margin-right: auto;
