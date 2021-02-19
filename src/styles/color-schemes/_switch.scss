@@ -26,18 +26,6 @@
 
 .cs-#{$ns}-switch__text {
   display: none;
-  position: absolute;
-  left: 0;
-  transform: translateX(calc(var(--#{$ns}-h-spacing-xsmall) * -1 - 100%));
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  @at-root .cs-#{$ns}-switch:hover #{&} {
-    display: block;
-  }
 }
 
 input#color-scheme {
