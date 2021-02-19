@@ -68,6 +68,10 @@ input#color-scheme {
     pointer-events: none;
   }
 
+  &:focus:not(:focus-visible):before {
+    display: none;
+  }
+
   &:checked ~ * .cs-#{$ns}-switch {
     box-shadow: none;
 
