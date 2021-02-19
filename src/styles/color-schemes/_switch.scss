@@ -46,30 +46,22 @@ input#color-scheme {
   left: -200vw;
 
   &:focus:before {
-    content: 'Press space to switch color scheme.\ATap anywhere to exit.';
-    white-space: pre-wrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include shape(box);
+    content: 'Press space bar to switch color scheme.\ATap anywhere to exit.';
+    display: block;
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: 1vh;
+    left: 1vw;
     z-index: z-index(overlay);
-    padding: var(--#{$ns}-v-spacing-medium) var(--#{$ns}-h-spacing-medium);
-    font-size: var(--#{$ns}-type-size-xxlarge);
+    padding: var(--#{$ns}-v-spacing-xsmall) var(--#{$ns}-h-spacing-xsmall);
+    font-size: var(--#{$ns}-type-size-xxsmall);
     font-family: var(--#{$ns}-typeface-heading);
     font-weight: var(--#{$ns}-custom-font-heading-weight, 900);
-    line-height: var(--#{$ns}-line-height-xxlarge);
-    color: hsl(var(--#{$ns}-link-color));
-    background-color: hsla(var(--#{$ns}-bg-color), 0.9);
-    text-align: center;
+    line-height: var(--#{$ns}-line-height-xxsmall);
+    color: hsl(var(--#{$ns}-text-color));
+    white-space: pre-wrap;
     pointer-events: none;
-  }
-
-  &:focus:not(:focus-visible):before {
-    display: none;
+    background-color: hsla(var(--#{$ns}-bg-color), 0.6);
   }
 
   &:checked ~ * .cs-#{$ns}-switch {
