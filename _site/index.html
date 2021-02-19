@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
   <meta http-equiv="cleartype" content="on">
   <title>Mike Mai: Designer and Coder | UI UX Accessibility</title>
   <link rel="stylesheet" href="src/styles/main.css">
@@ -24,7 +24,7 @@
   <link rel="icon" href="https://s3.amazonaws.com/mikemai/assets/img/favicon.ico">
 </head>
 <body class="c-mnml-body ">
-  <input type="checkbox" name="color-scheme" id="color-scheme" checked>
+  <input type="checkbox" name="color-scheme" id="color-scheme" checked aria-label="Toggle Color Scheme">
 
 
   <header class="c-mnml-plane c-mnml-plane--trendy-af c-mnml-plane--xlarge-width c-mnml-plane--full-height c-mnml-plane--h-inset-small c-mnml-plane--v-inset-xlarge" style="--mnml-list-item-basis: 300px;">
@@ -83,17 +83,18 @@
     </div>
   </header>
 
-  <aside class="c-mnml-plane c-mnml-plane--trendy c-mnml-plane--article-width c-mnml-plane--full-height c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xlarge cs-mnml-dark">
+  <aside class="c-mnml-plane c-mnml-plane--trendy c-mnml-plane--article-width c-mnml-plane--full-height c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xlarge cs-mnml-dark" aria-labelledby="mission-statement">
     <div class="c-mnml-plane-background">
       <img src="src/img/hero-walk.jpg" alt="" loading="lazy">
     </div>
     <div class="c-mnml-plane-cabin">
+      <h3 class="u-mnml-visuallyhidden" id="mission-statement">Mission Statement</h3>
       <p class="c-mnml-text c-mnml-text--block c-mnml-text--lede">Great design requires both form and function. Favoring one over the other will greatly affect a design&rsquo;s ability to communicate. Striking a balance between the two is something I dwell on every single day.</p>
     </div>
   </aside>
 
-  <article class="c-mnml-plane c-mnml-plane--article-width c-mnml-plane--full-height c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xxlarge" id="bio">
-    <div class="c-mnml-plane-cabin">
+  <main class="c-mnml-plane c-mnml-plane--article-width c-mnml-plane--full-height c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xxlarge" id="bio">
+    <article class="c-mnml-plane-cabin">
       <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xxlarge">Designer</h3>
       <p class="c-mnml-text c-mnml-text--block">I have been working as a designer for 11+ years. I received my BFA in graphic design from Massachusetts College of Art and Design, where I developed my passion for typography. That passion drove me to what I wanted to pursue professionally: designing for the web. Because the web is 99% text <mark>(unverified <emoji>😅</emoji>)</mark>, typography is the most important foundation of any given website. Picking typefaces and typesetting are my first tasks when starting any web projects.</p>
       <p class="c-mnml-text c-mnml-text--block">Many think that design is all about aesthetics, but a wise mentor once told me that &ldquo;design is about solving problems, first and foremost&rdquo;. My obsession of becoming a true designer drove me to what I am today: designing for the accessible web. While polished typographic styles create good forms, more is needed: functions. And more importantly, the experience of said functions. I mull over the user experience of every design I create, making sure they are usable, useful, and inclusive.</p>
@@ -125,15 +126,15 @@
           </div>
         </li>
       </ul>
-    </div>
-  </article>
+    </article>
+  </main>
 
-  <div class="c-mnml-plane c-mnml-plane--article-width c-mnml-plane--full-height c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xlarge cs-mnml-dark">
+  <aside class="c-mnml-plane c-mnml-plane--article-width c-mnml-plane--full-height c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xlarge cs-mnml-dark" aria-labelledby="colophon">
     <div class="c-mnml-plane-background">
       <img src="src/img/hero-childhood.jpg" alt="" loading="lazy">
     </div>
     <div class="c-mnml-plane-cabin">
-      <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--lede">Colophon</h3>
+      <h3 class="c-mnml-text c-mnml-text--block c-mnml-text--lede" id="colophon">Colophon</h3>
       <ul class="c-mnml-end-credits">
         <li class="c-mnml-end-credits__item">
           <span>Mike Mai</span>
@@ -157,10 +158,10 @@
         </li>
       </ul>
     </div>
-  </div>
+  </aside>
 
   <footer>
-    <div class="c-mnml-plane c-mnml-plane--trendy c-mnml-plane--article-width c-mnml-plane--full-height c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xxlarge" id="bio">
+    <div class="c-mnml-plane c-mnml-plane--trendy c-mnml-plane--article-width c-mnml-plane--full-height c-mnml-plane--h-inset-medium c-mnml-plane--v-inset-xxlarge">
       <div class="c-mnml-plane-cabin">
         <h4 class="c-mnml-text c-mnml-text--block c-mnml-text--heading c-mnml-text--xlarge">Contact</h4>
         <p class="c-mnml-text c-mnml-text--block">Call +1(978)912-0881 or <a class="c-mnml-link" href="mailto:boss@mikemai.net">email</a>.</p>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
   <meta http-equiv="cleartype" content="on">
   <title>{% if page.name == "index.html" %}{{ site.author }}: {{ site.title }} | {{ site.subtitle }}{% else %}{{ page.title }} | {{ site.author }}{% endif %}</title>
   <link rel="stylesheet" href="src/styles/main.css">
@@ -24,4 +24,4 @@
   <link rel="icon" href="{{ site.s3 }}/assets/img/favicon.ico">
 </head>
 <body class="c-{{ site.ns }}-body {% if page.color-scheme %}cs-{{ site.ns }}-{{ page.color-scheme }}{% endif %}">
-  {% if page.color-scheme-switch %}<input type="checkbox" name="color-scheme" id="color-scheme" checked>{% endif %}
+  {% if page.color-scheme-switch %}<input type="checkbox" name="color-scheme" id="color-scheme" checked aria-label="Toggle Color Scheme">{% endif %}
