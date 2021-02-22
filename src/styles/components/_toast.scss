@@ -11,15 +11,15 @@
   border: 1px solid hsla(var(--#{$ns}-link-color), 0.2);
   border-right: 0.4rem solid hsla(var(--#{$ns}-link-color), 0.2);
   border-left: 0.4rem solid hsla(var(--#{$ns}-link-color), 0.2);
-  background-color: hsla(var(--#{$ns}-bg-color), 0.4);
+  background-color: hsla(var(--#{$ns}-bg-color), 0.8);
   -webkit-backdrop-filter: blur(0.35rem);
   backdrop-filter: blur(0.35rem);
 }
 
 .c-#{$ns}-toast--bottom {
   position: fixed;
-  right: 50%;
   bottom: 2vh;
+  left: 50%;
   z-index: z-index(floating);
-  transform: translateX(50%);
+  transform: translate3d(-50%, 0, 0);
 }

@@ -18,11 +18,6 @@ html {
   font-size: var(--#{$ns}-font-size);
 }
 
-html,
-body {
-  min-height: 100vh;
-}
-
 #{$all-block-elements} {
   margin-top: 0;
   margin-bottom: v-spacing(medium);
