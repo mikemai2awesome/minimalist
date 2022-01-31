@@ -11,7 +11,7 @@
 
 .c-#{$ns}-text--heading {
   letter-spacing: -0.025em;
-  text-shadow: 0.1em 0.1em 1px hsla(var(--#{$ns}-bg-color), 0.6);
+  text-shadow: 0 0 0 hsla(var(--#{$ns}-text-color), 0.4);
   font-family: typeface(heading);
   font-weight: var(--#{$ns}-custom-font-heading-weight, 900);
 
@@ -158,4 +158,20 @@
       text-decoration: underline;
     }
   }
+}
+
+/* Gradient Heading */
+.c-#{$ns}-text--heading {
+  background-image: linear-gradient(to right, hsl(var(--#{$ns}-color-purple-dark)) 0%, hsl(var(--#{$ns}-color-red-dark)) 8%, hsl(var(--#{$ns}-color-blue-dark)) 40%, hsl(var(--#{$ns}-color-purple)) 66%, hsl(var(--#{$ns}-color-orange-dark)) 100%);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  -webkit-background-clip: text;
+  background-color: initial;
+  -webkit-text-fill-color: transparent;
 }
