@@ -55,11 +55,7 @@
 }
 
 .c-#{$ns}-text--display {
-  font-size: type-size(xxxlarge-min);
-
-  @include respond-to(small) {
-    font-size: type-size(xxxlarge-max);
-  }
+  font-size: clamp(type-size(xxxlarge-min), 6vw, type-size(xxxlarge-max));
 }
 
 .c-#{$ns}-text--xlarge,
@@ -161,7 +157,7 @@
 }
 
 /* Gradient Heading */
-.c-#{$ns}-text--heading {
+.c-#{$ns}-text--trendy {
   background-image: linear-gradient(to right, hsl(var(--#{$ns}-color-purple-dark)) 0%, hsl(var(--#{$ns}-color-red-dark)) 8%, hsl(var(--#{$ns}-color-blue-dark)) 40%, hsl(var(--#{$ns}-color-purple)) 66%, hsl(var(--#{$ns}-color-orange-dark)) 100%);
   background-position-x: initial;
   background-position-y: initial;

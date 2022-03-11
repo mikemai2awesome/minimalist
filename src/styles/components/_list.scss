@@ -3,7 +3,7 @@
 \* ------------------------------------ */
 
 $_bullet-color: hsla(var(--#{$ns}-text-color), 0.4);
-$_item-min-width: 200px;
+$_item-min-width: 250px;
 
 .c-#{$ns}-list {
   @include reset-spacing;

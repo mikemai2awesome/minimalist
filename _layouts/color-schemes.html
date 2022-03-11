@@ -1,0 +1,29 @@
+{% include body-start.html %}
+
+<header class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--article-width c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-xxlarge u-mnml-text-align-center">
+  <div class="c-{{ site.ns }}-plane-cabin">
+    <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xsmall">Light &amp; Dark</p>
+    <h1 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--display">{{ page.title }}</h1>
+  </div>
+</header>
+<main class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--large-width c-{{ site.ns }}-plane--h-inset-medium">
+  <div class="c-{{ site.ns }}-plane-cabin">
+    <div class="c-{{ site.ns }}-list c-{{ site.ns }}-list--bare lay-horizontal is-compact">
+      <article class="c-{{ site.ns }}-list__item cs-mnml-dark" style="padding: 1rem">
+        <h1 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xxlarge">Dark Kitchen Sink</h1>
+        {{ content }}
+      </article>
+      <article class="c-{{ site.ns }}-list__item" style="padding: 1rem">
+        <h1 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xxlarge">Light Kitchen Sink</h1>
+        {{ content }}
+      </article>
+    </div>
+  </div>
+</main>
+<footer class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--large-width c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-xxlarge">
+  <div class="c-{{ site.ns }}-plane-cabin">
+    &copy; Mike Mai Network
+  </div>
+</footer>
+
+{% include body-end.html %}

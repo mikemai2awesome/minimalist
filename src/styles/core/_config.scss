@@ -33,7 +33,7 @@ $typefaces: (
   --#{$ns}-custom-font-lede-weight: 800;
 
   /* Responsive page font-size. Only edit the vw value, never set this less than 100%. */
-  --#{$ns}-font-size: calc(100% + 0.25vw);
+  --#{$ns}-font-size: clamp(100%, 1.66vw, 160%);
 
   /* Global design tokens */
   --#{$ns}-text-color: var(--#{$ns}-color-gray-dark);
