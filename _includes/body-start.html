@@ -2,10 +2,7 @@
 <html lang="{% if page.lang %}{{ page.lang }}{% else %}en{% endif %}">
 <head>
   <meta charset="utf-8">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
-  <meta http-equiv="cleartype" content="on">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{% if page.name == "index.html" %}{{ site.author }}: {{ site.title }} | {{ site.subtitle }}{% else %}{{ page.title }} | {{ site.author }}{% endif %}</title>
   <link rel="stylesheet" href="src/styles/main.css">
   <meta name="description" content="{% if page.name == 'index.html' %}{{ site.description }}{% else %}{{ page.description }}{% endif %}">
