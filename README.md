@@ -1,5 +1,5 @@
 # minimalist
-CSS Framework for minimal design.
+CSS Framework for minimal design. _Shoot, this might have gone maximalist..._
 
 ## 🚧 On-going project by Mike Mai 🚧
 
