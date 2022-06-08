@@ -55,7 +55,7 @@
 }
 
 .c-#{$ns}-text--display {
-  font-size: clamp(type-size(xxxlarge-min), 6vw, type-size(xxxlarge-max));
+  font-size: clamp(#{type-size(xxxlarge-min)}, #{type-size(xxlarge)} + 6vw, #{type-size(xxxlarge-max)});
 }
 
 .c-#{$ns}-text--xlarge,
