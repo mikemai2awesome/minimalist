@@ -9,10 +9,7 @@ color-scheme-switch: true
     </div>
     <div class="c-{{ site.ns }}-plane-deck c-{{ site.ns }}-plane-deck--upper">
       <div class="c-{{ site.ns }}-plane-deck__content">
-        <div class="c-{{ site.ns }}-plane-deck__content__item">
-          <h1 class="u-{{ site.ns }}-visuallyhidden">Mike Mai, Designer/Coder</h1>
-        </div>
-        <div class="c-{{ site.ns }}-plane-deck__content__item">
+        <div class="c-{{ site.ns }}-plane-deck__content__item c-{{ site.ns }}-plane-deck__content__item--end">
           <label for="color-scheme" class="cs-{{ site.ns }}-switch">
             <span class="cs-{{ site.ns }}-switch__text">
               Switch color scheme
@@ -22,29 +19,17 @@ color-scheme-switch: true
       </div>
     </div>
     <div class="c-{{ site.ns }}-plane-cabin">
-      <div class="c-{{ site.ns }}-list c-{{ site.ns }}-list--ui is-comfortable lay-horizontal" style="--mnml-list-item-basis: 35ch">
-        <a href="#bio" class="c-{{ site.ns }}-list__item">
-          <span class="c-{{ site.ns }}-text c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xsmall">Hello, I am Mike Mai.</span>
-          <span class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xxlarge">UIX<br>designer <span class="u-{{ site.ns }}-white-space-nowrap">&amp; coder</span> <span class="u-{{ site.ns }}-white-space-nowrap">from China</span></span>
-          <img src="src/img/head-8bit.png" alt="" width=40 height=40 class="c-{{ site.ns }}-avatar c-{{ site.ns }}-avatar--block c-{{ site.ns }}-avatar--transparent c-{{ site.ns }}-avatar--medium u-{{ site.ns }}-margin-top-auto">
-        </a>
-        <div class="c-{{ site.ns }}-list__item">
-          <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block"><strong>Did you know?</strong> This is the 9th iteration of <code class="c-{{ site.ns }}-code">mikemai.net</code>. This time around I wanted to build it using my own <s>minimalist</s> <a href="https://github.com/mikemai2awesome/minimalist" class="c-{{ site.ns }}-link">maximalist framework</a> (work in progress). Love the typography? View the <a href="{{ site.url }}/typespecimen" class="c-{{ site.ns }}-link">Type Specimen</a>.</p>
-          <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block">And just because I can, I also rebuilt popular home pages from 1998 such as Google, Angelfire, and AOL. Websites used to be so simple and straight forward, can we go back to that?</p>
-          <a href="https://mikemai.s3.amazonaws.com/network/backup/remake-america-online.html" class="c-{{ site.ns }}-button c-{{ site.ns }}-text--block u-{{ site.ns }}-margin-top-auto">Back to 1998</a>
-        </div>
-        <div class="c-{{ site.ns }}-list__item">
-          <h2 class="u-{{ site.ns }}-visuallyhidden">About Me</h2>
-          <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--small"><strong>My current gig:</strong> Lead UI Architect, UX and Accessibility, <a href="https://boltdesignsystem.com" class="c-{{ site.ns }}-link">Bolt Design System</a>, Pegasystems Inc.</p>
-          <hr>
-          <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--small"><strong>My specialties:</strong> typography, design system thinking, UX design, UI design, HTML, CSS, and web accessibility.</p>
-          <hr>
-          <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--small"><strong>My writings:</strong> <a href="{{ site.url }}/blog" class="c-{{ site.ns }}-link">Command Shift 3</a>.</p>
-          <hr>
-          <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--small"><strong>My links:</strong> <a href="https://links.mikemai.net" class="c-{{ site.ns }}-link">Hao Collection</a>.</p>
-          <hr>
-          <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--small"><strong>Coffee or tea?</strong> Tea, always.</p>
-        </div>
+      <div class="u-{{ site.ns }}-text-align-center">
+        <span class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--xsmall" aria-hidden="true">Design System &bullet; Web Accessibility</span>
+        <h1 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--display" aria-label="Mike Mai, designer and coder specializing in design system and web accessibility." style="line-height: 1;">
+          <div aria-hidden="true">
+            Designer &amp;&nbsp;Coder
+          </div>
+        </h1>
+        <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--large">Mike Mai designs with HTML and&nbsp;CSS</p>
+        <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block">
+          <a class="c-{{ site.ns }}-button" href="#bio">This Is Mai Story</a>
+        </p>
       </div>
     </div>
     <div class="c-{{ site.ns }}-plane-deck c-{{ site.ns }}-plane-deck--lower">
@@ -64,26 +49,54 @@ color-scheme-switch: true
       <img src="src/img/hero-walk.jpg" alt="" loading="lazy">
     </div>
     <div class="c-{{ site.ns }}-plane-cabin">
-      <h3 class="u-{{ site.ns }}-visuallyhidden" id="mission-statement">Mission Statement</h3>
-      <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--lede">Great design requires both form and function. Favoring one over the other will greatly affect a design&rsquo;s ability to communicate. Striking a balance between the two is something I dwell on every single day.</p>
+      <h2 class="u-{{ site.ns }}-visuallyhidden" id="mission-statement">Mission Statement</h2>
+      <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--lede">Great design requires both form and function. Favoring one over the other will greatly affect a design&rsquo;s ability to communicate. Striking a balance between the two is something I dwell on every single&nbsp;day.</p>
     </div>
   </aside>
 
   <main class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--article-width c-{{ site.ns }}-plane--full-height c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-xxlarge" id="bio">
     <article class="c-{{ site.ns }}-plane-cabin">
-      <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xxlarge">Designer</h3>
-      <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block">I have been working as a designer for 11+ years. I received my BFA in graphic design from Massachusetts College of Art and Design, where I developed my passion for typography. That passion drove me to what I wanted to pursue professionally: designing for the web. Because the web is 99% text <mark>(unverified <emoji>😅</emoji>)</mark>, typography is the most important foundation of any given website. Picking typefaces and typesetting are my first tasks when starting any web projects.</p>
+      <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xxlarge">Designer</h2>
+      <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block">I have been working as a designer for 13+ years. I received my BFA in graphic design from Massachusetts College of Art and Design, where I developed my passion for typography. That passion drove me to what I wanted to pursue professionally: designing for the web. Because the web is 99% text <mark>(unverified <emoji>😅</emoji>)</mark>, typography is the most important foundation of any given website. Picking typefaces and typesetting are my first tasks when starting any web projects.</p>
       <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block">Many think that design is all about aesthetics, but a wise mentor once told me that &ldquo;design is about solving problems, first and foremost&rdquo;. My obsession of becoming a true designer drove me to what I am today: designing for the accessible web. While polished typographic styles create good forms, more is needed: functions. And more importantly, the experience of said functions. I mull over the user experience of every design I create, making sure they are usable, useful, and inclusive.</p>
-      <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xxlarge">&amp; Coder</h3>
+      <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xxlarge">&amp; Coder</h2>
       <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block">Regardless what you are designing, it is important to pick the right tool. For the web, that tool is code.</p>
       <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block">What is better than working in the exact medium that you are designing for? Nothing. That is the reason I learned to code. I see HTML and CSS as a design tool, just like Adobe XD, Sketch, or Figma, but it is a tool that does not create a layer of abstraction. If one can read and write HTML and CSS, one can fully understand the limitations of the current web technologies. When equipped with such knowledge, a designer can easily rapid prototype designs that stay true to their intentions. Great designers pay attention to the smallest details, and the right tool enables them to massage the design as much as possible.</p>
       <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block">Not only do I design with code, I also design in the code. Semantics is a big deal on the web, it leads to better performance, better accessibility, and better SEO. While it is technically possible to build a website with just a bunch of <code class="c-{{ site.ns }}-code">&lt;div&gt;</code>s&mdash;a generic element that carries no semantics, it is important to know that there are close to 100 HTML elements available for use. If a design has a specific information architecture visually, the same must be represented in code.</p>
       <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block">Always remember: <span class="c-{{ site.ns }}-text c-{{ site.ns }}-text--large"><em>form</em> <span class="c-{{ site.ns }}-text c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy">&amp;</span> <strong>function</strong>.</span></p>
-      <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xxlarge">My Side Projects</h3>
+      <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xxlarge">Design Systems</h2>
       <ul class="c-{{ site.ns }}-list c-{{ site.ns }}-list--unordered">
         <li class="c-{{ site.ns }}-list__item">
           <div class="c-{{ site.ns }}-text c-{{ site.ns }}-text--small">
+            <a href="https://boltdesignsystem.com" class="c-{{ site.ns }}-link">Bolt Design System</a>
+          </div>
+        </li>
+        <li class="c-{{ site.ns }}-list__item">
+          <div class="c-{{ site.ns }}-text c-{{ site.ns }}-text--small">
             <a href="{{ site.url }}/typesettings" class="c-{{ site.ns }}-link">Typesettings.css</a>
+          </div>
+        </li>
+        <li class="c-{{ site.ns }}-list__item">
+          <div class="c-{{ site.ns }}-text c-{{ site.ns }}-text--small">
+            <a href="https://codepen.io/mikemai2awesome/pen/KKvMZVz" class="c-{{ site.ns }}-link">SuperMinimalCSS</a>
+          </div>
+        </li>
+      </ul>
+      <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xxlarge">Fun Side Projects</h2>
+      <ul class="c-{{ site.ns }}-list c-{{ site.ns }}-list--unordered">
+        <li class="c-{{ site.ns }}-list__item">
+          <div class="c-{{ site.ns }}-text c-{{ site.ns }}-text--small">
+            <a href="{{ site.url }}/blog" class="c-{{ site.ns }}-link">Command Shift 3</a> <em>(my blog)</em>
+          </div>
+        </li>
+        <li class="c-{{ site.ns }}-list__item">
+          <div class="c-{{ site.ns }}-text c-{{ site.ns }}-text--small">
+            <a href="https://codepen.io/mikemai2awesome/pen/wvpLNjb" class="c-{{ site.ns }}-link">To All The Buttons I Designed Before</a>
+          </div>
+        </li>
+        <li class="c-{{ site.ns }}-list__item">
+          <div class="c-{{ site.ns }}-text c-{{ site.ns }}-text--small">
+            <a href="https://mikemai.s3.amazonaws.com/network/backup/remake-america-online.html" class="c-{{ site.ns }}-link">Remake 1998</a> <em>(in the style of mikemai.net)</em>
           </div>
         </li>
         <li class="c-{{ site.ns }}-list__item">
@@ -93,7 +106,7 @@ color-scheme-switch: true
         </li>
         <li class="c-{{ site.ns }}-list__item">
           <div class="c-{{ site.ns }}-text c-{{ site.ns }}-text--small">
-            <a href="https://iloveeurostile.com" class="c-{{ site.ns }}-link">I Love Eurostile</a> (font broken <emoji>😢</emoji>)
+            <a href="https://iloveeurostile.com" class="c-{{ site.ns }}-link">I Love Eurostile</a> <em>(font broken <emoji>😢</emoji>, will fix soon)</em>
           </div>
         </li>
         <li class="c-{{ site.ns }}-list__item">
@@ -101,7 +114,13 @@ color-scheme-switch: true
             <a href="https://noprobono.info" class="c-{{ site.ns }}-link">NoProBono.info</a>
           </div>
         </li>
+        <li class="c-{{ site.ns }}-list__item">
+          <div class="c-{{ site.ns }}-text c-{{ site.ns }}-text--small">
+            <a href="https://links.mikemai.net" class="c-{{ site.ns }}-link">Hao Collection</a>
+          </div>
+        </li>
       </ul>
+      <img src="src/img/head-8bit.png" alt="" width=40 height=40 class="c-{{ site.ns }}-avatar c-{{ site.ns }}-avatar--block c-{{ site.ns }}-avatar--transparent c-{{ site.ns }}-avatar--medium">
     </article>
   </main>
 
@@ -110,7 +129,7 @@ color-scheme-switch: true
       <img src="src/img/hero-childhood.jpg" alt="" loading="lazy">
     </div>
     <div class="c-{{ site.ns }}-plane-cabin">
-      <h3 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--lede" id="colophon">Colophon</h3>
+      <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--lede" id="colophon">Colophon</h2>
       <ul class="c-{{ site.ns }}-end-credits">
         <li class="c-{{ site.ns }}-end-credits__item">
           <span>Mike Mai</span>
@@ -139,9 +158,9 @@ color-scheme-switch: true
   <footer>
     <div class="c-{{ site.ns }}-plane c-{{ site.ns }}-plane--trendy c-{{ site.ns }}-plane--article-width c-{{ site.ns }}-plane--full-height c-{{ site.ns }}-plane--h-inset-medium c-{{ site.ns }}-plane--v-inset-xxlarge">
       <div class="c-{{ site.ns }}-plane-cabin">
-        <h4 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xlarge">Contact</h4>
+        <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xlarge">Contact</h2>
         <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block">Call +1 (978)912-0881 or email boss[at]mikemai.net.</p>
-        <h4 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xlarge">Press Kit</h4>
+        <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xlarge">Press Kit</h2>
         <ul class="c-{{ site.ns }}-list c-{{ site.ns }}-list--unordered">
           <li class="c-{{ site.ns }}-list__item">
             Portrait: <a class="c-{{ site.ns }}-link" href="{{ site.s3 }}/2017/img-hero-beer@900.jpg">900px wide</a>
@@ -159,7 +178,7 @@ color-scheme-switch: true
             Logo: <a class="c-{{ site.ns }}-link" href="{{ site.s3 }}/assets/img/ios/h/touch-icon-ipad-retina.png">144px wide</a>
           </li>
         </ul>
-        <h4 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xlarge">Previously on&hellip;</h4>
+        <h2 class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block c-{{ site.ns }}-text--heading c-{{ site.ns }}-text--trendy c-{{ site.ns }}-text--xlarge">Previously on&hellip;</h2>
         <p class="c-{{ site.ns }}-text c-{{ site.ns }}-text--block"><a class="c-{{ site.ns }}-link" href="{{ site.url }}/320">320 x 320</a></p>
       </div>
     </div>
